@@ -1,0 +1,5 @@
+  File "/home/robotica/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot/turtle_bot_teleop.py", line 33
+    global pressed
+    ^^^^^^^^^^^^^^
+SyntaxError: name 'pressed' is used prior to global declaration
+

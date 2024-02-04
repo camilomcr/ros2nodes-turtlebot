@@ -1,0 +1,21 @@
+[1.699s] Invoking command in '/home/robotica/ros2_ws/src/turtle_bot': PYTHONPATH=/home/robotica/ros2_ws/build/turtle_bot/prefix_override:/home/robotica/ros2_ws/install/turtle_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtle_bot build --build-base /home/robotica/ros2_ws/build/turtle_bot/build install --record /home/robotica/ros2_ws/build/turtle_bot/install.log --single-version-externally-managed
+[2.266s] running egg_info
+[2.267s] writing ../../build/turtle_bot/turtle_bot.egg-info/PKG-INFO
+[2.268s] writing dependency_links to ../../build/turtle_bot/turtle_bot.egg-info/dependency_links.txt
+[2.269s] writing entry points to ../../build/turtle_bot/turtle_bot.egg-info/entry_points.txt
+[2.270s] writing requirements to ../../build/turtle_bot/turtle_bot.egg-info/requires.txt
+[2.274s] writing top-level names to ../../build/turtle_bot/turtle_bot.egg-info/top_level.txt
+[2.281s] reading manifest file '../../build/turtle_bot/turtle_bot.egg-info/SOURCES.txt'
+[2.286s] writing manifest file '../../build/turtle_bot/turtle_bot.egg-info/SOURCES.txt'
+[2.290s] running build
+[2.291s] running build_py
+[2.291s] running install
+[2.293s] running install_lib
+[2.295s] running install_data
+[2.304s] running install_egg_info
+[2.306s] removing '/home/robotica/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot-0.0.0-py3.10.egg-info' (and everything under it)
+[2.307s] Copying ../../build/turtle_bot/turtle_bot.egg-info to /home/robotica/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot-0.0.0-py3.10.egg-info
+[2.308s] running install_scripts
+[2.365s] Installing turtle_bot_teleop script to /home/robotica/ros2_ws/install/turtle_bot/lib/turtle_bot
+[2.367s] writing list of installed files to '/home/robotica/ros2_ws/build/turtle_bot/install.log'
+[2.455s] Invoked command in '/home/robotica/ros2_ws/src/turtle_bot' returned '0': PYTHONPATH=/home/robotica/ros2_ws/build/turtle_bot/prefix_override:/home/robotica/ros2_ws/install/turtle_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtle_bot build --build-base /home/robotica/ros2_ws/build/turtle_bot/build install --record /home/robotica/ros2_ws/build/turtle_bot/install.log --single-version-externally-managed
