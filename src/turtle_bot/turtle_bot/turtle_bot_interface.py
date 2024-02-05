@@ -4,7 +4,6 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 import time
 import turtle
-import numpy as np
 
 class turtle_bot_interface(Node):
 
