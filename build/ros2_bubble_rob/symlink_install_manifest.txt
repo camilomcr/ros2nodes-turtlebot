@@ -1,0 +1,15 @@
+/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ament_index/resource_index/package_run_dependencies/ros2_bubble_rob
+/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ament_index/resource_index/parent_prefix_path/ros2_bubble_rob
+/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/environment/ament_prefix_path.sh
+/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/environment/ament_prefix_path.dsv
+/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/environment/path.sh
+/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/environment/path.dsv
+/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/local_setup.bash
+/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/local_setup.sh
+/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/local_setup.zsh
+/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/local_setup.dsv
+/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/package.dsv
+/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ament_index/resource_index/packages/ros2_bubble_rob
+/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/cmake/ros2_bubble_robConfig.cmake
+/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/cmake/ros2_bubble_robConfig-version.cmake
+/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/package.xml

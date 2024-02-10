@@ -1,0 +1,17 @@
+running develop
+running egg_info
+writing turtle_bot.egg-info/PKG-INFO
+writing dependency_links to turtle_bot.egg-info/dependency_links.txt
+writing entry points to turtle_bot.egg-info/entry_points.txt
+writing requirements to turtle_bot.egg-info/requires.txt
+writing top-level names to turtle_bot.egg-info/top_level.txt
+reading manifest file 'turtle_bot.egg-info/SOURCES.txt'
+writing manifest file 'turtle_bot.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle-bot.egg-link (link to .)
+Installing turtle_bot_interface script to /home/camilo/ros2_ws/install/turtle_bot/lib/turtle_bot
+Installing turtle_bot_player script to /home/camilo/ros2_ws/install/turtle_bot/lib/turtle_bot
+Installing turtle_bot_teleop script to /home/camilo/ros2_ws/install/turtle_bot/lib/turtle_bot
+
+Installed /home/camilo/ros2_ws/build/turtle_bot
+running install_data

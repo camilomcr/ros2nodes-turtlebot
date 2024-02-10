@@ -1,0 +1,43 @@
+-- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+-- Found diagnostic_msgs: 4.2.3 (/opt/ros/humble/share/diagnostic_msgs/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found lifecycle_msgs: 1.2.1 (/opt/ros/humble/share/lifecycle_msgs/cmake)
+-- Found map_msgs: 2.1.0 (/opt/ros/humble/share/map_msgs/cmake)
+-- Found pendulum_msgs: 0.20.3 (/opt/ros/humble/share/pendulum_msgs/cmake)
+-- Found rosgraph_msgs: 1.2.1 (/opt/ros/humble/share/rosgraph_msgs/cmake)
+-- Found shape_msgs: 4.2.3 (/opt/ros/humble/share/shape_msgs/cmake)
+-- Found stereo_msgs: 4.2.3 (/opt/ros/humble/share/stereo_msgs/cmake)
+-- Found tf2_geometry_msgs: 0.25.5 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found trajectory_msgs: 4.2.3 (/opt/ros/humble/share/trajectory_msgs/cmake)
+-- Found visualization_msgs: 4.2.3 (/opt/ros/humble/share/visualization_msgs/cmake)
+-- Found std_srvs: 4.2.3 (/opt/ros/humble/share/std_srvs/cmake)
+-- Found example_interfaces: 0.9.3 (/opt/ros/humble/share/example_interfaces/cmake)
+-- Found image_transport: 3.1.8 (/opt/ros/humble/share/image_transport/cmake)
+-- CoppeliaSim: LIBPLUGIN_DIR: /home/camilo/Downloads/Coppelia/programming/libPlugin.
+-- CoppeliaSim: COPPELIASIM_ROOT_DIR: /home/camilo/Downloads/Coppelia.
+-- Found CoppeliaSim installation at /home/camilo/Downloads/Coppelia.
+-- Checking CoppeliaSim header version...
+-- CoppeliaSim headers version 4.4.0 rev0
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: regex 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0")  
+-- Adding simStubsGen command...
+-- Reading plugin metadata...
+-- Plugin: ROS2
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/camilo/ros2_ws/build/sim_ros2_interface
+[ 73%] Built target generate_ros_code
+[35m[1mConsolidate compiler generated dependencies of target simExtROS2[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o[0m

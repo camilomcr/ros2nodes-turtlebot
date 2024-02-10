@@ -1,0 +1,1254 @@
+[0.000000] (-) TimerEvent: {}
+[0.000226] (ros2_bubble_rob) JobQueued: {'identifier': 'ros2_bubble_rob', 'dependencies': OrderedDict()}
+[0.000290] (sim_ros2_interface) JobQueued: {'identifier': 'sim_ros2_interface', 'dependencies': OrderedDict()}
+[0.000307] (turtle_bot) JobQueued: {'identifier': 'turtle_bot', 'dependencies': OrderedDict()}
+[0.000321] (ros2_bubble_rob) JobStarted: {'identifier': 'ros2_bubble_rob'}
+[0.041843] (sim_ros2_interface) JobStarted: {'identifier': 'sim_ros2_interface'}
+[0.091395] (turtle_bot) JobStarted: {'identifier': 'turtle_bot'}
+[0.099547] (-) TimerEvent: {}
+[0.143933] (ros2_bubble_rob) JobProgress: {'identifier': 'ros2_bubble_rob', 'progress': 'cmake'}
+[0.144551] (ros2_bubble_rob) Command: {'cmd': ['/usr/bin/cmake', '/home/camilo/ros2_ws/src/ros2_bubble_rob', '-DCMAKE_INSTALL_PREFIX=/home/camilo/ros2_ws/install/ros2_bubble_rob'], 'cwd': '/home/camilo/ros2_ws/build/ros2_bubble_rob', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'camilo'), ('LC_TIME', 'es_CO.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/camilo'), ('OLDPWD', '/home/camilo/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_CO.UTF-8'), ('SYSTEMD_EXEC_PID', '1023'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/camilo/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'camilo'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'camilo'), ('TERM', 'xterm-256color'), ('COPPELIASIM_ROOT_DIR', '/home/camilo/Downloads/Coppelia'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/camilo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/camilo-linux:@/tmp/.ICE-unix/1004,unix/camilo-linux:/tmp/.ICE-unix/1004'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_CO.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/4172a09b_14f1_47fe_abc1_1a5f23c84b77'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_CO.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.Q10SI2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.129'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/camilo/ros2_ws/install/ros2_bubble_rob:/home/camilo/ros2_ws/install/sim_ros2_interface:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_CO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_CO.UTF-8'), ('LC_IDENTIFICATION', 'es_CO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/camilo/ros2_ws/build/ros2_bubble_rob'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/camilo/ros2_ws/build/turtle_bot:/home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_CO.UTF-8'), ('LC_PAPER', 'es_CO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/camilo/ros2_ws/install/ros2_bubble_rob:/home/camilo/ros2_ws/install/sim_ros2_interface:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble')]), 'shell': False}
+[0.146783] (sim_ros2_interface) JobProgress: {'identifier': 'sim_ros2_interface', 'progress': 'cmake'}
+[0.147182] (sim_ros2_interface) Command: {'cmd': ['/usr/bin/cmake', '/home/camilo/ros2_ws/src/sim_ros2_interface', '-DCMAKE_INSTALL_PREFIX=/home/camilo/ros2_ws/install/sim_ros2_interface'], 'cwd': '/home/camilo/ros2_ws/build/sim_ros2_interface', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'camilo'), ('LC_TIME', 'es_CO.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/camilo'), ('OLDPWD', '/home/camilo/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_CO.UTF-8'), ('SYSTEMD_EXEC_PID', '1023'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/camilo/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'camilo'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'camilo'), ('TERM', 'xterm-256color'), ('COPPELIASIM_ROOT_DIR', '/home/camilo/Downloads/Coppelia'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/camilo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/camilo-linux:@/tmp/.ICE-unix/1004,unix/camilo-linux:/tmp/.ICE-unix/1004'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_CO.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/4172a09b_14f1_47fe_abc1_1a5f23c84b77'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_CO.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.Q10SI2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.129'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/camilo/ros2_ws/install/ros2_bubble_rob:/home/camilo/ros2_ws/install/sim_ros2_interface:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_CO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_CO.UTF-8'), ('LC_IDENTIFICATION', 'es_CO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/camilo/ros2_ws/build/sim_ros2_interface'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/camilo/ros2_ws/build/turtle_bot:/home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_CO.UTF-8'), ('LC_PAPER', 'es_CO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/camilo/ros2_ws/install/ros2_bubble_rob:/home/camilo/ros2_ws/install/sim_ros2_interface:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble')]), 'shell': False}
+[0.155792] (ros2_bubble_rob) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.156843] (sim_ros2_interface) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.199911] (-) TimerEvent: {}
+[0.274361] (ros2_bubble_rob) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.274663] (sim_ros2_interface) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.282046] (ros2_bubble_rob) StdoutLine: {'line': b'-- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.282322] (sim_ros2_interface) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.285042] (sim_ros2_interface) StdoutLine: {'line': b'-- Found diagnostic_msgs: 4.2.3 (/opt/ros/humble/share/diagnostic_msgs/cmake)\n'}
+[0.300086] (-) TimerEvent: {}
+[0.314296] (sim_ros2_interface) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.315561] (ros2_bubble_rob) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.317509] (sim_ros2_interface) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.318882] (ros2_bubble_rob) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.325270] (sim_ros2_interface) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.326401] (ros2_bubble_rob) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.339192] (sim_ros2_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.340098] (ros2_bubble_rob) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.352646] (sim_ros2_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.353635] (ros2_bubble_rob) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.400375] (-) TimerEvent: {}
+[0.400947] (ros2_bubble_rob) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.402524] (ros2_bubble_rob) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.448170] (sim_ros2_interface) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[0.483576] (sim_ros2_interface) StdoutLine: {'line': b'-- Found lifecycle_msgs: 1.2.1 (/opt/ros/humble/share/lifecycle_msgs/cmake)\n'}
+[0.496171] (ros2_bubble_rob) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.496461] (sim_ros2_interface) StdoutLine: {'line': b'-- Found map_msgs: 2.1.0 (/opt/ros/humble/share/map_msgs/cmake)\n'}
+[0.500539] (-) TimerEvent: {}
+[0.600870] (-) TimerEvent: {}
+[0.631118] (ros2_bubble_rob) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.676912] (turtle_bot) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--uninstall', '--editable', '--build-directory', '/home/camilo/ros2_ws/build/turtle_bot/build'], 'cwd': '/home/camilo/ros2_ws/build/turtle_bot', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'camilo', 'LC_TIME': 'es_CO.UTF-8', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/camilo', 'OLDPWD': '/home/camilo/ros2_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'es_CO.UTF-8', 'SYSTEMD_EXEC_PID': '1023', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/camilo/ros2_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'camilo', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'camilo', 'TERM': 'xterm-256color', 'COPPELIASIM_ROOT_DIR': '/home/camilo/Downloads/Coppelia', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/camilo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/camilo-linux:@/tmp/.ICE-unix/1004,unix/camilo-linux:/tmp/.ICE-unix/1004', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'es_CO.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4172a09b_14f1_47fe_abc1_1a5f23c84b77', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'es_CO.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.Q10SI2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.129', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/camilo/ros2_ws/install/ros2_bubble_rob:/home/camilo/ros2_ws/install/sim_ros2_interface:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'es_CO.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'es_CO.UTF-8', 'LC_IDENTIFICATION': 'es_CO.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/camilo/ros2_ws/build/turtle_bot', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/camilo/ros2_ws/build/turtle_bot/prefix_override:/home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages:/home/camilo/ros2_ws/build/turtle_bot:/home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'es_CO.UTF-8', 'LC_PAPER': 'es_CO.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/camilo/ros2_ws/install/ros2_bubble_rob:/home/camilo/ros2_ws/install/sim_ros2_interface'}, 'shell': False}
+[0.696025] (ros2_bubble_rob) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[0.698806] (ros2_bubble_rob) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[0.699022] (ros2_bubble_rob) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/camilo/ros2_ws/src/ros2_bubble_rob/include>\n'}
+[0.699106] (ros2_bubble_rob) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[0.700958] (-) TimerEvent: {}
+[0.701993] (ros2_bubble_rob) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[0.702079] (ros2_bubble_rob) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[0.703337] (ros2_bubble_rob) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.706442] (ros2_bubble_rob) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[0.706540] (ros2_bubble_rob) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[0.707120] (ros2_bubble_rob) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.708268] (ros2_bubble_rob) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.718408] (ros2_bubble_rob) StdoutLine: {'line': b'-- Generating done\n'}
+[0.720285] (ros2_bubble_rob) StdoutLine: {'line': b'-- Build files have been written to: /home/camilo/ros2_ws/build/ros2_bubble_rob\n'}
+[0.728853] (ros2_bubble_rob) CommandEnded: {'returncode': 0}
+[0.729963] (ros2_bubble_rob) JobProgress: {'identifier': 'ros2_bubble_rob', 'progress': 'build'}
+[0.729999] (ros2_bubble_rob) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/camilo/ros2_ws/build/ros2_bubble_rob', '--', '-j8', '-l8'], 'cwd': '/home/camilo/ros2_ws/build/ros2_bubble_rob', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'camilo'), ('LC_TIME', 'es_CO.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/camilo'), ('OLDPWD', '/home/camilo/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_CO.UTF-8'), ('SYSTEMD_EXEC_PID', '1023'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/camilo/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'camilo'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'camilo'), ('TERM', 'xterm-256color'), ('COPPELIASIM_ROOT_DIR', '/home/camilo/Downloads/Coppelia'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/camilo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/camilo-linux:@/tmp/.ICE-unix/1004,unix/camilo-linux:/tmp/.ICE-unix/1004'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_CO.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/4172a09b_14f1_47fe_abc1_1a5f23c84b77'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_CO.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.Q10SI2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.129'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/camilo/ros2_ws/install/ros2_bubble_rob:/home/camilo/ros2_ws/install/sim_ros2_interface:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_CO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_CO.UTF-8'), ('LC_IDENTIFICATION', 'es_CO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/camilo/ros2_ws/build/ros2_bubble_rob'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/camilo/ros2_ws/build/turtle_bot:/home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_CO.UTF-8'), ('LC_PAPER', 'es_CO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/camilo/ros2_ws/install/ros2_bubble_rob:/home/camilo/ros2_ws/install/sim_ros2_interface:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble')]), 'shell': False}
+[0.745963] (sim_ros2_interface) StdoutLine: {'line': b'-- Found pendulum_msgs: 0.20.3 (/opt/ros/humble/share/pendulum_msgs/cmake)\n'}
+[0.762161] (ros2_bubble_rob) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ros2BubbleRob\x1b[0m\n'}
+[0.769961] (sim_ros2_interface) StdoutLine: {'line': b'-- Found rosgraph_msgs: 1.2.1 (/opt/ros/humble/share/rosgraph_msgs/cmake)\n'}
+[0.779096] (ros2_bubble_rob) StdoutLine: {'line': b'[100%] Built target ros2BubbleRob\n'}
+[0.788097] (ros2_bubble_rob) CommandEnded: {'returncode': 0}
+[0.797352] (sim_ros2_interface) StdoutLine: {'line': b'-- Found shape_msgs: 4.2.3 (/opt/ros/humble/share/shape_msgs/cmake)\n'}
+[0.801049] (-) TimerEvent: {}
+[0.804825] (ros2_bubble_rob) JobProgress: {'identifier': 'ros2_bubble_rob', 'progress': 'install'}
+[0.811965] (ros2_bubble_rob) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/camilo/ros2_ws/build/ros2_bubble_rob'], 'cwd': '/home/camilo/ros2_ws/build/ros2_bubble_rob', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'camilo'), ('LC_TIME', 'es_CO.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/camilo'), ('OLDPWD', '/home/camilo/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_CO.UTF-8'), ('SYSTEMD_EXEC_PID', '1023'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/camilo/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'camilo'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'camilo'), ('TERM', 'xterm-256color'), ('COPPELIASIM_ROOT_DIR', '/home/camilo/Downloads/Coppelia'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/camilo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/camilo-linux:@/tmp/.ICE-unix/1004,unix/camilo-linux:/tmp/.ICE-unix/1004'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_CO.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/4172a09b_14f1_47fe_abc1_1a5f23c84b77'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_CO.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.Q10SI2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.129'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/camilo/ros2_ws/install/ros2_bubble_rob:/home/camilo/ros2_ws/install/sim_ros2_interface:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_CO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_CO.UTF-8'), ('LC_IDENTIFICATION', 'es_CO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/camilo/ros2_ws/build/ros2_bubble_rob'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/camilo/ros2_ws/build/turtle_bot:/home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_CO.UTF-8'), ('LC_PAPER', 'es_CO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/camilo/ros2_ws/install/ros2_bubble_rob:/home/camilo/ros2_ws/install/sim_ros2_interface:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble')]), 'shell': False}
+[0.817983] (ros2_bubble_rob) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[0.818308] (ros2_bubble_rob) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.818432] (ros2_bubble_rob) StdoutLine: {'line': b'-- Up-to-date symlink: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ament_index/resource_index/package_run_dependencies/ros2_bubble_rob\n'}
+[0.818549] (ros2_bubble_rob) StdoutLine: {'line': b'-- Up-to-date symlink: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ament_index/resource_index/parent_prefix_path/ros2_bubble_rob\n'}
+[0.818663] (ros2_bubble_rob) StdoutLine: {'line': b'-- Up-to-date symlink: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/environment/ament_prefix_path.sh\n'}
+[0.818763] (ros2_bubble_rob) StdoutLine: {'line': b'-- Up-to-date symlink: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/environment/ament_prefix_path.dsv\n'}
+[0.818864] (ros2_bubble_rob) StdoutLine: {'line': b'-- Up-to-date symlink: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/environment/path.sh\n'}
+[0.818956] (ros2_bubble_rob) StdoutLine: {'line': b'-- Up-to-date symlink: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/environment/path.dsv\n'}
+[0.819051] (ros2_bubble_rob) StdoutLine: {'line': b'-- Up-to-date symlink: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/local_setup.bash\n'}
+[0.819143] (ros2_bubble_rob) StdoutLine: {'line': b'-- Up-to-date symlink: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/local_setup.sh\n'}
+[0.819234] (ros2_bubble_rob) StdoutLine: {'line': b'-- Up-to-date symlink: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/local_setup.zsh\n'}
+[0.819323] (ros2_bubble_rob) StdoutLine: {'line': b'-- Up-to-date symlink: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/local_setup.dsv\n'}
+[0.819393] (ros2_bubble_rob) StdoutLine: {'line': b'-- Symlinking: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/package.dsv\n'}
+[0.826971] (ros2_bubble_rob) StdoutLine: {'line': b'-- Up-to-date symlink: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ament_index/resource_index/packages/ros2_bubble_rob\n'}
+[0.827238] (ros2_bubble_rob) StdoutLine: {'line': b'-- Up-to-date symlink: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/cmake/ros2_bubble_robConfig.cmake\n'}
+[0.827337] (ros2_bubble_rob) StdoutLine: {'line': b'-- Up-to-date symlink: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/cmake/ros2_bubble_robConfig-version.cmake\n'}
+[0.827470] (ros2_bubble_rob) StdoutLine: {'line': b'-- Up-to-date symlink: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/package.xml\n'}
+[0.827583] (ros2_bubble_rob) StdoutLine: {'line': b'-- Up-to-date: /home/camilo/ros2_ws/install/ros2_bubble_rob/lib/ros2_bubble_rob/ros2BubbleRob\n'}
+[0.829271] (ros2_bubble_rob) CommandEnded: {'returncode': 0}
+[0.852638] (sim_ros2_interface) StdoutLine: {'line': b'-- Found stereo_msgs: 4.2.3 (/opt/ros/humble/share/stereo_msgs/cmake)\n'}
+[0.899771] (turtle_bot) StdoutLine: {'line': b'running develop\n'}
+[0.901181] (-) TimerEvent: {}
+[0.929103] (sim_ros2_interface) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.5 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[0.933126] (sim_ros2_interface) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[0.933659] (sim_ros2_interface) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[0.947470] (ros2_bubble_rob) JobEnded: {'identifier': 'ros2_bubble_rob', 'rc': 0}
+[1.001385] (-) TimerEvent: {}
+[1.013865] (turtle_bot) StdoutLine: {'line': b'Removing /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle-bot.egg-link (link to .)\n'}
+[1.022767] (sim_ros2_interface) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.023852] (sim_ros2_interface) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.039218] (turtle_bot) CommandEnded: {'returncode': 0}
+[1.040210] (turtle_bot) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/turtle_bot', 'build', '--build-base', '/home/camilo/ros2_ws/build/turtle_bot/build', 'install', '--record', '/home/camilo/ros2_ws/build/turtle_bot/install.log', '--single-version-externally-managed'], 'cwd': '/home/camilo/ros2_ws/src/turtle_bot', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'camilo', 'LC_TIME': 'es_CO.UTF-8', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/camilo', 'OLDPWD': '/home/camilo/ros2_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'es_CO.UTF-8', 'SYSTEMD_EXEC_PID': '1023', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/camilo/ros2_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'camilo', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'camilo', 'TERM': 'xterm-256color', 'COPPELIASIM_ROOT_DIR': '/home/camilo/Downloads/Coppelia', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/camilo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/camilo-linux:@/tmp/.ICE-unix/1004,unix/camilo-linux:/tmp/.ICE-unix/1004', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'es_CO.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4172a09b_14f1_47fe_abc1_1a5f23c84b77', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'es_CO.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.Q10SI2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.129', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/camilo/ros2_ws/install/ros2_bubble_rob:/home/camilo/ros2_ws/install/sim_ros2_interface:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'es_CO.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'es_CO.UTF-8', 'LC_IDENTIFICATION': 'es_CO.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/camilo/ros2_ws/build/turtle_bot', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/camilo/ros2_ws/build/turtle_bot/prefix_override:/home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages:/home/camilo/ros2_ws/build/turtle_bot:/home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'es_CO.UTF-8', 'LC_PAPER': 'es_CO.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/camilo/ros2_ws/install/ros2_bubble_rob:/home/camilo/ros2_ws/install/sim_ros2_interface'}, 'shell': False}
+[1.101490] (-) TimerEvent: {}
+[1.111699] (sim_ros2_interface) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.201702] (-) TimerEvent: {}
+[1.218511] (turtle_bot) StdoutLine: {'line': b'running egg_info\n'}
+[1.218915] (turtle_bot) StdoutLine: {'line': b'writing ../../build/turtle_bot/turtle_bot.egg-info/PKG-INFO\n'}
+[1.219156] (turtle_bot) StdoutLine: {'line': b'writing dependency_links to ../../build/turtle_bot/turtle_bot.egg-info/dependency_links.txt\n'}
+[1.219388] (turtle_bot) StdoutLine: {'line': b'writing entry points to ../../build/turtle_bot/turtle_bot.egg-info/entry_points.txt\n'}
+[1.219474] (turtle_bot) StdoutLine: {'line': b'writing requirements to ../../build/turtle_bot/turtle_bot.egg-info/requires.txt\n'}
+[1.219525] (turtle_bot) StdoutLine: {'line': b'writing top-level names to ../../build/turtle_bot/turtle_bot.egg-info/top_level.txt\n'}
+[1.224162] (turtle_bot) StdoutLine: {'line': b"reading manifest file '../../build/turtle_bot/turtle_bot.egg-info/SOURCES.txt'\n"}
+[1.225115] (turtle_bot) StdoutLine: {'line': b"writing manifest file '../../build/turtle_bot/turtle_bot.egg-info/SOURCES.txt'\n"}
+[1.225204] (turtle_bot) StdoutLine: {'line': b'running build\n'}
+[1.225266] (turtle_bot) StdoutLine: {'line': b'running build_py\n'}
+[1.225469] (turtle_bot) StdoutLine: {'line': b'running install\n'}
+[1.225710] (turtle_bot) StdoutLine: {'line': b'running install_lib\n'}
+[1.226529] (turtle_bot) StdoutLine: {'line': b'creating /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot\n'}
+[1.226617] (turtle_bot) StdoutLine: {'line': b'copying /home/camilo/ros2_ws/build/turtle_bot/build/lib/turtle_bot/turtle_bot_interface.py -> /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot\n'}
+[1.226820] (turtle_bot) StdoutLine: {'line': b'copying /home/camilo/ros2_ws/build/turtle_bot/build/lib/turtle_bot/turtle_bot_player.py -> /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot\n'}
+[1.226881] (turtle_bot) StdoutLine: {'line': b'copying /home/camilo/ros2_ws/build/turtle_bot/build/lib/turtle_bot/__init__.py -> /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot\n'}
+[1.226930] (turtle_bot) StdoutLine: {'line': b'copying /home/camilo/ros2_ws/build/turtle_bot/build/lib/turtle_bot/turtle_bot_teleop.py -> /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot\n'}
+[1.227081] (turtle_bot) StdoutLine: {'line': b'byte-compiling /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot/turtle_bot_interface.py to turtle_bot_interface.cpython-310.pyc\n'}
+[1.227578] (turtle_bot) StdoutLine: {'line': b'byte-compiling /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot/turtle_bot_player.py to turtle_bot_player.cpython-310.pyc\n'}
+[1.227752] (turtle_bot) StdoutLine: {'line': b'byte-compiling /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot/__init__.py to __init__.cpython-310.pyc\n'}
+[1.227848] (turtle_bot) StdoutLine: {'line': b'byte-compiling /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot/turtle_bot_teleop.py to turtle_bot_teleop.cpython-310.pyc\n'}
+[1.228468] (turtle_bot) StdoutLine: {'line': b'running install_data\n'}
+[1.228956] (turtle_bot) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.230309] (turtle_bot) StdoutLine: {'line': b'Copying ../../build/turtle_bot/turtle_bot.egg-info to /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot-0.0.0-py3.10.egg-info\n'}
+[1.230747] (turtle_bot) StdoutLine: {'line': b'running install_scripts\n'}
+[1.246245] (turtle_bot) StdoutLine: {'line': b'Installing turtle_bot_interface script to /home/camilo/ros2_ws/install/turtle_bot/lib/turtle_bot\n'}
+[1.246388] (turtle_bot) StdoutLine: {'line': b'Installing turtle_bot_player script to /home/camilo/ros2_ws/install/turtle_bot/lib/turtle_bot\n'}
+[1.246540] (turtle_bot) StdoutLine: {'line': b'Installing turtle_bot_teleop script to /home/camilo/ros2_ws/install/turtle_bot/lib/turtle_bot\n'}
+[1.246724] (turtle_bot) StdoutLine: {'line': b"writing list of installed files to '/home/camilo/ros2_ws/build/turtle_bot/install.log'\n"}
+[1.266347] (turtle_bot) CommandEnded: {'returncode': 0}
+[1.299418] (turtle_bot) JobEnded: {'identifier': 'turtle_bot', 'rc': 0}
+[1.301775] (-) TimerEvent: {}
+[1.401981] (-) TimerEvent: {}
+[1.410739] (sim_ros2_interface) StdoutLine: {'line': b'-- Found trajectory_msgs: 4.2.3 (/opt/ros/humble/share/trajectory_msgs/cmake)\n'}
+[1.471357] (sim_ros2_interface) StdoutLine: {'line': b'-- Found visualization_msgs: 4.2.3 (/opt/ros/humble/share/visualization_msgs/cmake)\n'}
+[1.502128] (-) TimerEvent: {}
+[1.560651] (sim_ros2_interface) StdoutLine: {'line': b'-- Found std_srvs: 4.2.3 (/opt/ros/humble/share/std_srvs/cmake)\n'}
+[1.572143] (sim_ros2_interface) StdoutLine: {'line': b'-- Found example_interfaces: 0.9.3 (/opt/ros/humble/share/example_interfaces/cmake)\n'}
+[1.602282] (-) TimerEvent: {}
+[1.612243] (sim_ros2_interface) StdoutLine: {'line': b'-- Found image_transport: 3.1.8 (/opt/ros/humble/share/image_transport/cmake)\n'}
+[1.628141] (sim_ros2_interface) StdoutLine: {'line': b'-- CoppeliaSim: LIBPLUGIN_DIR: /home/camilo/Downloads/Coppelia/programming/libPlugin.\n'}
+[1.628246] (sim_ros2_interface) StdoutLine: {'line': b'-- CoppeliaSim: COPPELIASIM_ROOT_DIR: /home/camilo/Downloads/Coppelia.\n'}
+[1.628300] (sim_ros2_interface) StdoutLine: {'line': b'-- Found CoppeliaSim installation at /home/camilo/Downloads/Coppelia.\n'}
+[1.628346] (sim_ros2_interface) StdoutLine: {'line': b'-- Checking CoppeliaSim header version...\n'}
+[1.702436] (-) TimerEvent: {}
+[1.802784] (-) TimerEvent: {}
+[1.865472] (sim_ros2_interface) StdoutLine: {'line': b'-- CoppeliaSim headers version 4.4.0 rev0\n'}
+[1.869219] (sim_ros2_interface) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: regex \n'}
+[1.902959] (-) TimerEvent: {}
+[1.919109] (sim_ros2_interface) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0")  \n'}
+[1.919997] (sim_ros2_interface) StdoutLine: {'line': b'-- Adding simStubsGen command...\n'}
+[1.962623] (sim_ros2_interface) StdoutLine: {'line': b'-- Reading plugin metadata...\n'}
+[2.003155] (-) TimerEvent: {}
+[2.103511] (-) TimerEvent: {}
+[2.203846] (-) TimerEvent: {}
+[2.304184] (-) TimerEvent: {}
+[2.404521] (-) TimerEvent: {}
+[2.504871] (-) TimerEvent: {}
+[2.566758] (sim_ros2_interface) StdoutLine: {'line': b'-- Plugin: ROS2\n'}
+[2.605122] (-) TimerEvent: {}
+[2.626265] (sim_ros2_interface) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.640928] (sim_ros2_interface) StdoutLine: {'line': b'-- Generating done\n'}
+[2.642433] (sim_ros2_interface) StdoutLine: {'line': b'-- Build files have been written to: /home/camilo/ros2_ws/build/sim_ros2_interface\n'}
+[2.649912] (sim_ros2_interface) CommandEnded: {'returncode': 0}
+[2.651276] (sim_ros2_interface) JobProgress: {'identifier': 'sim_ros2_interface', 'progress': 'build'}
+[2.651317] (sim_ros2_interface) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/camilo/ros2_ws/build/sim_ros2_interface', '--', '-j8', '-l8'], 'cwd': '/home/camilo/ros2_ws/build/sim_ros2_interface', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'camilo'), ('LC_TIME', 'es_CO.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/camilo'), ('OLDPWD', '/home/camilo/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_CO.UTF-8'), ('SYSTEMD_EXEC_PID', '1023'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/camilo/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'camilo'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'camilo'), ('TERM', 'xterm-256color'), ('COPPELIASIM_ROOT_DIR', '/home/camilo/Downloads/Coppelia'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/camilo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/camilo-linux:@/tmp/.ICE-unix/1004,unix/camilo-linux:/tmp/.ICE-unix/1004'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_CO.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/4172a09b_14f1_47fe_abc1_1a5f23c84b77'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_CO.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.Q10SI2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.129'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/camilo/ros2_ws/install/ros2_bubble_rob:/home/camilo/ros2_ws/install/sim_ros2_interface:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_CO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_CO.UTF-8'), ('LC_IDENTIFICATION', 'es_CO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/camilo/ros2_ws/build/sim_ros2_interface'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/camilo/ros2_ws/build/turtle_bot:/home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_CO.UTF-8'), ('LC_PAPER', 'es_CO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/camilo/ros2_ws/install/ros2_bubble_rob:/home/camilo/ros2_ws/install/sim_ros2_interface:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble')]), 'shell': False}
+[2.694256] (sim_ros2_interface) StdoutLine: {'line': b'[  9%] \x1b[34m\x1b[1mGenerating generated/actcli_new.cpp\x1b[0m\n'}
+[2.694547] (sim_ros2_interface) StdoutLine: {'line': b'[  9%] \x1b[34m\x1b[1mGenerating generated/actcli_del.cpp\x1b[0m\n'}
+[2.694640] (sim_ros2_interface) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating generated/actsrv_action_abort.cpp\x1b[0m\n'}
+[2.694744] (sim_ros2_interface) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating generated/actsrv_action_canceled.cpp\x1b[0m\n'}
+[2.694819] (sim_ros2_interface) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating generated/actsrv_action_execute.cpp\x1b[0m\n'}
+[2.694891] (sim_ros2_interface) StdoutLine: {'line': b'[ 19%] \x1b[34m\x1b[1mGenerating generated/actsrv_action_is_active.cpp\x1b[0m\n'}
+[2.695007] (sim_ros2_interface) StdoutLine: {'line': b'[  9%] \x1b[34m\x1b[1mGenerating generated/actcli_cancelLastGoal.cpp\x1b[0m\n'}
+[2.695108] (sim_ros2_interface) StdoutLine: {'line': b'[  9%] \x1b[34m\x1b[1mGenerating generated/actcli_sendGoal.cpp\x1b[0m\n'}
+[2.705237] (-) TimerEvent: {}
+[2.805581] (-) TimerEvent: {}
+[2.906040] (-) TimerEvent: {}
+[2.979319] (sim_ros2_interface) StdoutLine: {'line': b'[ 21%] \x1b[34m\x1b[1mGenerating generated/actsrv_action_is_canceling.cpp\x1b[0m\n'}
+[2.979723] (sim_ros2_interface) StdoutLine: {'line': b'[ 24%] \x1b[34m\x1b[1mGenerating generated/actsrv_action_succeed.cpp\x1b[0m\n'}
+[2.979956] (sim_ros2_interface) StdoutLine: {'line': b'[ 34%] \x1b[34m\x1b[1mGenerating generated/actsrv_new.cpp\x1b[0m\n'}
+[2.980058] (sim_ros2_interface) StdoutLine: {'line': b'[ 34%] \x1b[34m\x1b[1mGenerating generated/actsrv_action_is_executing.cpp\x1b[0m\n'}
+[2.980153] (sim_ros2_interface) StdoutLine: {'line': b'[ 34%] \x1b[34m\x1b[1mGenerating generated/callbacks.cpp\x1b[0m\n'}
+[2.980288] (sim_ros2_interface) StdoutLine: {'line': b'[ 34%] \x1b[34m\x1b[1mGenerating generated/actsrv_action_publish_feedback.cpp\x1b[0m\n'}
+[2.980361] (sim_ros2_interface) StdoutLine: {'line': b'[ 36%] \x1b[34m\x1b[1mGenerating generated/callbacks.h\x1b[0m\n'}
+[2.980433] (sim_ros2_interface) StdoutLine: {'line': b'[ 39%] \x1b[34m\x1b[1mGenerating generated/actsrv_del.cpp\x1b[0m\n'}
+[3.006110] (-) TimerEvent: {}
+[3.106443] (-) TimerEvent: {}
+[3.206911] (-) TimerEvent: {}
+[3.255257] (sim_ros2_interface) StdoutLine: {'line': b'[ 48%] \x1b[34m\x1b[1mGenerating generated/cli_new.cpp\x1b[0m\n'}
+[3.255491] (sim_ros2_interface) StdoutLine: {'line': b'[ 48%] \x1b[34m\x1b[1mGenerating generated/cli_del.cpp\x1b[0m\n'}
+[3.255572] (sim_ros2_interface) StdoutLine: {'line': b'[ 48%] \x1b[34m\x1b[1mGenerating generated/cli_wait.cpp\x1b[0m\n'}
+[3.255646] (sim_ros2_interface) StdoutLine: {'line': b'[ 48%] \x1b[34m\x1b[1mGenerating generated/cli_call.cpp\x1b[0m\n'}
+[3.259487] (sim_ros2_interface) StdoutLine: {'line': b'[ 51%] \x1b[34m\x1b[1mGenerating generated/if_const.cpp\x1b[0m\n'}
+[3.261202] (sim_ros2_interface) StdoutLine: {'line': b'[ 53%] \x1b[34m\x1b[1mGenerating generated/if_list.cpp\x1b[0m\n'}
+[3.262024] (sim_ros2_interface) StdoutLine: {'line': b'[ 56%] \x1b[34m\x1b[1mGenerating generated/if_new.cpp\x1b[0m\n'}
+[3.266641] (sim_ros2_interface) StdoutLine: {'line': b'[ 58%] \x1b[34m\x1b[1mGenerating generated/pub_del.cpp\x1b[0m\n'}
+[3.307002] (-) TimerEvent: {}
+[3.407371] (-) TimerEvent: {}
+[3.507854] (-) TimerEvent: {}
+[3.523298] (sim_ros2_interface) StdoutLine: {'line': b'[ 68%] \x1b[34m\x1b[1mGenerating generated/srv_new.cpp\x1b[0m\n'}
+[3.523532] (sim_ros2_interface) StdoutLine: {'line': b'[ 68%] \x1b[34m\x1b[1mGenerating generated/srv_del.cpp\x1b[0m\n'}
+[3.523613] (sim_ros2_interface) StdoutLine: {'line': b'[ 68%] \x1b[34m\x1b[1mGenerating generated/pub_new.cpp\x1b[0m\n'}
+[3.523897] (sim_ros2_interface) StdoutLine: {'line': b'[ 68%] \x1b[34m\x1b[1mGenerating generated/pub_publish.cpp\x1b[0m\n'}
+[3.528786] (sim_ros2_interface) StdoutLine: {'line': b'[ 73%] \x1b[34m\x1b[1mGenerating generated/sub_new.cpp\x1b[0m\n'}
+[3.529025] (sim_ros2_interface) StdoutLine: {'line': b'[ 73%] \x1b[34m\x1b[1mGenerating generated/sub_del.cpp\x1b[0m\n'}
+[3.607943] (-) TimerEvent: {}
+[3.708383] (-) TimerEvent: {}
+[3.753798] (sim_ros2_interface) StdoutLine: {'line': b'[ 73%] Built target generate_ros_code\n'}
+[3.767495] (sim_ros2_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target simExtROS2\x1b[0m\n'}
+[3.808597] (-) TimerEvent: {}
+[3.819865] (sim_ros2_interface) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/simExtROS2.dir/src/sim_ros2_interface.cpp.o\x1b[0m\n'}
+[3.820564] (sim_ros2_interface) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o\x1b[0m\n'}
+[3.908703] (-) TimerEvent: {}
+[4.009134] (-) TimerEvent: {}
+[4.109448] (-) TimerEvent: {}
+[4.209743] (-) TimerEvent: {}
+[4.310044] (-) TimerEvent: {}
+[4.410337] (-) TimerEvent: {}
+[4.510599] (-) TimerEvent: {}
+[4.610965] (-) TimerEvent: {}
+[4.711246] (-) TimerEvent: {}
+[4.811603] (-) TimerEvent: {}
+[4.911973] (-) TimerEvent: {}
+[5.012354] (-) TimerEvent: {}
+[5.112724] (-) TimerEvent: {}
+[5.213107] (-) TimerEvent: {}
+[5.313413] (-) TimerEvent: {}
+[5.413785] (-) TimerEvent: {}
+[5.514159] (-) TimerEvent: {}
+[5.614532] (-) TimerEvent: {}
+[5.714898] (-) TimerEvent: {}
+[5.815273] (-) TimerEvent: {}
+[5.915643] (-) TimerEvent: {}
+[6.016019] (-) TimerEvent: {}
+[6.116407] (-) TimerEvent: {}
+[6.216779] (-) TimerEvent: {}
+[6.317160] (-) TimerEvent: {}
+[6.417553] (-) TimerEvent: {}
+[6.517949] (-) TimerEvent: {}
+[6.618323] (-) TimerEvent: {}
+[6.718718] (-) TimerEvent: {}
+[6.819095] (-) TimerEvent: {}
+[6.919466] (-) TimerEvent: {}
+[6.929586] (sim_ros2_interface) StderrLine: {'line': b'\x1b[01m\x1b[K/home/camilo/ros2_ws/build/sim_ros2_interface/generated/callbacks.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid write__std_msgs__msg__Float32MultiArray(const Float32MultiArray&, int, const ROS2WriteOptions*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.929756] (sim_ros2_interface) StderrLine: {'line': b'\x1b[01m\x1b[K/home/camilo/ros2_ws/build/sim_ros2_interface/generated/callbacks.cpp:2766:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kwrite__std_msgs__msg__MultiArrayLayout\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KDEPRECATED__std_msgs__msg__MultiArrayLayout\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.929815] (sim_ros2_interface) StderrLine: {'line': b' 2766 |             \x1b[01;31m\x1b[Kwrite__std_msgs__msg__MultiArrayLayout\x1b[m\x1b[K(msg.layout, stack, opt);\n'}
+[6.929862] (sim_ros2_interface) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.929906] (sim_ros2_interface) StderrLine: {'line': b'      |             \x1b[32m\x1b[KDEPRECATED__std_msgs__msg__MultiArrayLayout\x1b[m\x1b[K\n'}
+[6.959746] (sim_ros2_interface) StderrLine: {'line': b'\x1b[01m\x1b[K/home/camilo/ros2_ws/build/sim_ros2_interface/generated/callbacks.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid read__std_msgs__msg__Float32MultiArray(int, std_msgs::msg::Float32MultiArray*, const ROS2ReadOptions*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.959898] (sim_ros2_interface) StderrLine: {'line': b'\x1b[01m\x1b[K/home/camilo/ros2_ws/build/sim_ros2_interface/generated/callbacks.cpp:2827:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kread__std_msgs__msg__MultiArrayLayout\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KDEPRECATED__std_msgs__msg__MultiArrayLayout\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.959953] (sim_ros2_interface) StderrLine: {'line': b' 2827 |                         \x1b[01;31m\x1b[Kread__std_msgs__msg__MultiArrayLayout\x1b[m\x1b[K(stack, &(msg->layout), opt);\n'}
+[6.960000] (sim_ros2_interface) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.960046] (sim_ros2_interface) StderrLine: {'line': b'      |                         \x1b[32m\x1b[KDEPRECATED__std_msgs__msg__MultiArrayLayout\x1b[m\x1b[K\n'}
+[7.019676] (-) TimerEvent: {}
+[7.119974] (-) TimerEvent: {}
+[7.220278] (-) TimerEvent: {}
+[7.320678] (-) TimerEvent: {}
+[7.421060] (-) TimerEvent: {}
+[7.521410] (-) TimerEvent: {}
+[7.587557] (sim_ros2_interface) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/simExtROS2.dir/build.make:227: CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o] Error 1\n'}
+[7.587704] (sim_ros2_interface) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[7.621510] (-) TimerEvent: {}
+[7.721874] (-) TimerEvent: {}
+[7.822246] (-) TimerEvent: {}
+[7.922594] (-) TimerEvent: {}
+[8.022956] (-) TimerEvent: {}
+[8.123315] (-) TimerEvent: {}
+[8.223672] (-) TimerEvent: {}
+[8.323968] (-) TimerEvent: {}
+[8.424250] (-) TimerEvent: {}
+[8.524520] (-) TimerEvent: {}
+[8.624929] (-) TimerEvent: {}
+[8.725197] (-) TimerEvent: {}
+[8.825471] (-) TimerEvent: {}
+[8.925743] (-) TimerEvent: {}
+[9.026061] (-) TimerEvent: {}
+[9.126351] (-) TimerEvent: {}
+[9.226660] (-) TimerEvent: {}
+[9.326955] (-) TimerEvent: {}
+[9.427266] (-) TimerEvent: {}
+[9.527546] (-) TimerEvent: {}
+[9.627920] (-) TimerEvent: {}
+[9.728255] (-) TimerEvent: {}
+[9.828586] (-) TimerEvent: {}
+[9.928947] (-) TimerEvent: {}
+[10.029306] (-) TimerEvent: {}
+[10.129633] (-) TimerEvent: {}
+[10.229991] (-) TimerEvent: {}
+[10.330338] (-) TimerEvent: {}
+[10.430689] (-) TimerEvent: {}
+[10.531017] (-) TimerEvent: {}
+[10.631449] (-) TimerEvent: {}
+[10.731805] (-) TimerEvent: {}
+[10.832087] (-) TimerEvent: {}
+[10.932443] (-) TimerEvent: {}
+[11.032752] (-) TimerEvent: {}
+[11.133157] (-) TimerEvent: {}
+[11.233520] (-) TimerEvent: {}
+[11.333851] (-) TimerEvent: {}
+[11.434191] (-) TimerEvent: {}
+[11.534561] (-) TimerEvent: {}
+[11.634937] (-) TimerEvent: {}
+[11.735309] (-) TimerEvent: {}
+[11.835690] (-) TimerEvent: {}
+[11.936043] (-) TimerEvent: {}
+[12.036392] (-) TimerEvent: {}
+[12.136775] (-) TimerEvent: {}
+[12.237137] (-) TimerEvent: {}
+[12.337509] (-) TimerEvent: {}
+[12.437846] (-) TimerEvent: {}
+[12.538249] (-) TimerEvent: {}
+[12.638724] (-) TimerEvent: {}
+[12.739064] (-) TimerEvent: {}
+[12.839329] (-) TimerEvent: {}
+[12.939700] (-) TimerEvent: {}
+[13.040062] (-) TimerEvent: {}
+[13.140427] (-) TimerEvent: {}
+[13.240794] (-) TimerEvent: {}
+[13.341160] (-) TimerEvent: {}
+[13.441450] (-) TimerEvent: {}
+[13.541786] (-) TimerEvent: {}
+[13.642129] (-) TimerEvent: {}
+[13.742557] (-) TimerEvent: {}
+[13.842933] (-) TimerEvent: {}
+[13.943268] (-) TimerEvent: {}
+[14.043622] (-) TimerEvent: {}
+[14.143997] (-) TimerEvent: {}
+[14.244382] (-) TimerEvent: {}
+[14.344771] (-) TimerEvent: {}
+[14.445228] (-) TimerEvent: {}
+[14.545718] (-) TimerEvent: {}
+[14.646070] (-) TimerEvent: {}
+[14.746408] (-) TimerEvent: {}
+[14.846763] (-) TimerEvent: {}
+[14.947126] (-) TimerEvent: {}
+[15.047495] (-) TimerEvent: {}
+[15.147855] (-) TimerEvent: {}
+[15.248199] (-) TimerEvent: {}
+[15.348559] (-) TimerEvent: {}
+[15.448828] (-) TimerEvent: {}
+[15.549189] (-) TimerEvent: {}
+[15.649473] (-) TimerEvent: {}
+[15.749824] (-) TimerEvent: {}
+[15.850172] (-) TimerEvent: {}
+[15.950574] (-) TimerEvent: {}
+[16.050928] (-) TimerEvent: {}
+[16.151278] (-) TimerEvent: {}
+[16.251631] (-) TimerEvent: {}
+[16.351990] (-) TimerEvent: {}
+[16.452334] (-) TimerEvent: {}
+[16.552780] (-) TimerEvent: {}
+[16.653139] (-) TimerEvent: {}
+[16.753523] (-) TimerEvent: {}
+[16.853892] (-) TimerEvent: {}
+[16.954225] (-) TimerEvent: {}
+[17.054581] (-) TimerEvent: {}
+[17.154853] (-) TimerEvent: {}
+[17.255217] (-) TimerEvent: {}
+[17.355571] (-) TimerEvent: {}
+[17.455922] (-) TimerEvent: {}
+[17.556267] (-) TimerEvent: {}
+[17.656619] (-) TimerEvent: {}
+[17.756980] (-) TimerEvent: {}
+[17.857333] (-) TimerEvent: {}
+[17.957693] (-) TimerEvent: {}
+[18.058051] (-) TimerEvent: {}
+[18.158394] (-) TimerEvent: {}
+[18.258740] (-) TimerEvent: {}
+[18.359113] (-) TimerEvent: {}
+[18.459447] (-) TimerEvent: {}
+[18.559786] (-) TimerEvent: {}
+[18.660146] (-) TimerEvent: {}
+[18.760516] (-) TimerEvent: {}
+[18.860875] (-) TimerEvent: {}
+[18.961237] (-) TimerEvent: {}
+[19.061618] (-) TimerEvent: {}
+[19.161960] (-) TimerEvent: {}
+[19.262249] (-) TimerEvent: {}
+[19.362592] (-) TimerEvent: {}
+[19.462985] (-) TimerEvent: {}
+[19.563346] (-) TimerEvent: {}
+[19.663736] (-) TimerEvent: {}
+[19.764088] (-) TimerEvent: {}
+[19.864458] (-) TimerEvent: {}
+[19.964827] (-) TimerEvent: {}
+[20.065235] (-) TimerEvent: {}
+[20.165638] (-) TimerEvent: {}
+[20.265998] (-) TimerEvent: {}
+[20.366343] (-) TimerEvent: {}
+[20.466687] (-) TimerEvent: {}
+[20.567085] (-) TimerEvent: {}
+[20.667446] (-) TimerEvent: {}
+[20.767794] (-) TimerEvent: {}
+[20.868166] (-) TimerEvent: {}
+[20.968534] (-) TimerEvent: {}
+[21.068913] (-) TimerEvent: {}
+[21.169318] (-) TimerEvent: {}
+[21.269680] (-) TimerEvent: {}
+[21.369970] (-) TimerEvent: {}
+[21.470332] (-) TimerEvent: {}
+[21.570677] (-) TimerEvent: {}
+[21.671078] (-) TimerEvent: {}
+[21.771509] (-) TimerEvent: {}
+[21.871931] (-) TimerEvent: {}
+[21.972311] (-) TimerEvent: {}
+[22.072738] (-) TimerEvent: {}
+[22.173178] (-) TimerEvent: {}
+[22.273660] (-) TimerEvent: {}
+[22.374029] (-) TimerEvent: {}
+[22.474446] (-) TimerEvent: {}
+[22.574855] (-) TimerEvent: {}
+[22.675271] (-) TimerEvent: {}
+[22.775643] (-) TimerEvent: {}
+[22.875990] (-) TimerEvent: {}
+[22.976344] (-) TimerEvent: {}
+[23.076708] (-) TimerEvent: {}
+[23.177054] (-) TimerEvent: {}
+[23.277334] (-) TimerEvent: {}
+[23.377690] (-) TimerEvent: {}
+[23.478029] (-) TimerEvent: {}
+[23.578386] (-) TimerEvent: {}
+[23.678722] (-) TimerEvent: {}
+[23.779069] (-) TimerEvent: {}
+[23.879441] (-) TimerEvent: {}
+[23.979807] (-) TimerEvent: {}
+[24.080168] (-) TimerEvent: {}
+[24.180512] (-) TimerEvent: {}
+[24.280862] (-) TimerEvent: {}
+[24.381218] (-) TimerEvent: {}
+[24.481593] (-) TimerEvent: {}
+[24.581927] (-) TimerEvent: {}
+[24.682263] (-) TimerEvent: {}
+[24.782626] (-) TimerEvent: {}
+[24.882983] (-) TimerEvent: {}
+[24.983354] (-) TimerEvent: {}
+[25.083705] (-) TimerEvent: {}
+[25.184058] (-) TimerEvent: {}
+[25.284402] (-) TimerEvent: {}
+[25.384762] (-) TimerEvent: {}
+[25.485107] (-) TimerEvent: {}
+[25.585479] (-) TimerEvent: {}
+[25.685836] (-) TimerEvent: {}
+[25.786124] (-) TimerEvent: {}
+[25.886480] (-) TimerEvent: {}
+[25.986774] (-) TimerEvent: {}
+[26.087119] (-) TimerEvent: {}
+[26.187490] (-) TimerEvent: {}
+[26.287869] (-) TimerEvent: {}
+[26.388237] (-) TimerEvent: {}
+[26.488606] (-) TimerEvent: {}
+[26.588974] (-) TimerEvent: {}
+[26.689359] (-) TimerEvent: {}
+[26.789706] (-) TimerEvent: {}
+[26.890051] (-) TimerEvent: {}
+[26.990329] (-) TimerEvent: {}
+[27.090679] (-) TimerEvent: {}
+[27.190960] (-) TimerEvent: {}
+[27.291300] (-) TimerEvent: {}
+[27.391637] (-) TimerEvent: {}
+[27.492007] (-) TimerEvent: {}
+[27.592365] (-) TimerEvent: {}
+[27.692725] (-) TimerEvent: {}
+[27.793086] (-) TimerEvent: {}
+[27.893463] (-) TimerEvent: {}
+[27.993800] (-) TimerEvent: {}
+[28.094160] (-) TimerEvent: {}
+[28.194501] (-) TimerEvent: {}
+[28.294779] (-) TimerEvent: {}
+[28.395135] (-) TimerEvent: {}
+[28.495500] (-) TimerEvent: {}
+[28.595865] (-) TimerEvent: {}
+[28.696272] (-) TimerEvent: {}
+[28.796656] (-) TimerEvent: {}
+[28.897032] (-) TimerEvent: {}
+[28.997436] (-) TimerEvent: {}
+[29.097787] (-) TimerEvent: {}
+[29.198166] (-) TimerEvent: {}
+[29.298464] (-) TimerEvent: {}
+[29.398863] (-) TimerEvent: {}
+[29.499281] (-) TimerEvent: {}
+[29.599715] (-) TimerEvent: {}
+[29.700140] (-) TimerEvent: {}
+[29.800574] (-) TimerEvent: {}
+[29.901023] (-) TimerEvent: {}
+[30.001485] (-) TimerEvent: {}
+[30.101833] (-) TimerEvent: {}
+[30.202213] (-) TimerEvent: {}
+[30.302597] (-) TimerEvent: {}
+[30.402998] (-) TimerEvent: {}
+[30.503396] (-) TimerEvent: {}
+[30.603780] (-) TimerEvent: {}
+[30.704139] (-) TimerEvent: {}
+[30.804569] (-) TimerEvent: {}
+[30.905009] (-) TimerEvent: {}
+[31.005437] (-) TimerEvent: {}
+[31.105799] (-) TimerEvent: {}
+[31.206154] (-) TimerEvent: {}
+[31.306455] (-) TimerEvent: {}
+[31.406830] (-) TimerEvent: {}
+[31.507182] (-) TimerEvent: {}
+[31.607549] (-) TimerEvent: {}
+[31.707910] (-) TimerEvent: {}
+[31.808321] (-) TimerEvent: {}
+[31.908711] (-) TimerEvent: {}
+[32.009134] (-) TimerEvent: {}
+[32.109604] (-) TimerEvent: {}
+[32.209979] (-) TimerEvent: {}
+[32.310360] (-) TimerEvent: {}
+[32.410716] (-) TimerEvent: {}
+[32.511071] (-) TimerEvent: {}
+[32.611441] (-) TimerEvent: {}
+[32.711820] (-) TimerEvent: {}
+[32.812187] (-) TimerEvent: {}
+[32.912556] (-) TimerEvent: {}
+[33.012931] (-) TimerEvent: {}
+[33.113320] (-) TimerEvent: {}
+[33.213677] (-) TimerEvent: {}
+[33.314045] (-) TimerEvent: {}
+[33.414394] (-) TimerEvent: {}
+[33.514780] (-) TimerEvent: {}
+[33.615149] (-) TimerEvent: {}
+[33.715531] (-) TimerEvent: {}
+[33.815900] (-) TimerEvent: {}
+[33.916273] (-) TimerEvent: {}
+[34.016647] (-) TimerEvent: {}
+[34.117038] (-) TimerEvent: {}
+[34.217405] (-) TimerEvent: {}
+[34.317757] (-) TimerEvent: {}
+[34.418145] (-) TimerEvent: {}
+[34.518537] (-) TimerEvent: {}
+[34.618908] (-) TimerEvent: {}
+[34.719262] (-) TimerEvent: {}
+[34.819623] (-) TimerEvent: {}
+[34.919967] (-) TimerEvent: {}
+[35.020329] (-) TimerEvent: {}
+[35.120696] (-) TimerEvent: {}
+[35.221070] (-) TimerEvent: {}
+[35.321395] (-) TimerEvent: {}
+[35.421802] (-) TimerEvent: {}
+[35.522194] (-) TimerEvent: {}
+[35.622599] (-) TimerEvent: {}
+[35.723018] (-) TimerEvent: {}
+[35.823457] (-) TimerEvent: {}
+[35.923834] (-) TimerEvent: {}
+[36.024268] (-) TimerEvent: {}
+[36.124730] (-) TimerEvent: {}
+[36.225128] (-) TimerEvent: {}
+[36.325506] (-) TimerEvent: {}
+[36.425909] (-) TimerEvent: {}
+[36.526333] (-) TimerEvent: {}
+[36.626780] (-) TimerEvent: {}
+[36.727224] (-) TimerEvent: {}
+[36.827656] (-) TimerEvent: {}
+[36.928117] (-) TimerEvent: {}
+[37.028549] (-) TimerEvent: {}
+[37.128932] (-) TimerEvent: {}
+[37.229322] (-) TimerEvent: {}
+[37.329639] (-) TimerEvent: {}
+[37.429993] (-) TimerEvent: {}
+[37.530366] (-) TimerEvent: {}
+[37.630761] (-) TimerEvent: {}
+[37.731157] (-) TimerEvent: {}
+[37.831528] (-) TimerEvent: {}
+[37.931904] (-) TimerEvent: {}
+[38.032283] (-) TimerEvent: {}
+[38.132649] (-) TimerEvent: {}
+[38.233023] (-) TimerEvent: {}
+[38.333394] (-) TimerEvent: {}
+[38.433686] (-) TimerEvent: {}
+[38.534014] (-) TimerEvent: {}
+[38.634364] (-) TimerEvent: {}
+[38.734737] (-) TimerEvent: {}
+[38.835147] (-) TimerEvent: {}
+[38.935533] (-) TimerEvent: {}
+[39.035995] (-) TimerEvent: {}
+[39.136380] (-) TimerEvent: {}
+[39.236772] (-) TimerEvent: {}
+[39.337138] (-) TimerEvent: {}
+[39.437450] (-) TimerEvent: {}
+[39.537813] (-) TimerEvent: {}
+[39.638177] (-) TimerEvent: {}
+[39.738536] (-) TimerEvent: {}
+[39.838906] (-) TimerEvent: {}
+[39.939316] (-) TimerEvent: {}
+[40.039691] (-) TimerEvent: {}
+[40.140073] (-) TimerEvent: {}
+[40.240445] (-) TimerEvent: {}
+[40.340799] (-) TimerEvent: {}
+[40.441158] (-) TimerEvent: {}
+[40.541454] (-) TimerEvent: {}
+[40.641807] (-) TimerEvent: {}
+[40.742167] (-) TimerEvent: {}
+[40.842523] (-) TimerEvent: {}
+[40.942883] (-) TimerEvent: {}
+[41.043243] (-) TimerEvent: {}
+[41.143602] (-) TimerEvent: {}
+[41.243955] (-) TimerEvent: {}
+[41.344317] (-) TimerEvent: {}
+[41.444687] (-) TimerEvent: {}
+[41.545049] (-) TimerEvent: {}
+[41.645394] (-) TimerEvent: {}
+[41.745755] (-) TimerEvent: {}
+[41.846116] (-) TimerEvent: {}
+[41.946450] (-) TimerEvent: {}
+[42.046818] (-) TimerEvent: {}
+[42.147187] (-) TimerEvent: {}
+[42.247555] (-) TimerEvent: {}
+[42.347905] (-) TimerEvent: {}
+[42.448263] (-) TimerEvent: {}
+[42.548654] (-) TimerEvent: {}
+[42.649016] (-) TimerEvent: {}
+[42.749379] (-) TimerEvent: {}
+[42.849757] (-) TimerEvent: {}
+[42.950113] (-) TimerEvent: {}
+[43.050472] (-) TimerEvent: {}
+[43.150830] (-) TimerEvent: {}
+[43.251190] (-) TimerEvent: {}
+[43.351564] (-) TimerEvent: {}
+[43.451931] (-) TimerEvent: {}
+[43.552275] (-) TimerEvent: {}
+[43.652647] (-) TimerEvent: {}
+[43.753036] (-) TimerEvent: {}
+[43.853400] (-) TimerEvent: {}
+[43.953687] (-) TimerEvent: {}
+[44.054056] (-) TimerEvent: {}
+[44.154415] (-) TimerEvent: {}
+[44.254781] (-) TimerEvent: {}
+[44.355145] (-) TimerEvent: {}
+[44.455511] (-) TimerEvent: {}
+[44.555863] (-) TimerEvent: {}
+[44.656226] (-) TimerEvent: {}
+[44.756591] (-) TimerEvent: {}
+[44.856961] (-) TimerEvent: {}
+[44.957315] (-) TimerEvent: {}
+[45.057625] (-) TimerEvent: {}
+[45.157979] (-) TimerEvent: {}
+[45.258326] (-) TimerEvent: {}
+[45.358684] (-) TimerEvent: {}
+[45.459075] (-) TimerEvent: {}
+[45.559442] (-) TimerEvent: {}
+[45.659824] (-) TimerEvent: {}
+[45.760202] (-) TimerEvent: {}
+[45.860549] (-) TimerEvent: {}
+[45.960915] (-) TimerEvent: {}
+[46.061317] (-) TimerEvent: {}
+[46.161657] (-) TimerEvent: {}
+[46.262006] (-) TimerEvent: {}
+[46.362363] (-) TimerEvent: {}
+[46.462719] (-) TimerEvent: {}
+[46.563092] (-) TimerEvent: {}
+[46.663469] (-) TimerEvent: {}
+[46.763842] (-) TimerEvent: {}
+[46.864188] (-) TimerEvent: {}
+[46.964550] (-) TimerEvent: {}
+[47.064943] (-) TimerEvent: {}
+[47.165297] (-) TimerEvent: {}
+[47.265563] (-) TimerEvent: {}
+[47.365909] (-) TimerEvent: {}
+[47.466286] (-) TimerEvent: {}
+[47.566645] (-) TimerEvent: {}
+[47.667002] (-) TimerEvent: {}
+[47.767373] (-) TimerEvent: {}
+[47.867769] (-) TimerEvent: {}
+[47.968124] (-) TimerEvent: {}
+[48.068482] (-) TimerEvent: {}
+[48.168860] (-) TimerEvent: {}
+[48.269226] (-) TimerEvent: {}
+[48.369564] (-) TimerEvent: {}
+[48.469915] (-) TimerEvent: {}
+[48.570279] (-) TimerEvent: {}
+[48.670621] (-) TimerEvent: {}
+[48.770977] (-) TimerEvent: {}
+[48.871330] (-) TimerEvent: {}
+[48.971689] (-) TimerEvent: {}
+[49.072051] (-) TimerEvent: {}
+[49.172407] (-) TimerEvent: {}
+[49.272754] (-) TimerEvent: {}
+[49.373128] (-) TimerEvent: {}
+[49.473439] (-) TimerEvent: {}
+[49.573789] (-) TimerEvent: {}
+[49.674149] (-) TimerEvent: {}
+[49.774509] (-) TimerEvent: {}
+[49.874888] (-) TimerEvent: {}
+[49.975252] (-) TimerEvent: {}
+[50.075615] (-) TimerEvent: {}
+[50.175980] (-) TimerEvent: {}
+[50.276361] (-) TimerEvent: {}
+[50.376736] (-) TimerEvent: {}
+[50.477120] (-) TimerEvent: {}
+[50.577412] (-) TimerEvent: {}
+[50.677768] (-) TimerEvent: {}
+[50.778131] (-) TimerEvent: {}
+[50.878506] (-) TimerEvent: {}
+[50.978862] (-) TimerEvent: {}
+[51.079225] (-) TimerEvent: {}
+[51.179589] (-) TimerEvent: {}
+[51.279950] (-) TimerEvent: {}
+[51.380314] (-) TimerEvent: {}
+[51.480684] (-) TimerEvent: {}
+[51.581057] (-) TimerEvent: {}
+[51.681424] (-) TimerEvent: {}
+[51.781804] (-) TimerEvent: {}
+[51.882097] (-) TimerEvent: {}
+[51.982440] (-) TimerEvent: {}
+[52.082804] (-) TimerEvent: {}
+[52.183169] (-) TimerEvent: {}
+[52.283528] (-) TimerEvent: {}
+[52.383885] (-) TimerEvent: {}
+[52.484234] (-) TimerEvent: {}
+[52.584598] (-) TimerEvent: {}
+[52.684979] (-) TimerEvent: {}
+[52.785354] (-) TimerEvent: {}
+[52.885665] (-) TimerEvent: {}
+[52.986011] (-) TimerEvent: {}
+[53.086366] (-) TimerEvent: {}
+[53.186710] (-) TimerEvent: {}
+[53.287067] (-) TimerEvent: {}
+[53.387441] (-) TimerEvent: {}
+[53.487783] (-) TimerEvent: {}
+[53.588133] (-) TimerEvent: {}
+[53.688492] (-) TimerEvent: {}
+[53.788844] (-) TimerEvent: {}
+[53.889190] (-) TimerEvent: {}
+[53.989485] (-) TimerEvent: {}
+[54.089798] (-) TimerEvent: {}
+[54.190187] (-) TimerEvent: {}
+[54.290552] (-) TimerEvent: {}
+[54.390912] (-) TimerEvent: {}
+[54.491266] (-) TimerEvent: {}
+[54.591605] (-) TimerEvent: {}
+[54.691956] (-) TimerEvent: {}
+[54.792313] (-) TimerEvent: {}
+[54.892665] (-) TimerEvent: {}
+[54.993066] (-) TimerEvent: {}
+[55.093455] (-) TimerEvent: {}
+[55.193871] (-) TimerEvent: {}
+[55.294234] (-) TimerEvent: {}
+[55.394592] (-) TimerEvent: {}
+[55.495008] (-) TimerEvent: {}
+[55.595430] (-) TimerEvent: {}
+[55.695862] (-) TimerEvent: {}
+[55.796314] (-) TimerEvent: {}
+[55.896666] (-) TimerEvent: {}
+[55.997049] (-) TimerEvent: {}
+[56.097479] (-) TimerEvent: {}
+[56.197852] (-) TimerEvent: {}
+[56.298239] (-) TimerEvent: {}
+[56.398629] (-) TimerEvent: {}
+[56.499009] (-) TimerEvent: {}
+[56.599449] (-) TimerEvent: {}
+[56.699820] (-) TimerEvent: {}
+[56.800190] (-) TimerEvent: {}
+[56.900556] (-) TimerEvent: {}
+[57.000918] (-) TimerEvent: {}
+[57.101362] (-) TimerEvent: {}
+[57.201693] (-) TimerEvent: {}
+[57.302060] (-) TimerEvent: {}
+[57.402409] (-) TimerEvent: {}
+[57.502768] (-) TimerEvent: {}
+[57.603223] (-) TimerEvent: {}
+[57.703647] (-) TimerEvent: {}
+[57.804007] (-) TimerEvent: {}
+[57.904368] (-) TimerEvent: {}
+[58.004706] (-) TimerEvent: {}
+[58.105043] (-) TimerEvent: {}
+[58.205380] (-) TimerEvent: {}
+[58.305656] (-) TimerEvent: {}
+[58.405995] (-) TimerEvent: {}
+[58.506362] (-) TimerEvent: {}
+[58.606697] (-) TimerEvent: {}
+[58.707051] (-) TimerEvent: {}
+[58.807398] (-) TimerEvent: {}
+[58.907750] (-) TimerEvent: {}
+[59.008106] (-) TimerEvent: {}
+[59.108496] (-) TimerEvent: {}
+[59.208851] (-) TimerEvent: {}
+[59.309200] (-) TimerEvent: {}
+[59.409478] (-) TimerEvent: {}
+[59.509817] (-) TimerEvent: {}
+[59.610149] (-) TimerEvent: {}
+[59.710525] (-) TimerEvent: {}
+[59.810883] (-) TimerEvent: {}
+[59.911256] (-) TimerEvent: {}
+[60.011629] (-) TimerEvent: {}
+[60.112014] (-) TimerEvent: {}
+[60.212414] (-) TimerEvent: {}
+[60.312793] (-) TimerEvent: {}
+[60.413159] (-) TimerEvent: {}
+[60.513462] (-) TimerEvent: {}
+[60.613767] (-) TimerEvent: {}
+[60.714119] (-) TimerEvent: {}
+[60.814453] (-) TimerEvent: {}
+[60.914818] (-) TimerEvent: {}
+[61.015188] (-) TimerEvent: {}
+[61.115543] (-) TimerEvent: {}
+[61.215917] (-) TimerEvent: {}
+[61.316304] (-) TimerEvent: {}
+[61.416694] (-) TimerEvent: {}
+[61.517056] (-) TimerEvent: {}
+[61.617403] (-) TimerEvent: {}
+[61.717756] (-) TimerEvent: {}
+[61.818091] (-) TimerEvent: {}
+[61.918404] (-) TimerEvent: {}
+[62.018761] (-) TimerEvent: {}
+[62.119119] (-) TimerEvent: {}
+[62.219482] (-) TimerEvent: {}
+[62.319854] (-) TimerEvent: {}
+[62.420199] (-) TimerEvent: {}
+[62.520542] (-) TimerEvent: {}
+[62.620884] (-) TimerEvent: {}
+[62.721239] (-) TimerEvent: {}
+[62.821577] (-) TimerEvent: {}
+[62.921914] (-) TimerEvent: {}
+[63.022286] (-) TimerEvent: {}
+[63.122638] (-) TimerEvent: {}
+[63.222963] (-) TimerEvent: {}
+[63.323328] (-) TimerEvent: {}
+[63.423684] (-) TimerEvent: {}
+[63.524035] (-) TimerEvent: {}
+[63.624394] (-) TimerEvent: {}
+[63.724759] (-) TimerEvent: {}
+[63.825100] (-) TimerEvent: {}
+[63.925440] (-) TimerEvent: {}
+[64.025805] (-) TimerEvent: {}
+[64.126168] (-) TimerEvent: {}
+[64.226541] (-) TimerEvent: {}
+[64.326897] (-) TimerEvent: {}
+[64.427278] (-) TimerEvent: {}
+[64.527660] (-) TimerEvent: {}
+[64.628025] (-) TimerEvent: {}
+[64.728405] (-) TimerEvent: {}
+[64.828804] (-) TimerEvent: {}
+[64.929199] (-) TimerEvent: {}
+[65.029516] (-) TimerEvent: {}
+[65.129909] (-) TimerEvent: {}
+[65.230276] (-) TimerEvent: {}
+[65.330607] (-) TimerEvent: {}
+[65.430963] (-) TimerEvent: {}
+[65.531340] (-) TimerEvent: {}
+[65.631727] (-) TimerEvent: {}
+[65.732084] (-) TimerEvent: {}
+[65.832458] (-) TimerEvent: {}
+[65.932832] (-) TimerEvent: {}
+[66.033216] (-) TimerEvent: {}
+[66.133505] (-) TimerEvent: {}
+[66.233852] (-) TimerEvent: {}
+[66.334194] (-) TimerEvent: {}
+[66.434475] (-) TimerEvent: {}
+[66.534888] (-) TimerEvent: {}
+[66.635284] (-) TimerEvent: {}
+[66.735645] (-) TimerEvent: {}
+[66.836005] (-) TimerEvent: {}
+[66.936371] (-) TimerEvent: {}
+[67.036747] (-) TimerEvent: {}
+[67.137104] (-) TimerEvent: {}
+[67.237400] (-) TimerEvent: {}
+[67.337760] (-) TimerEvent: {}
+[67.438125] (-) TimerEvent: {}
+[67.538495] (-) TimerEvent: {}
+[67.638846] (-) TimerEvent: {}
+[67.739212] (-) TimerEvent: {}
+[67.839586] (-) TimerEvent: {}
+[67.939861] (-) TimerEvent: {}
+[68.040233] (-) TimerEvent: {}
+[68.140592] (-) TimerEvent: {}
+[68.240970] (-) TimerEvent: {}
+[68.341315] (-) TimerEvent: {}
+[68.441633] (-) TimerEvent: {}
+[68.542007] (-) TimerEvent: {}
+[68.642384] (-) TimerEvent: {}
+[68.742777] (-) TimerEvent: {}
+[68.843160] (-) TimerEvent: {}
+[68.943514] (-) TimerEvent: {}
+[69.043867] (-) TimerEvent: {}
+[69.144225] (-) TimerEvent: {}
+[69.244597] (-) TimerEvent: {}
+[69.344970] (-) TimerEvent: {}
+[69.445321] (-) TimerEvent: {}
+[69.545622] (-) TimerEvent: {}
+[69.645948] (-) TimerEvent: {}
+[69.746290] (-) TimerEvent: {}
+[69.846656] (-) TimerEvent: {}
+[69.947006] (-) TimerEvent: {}
+[70.047349] (-) TimerEvent: {}
+[70.147722] (-) TimerEvent: {}
+[70.248101] (-) TimerEvent: {}
+[70.348465] (-) TimerEvent: {}
+[70.448867] (-) TimerEvent: {}
+[70.549281] (-) TimerEvent: {}
+[70.649594] (-) TimerEvent: {}
+[70.749884] (-) TimerEvent: {}
+[70.850246] (-) TimerEvent: {}
+[70.950619] (-) TimerEvent: {}
+[71.050985] (-) TimerEvent: {}
+[71.151384] (-) TimerEvent: {}
+[71.251781] (-) TimerEvent: {}
+[71.352121] (-) TimerEvent: {}
+[71.452476] (-) TimerEvent: {}
+[71.552843] (-) TimerEvent: {}
+[71.653231] (-) TimerEvent: {}
+[71.753517] (-) TimerEvent: {}
+[71.853849] (-) TimerEvent: {}
+[71.954193] (-) TimerEvent: {}
+[72.054551] (-) TimerEvent: {}
+[72.154899] (-) TimerEvent: {}
+[72.255257] (-) TimerEvent: {}
+[72.355627] (-) TimerEvent: {}
+[72.455995] (-) TimerEvent: {}
+[72.556353] (-) TimerEvent: {}
+[72.656712] (-) TimerEvent: {}
+[72.757087] (-) TimerEvent: {}
+[72.857428] (-) TimerEvent: {}
+[72.957768] (-) TimerEvent: {}
+[73.058112] (-) TimerEvent: {}
+[73.158486] (-) TimerEvent: {}
+[73.258859] (-) TimerEvent: {}
+[73.359244] (-) TimerEvent: {}
+[73.459604] (-) TimerEvent: {}
+[73.559938] (-) TimerEvent: {}
+[73.660342] (-) TimerEvent: {}
+[73.760685] (-) TimerEvent: {}
+[73.861039] (-) TimerEvent: {}
+[73.961424] (-) TimerEvent: {}
+[74.061768] (-) TimerEvent: {}
+[74.162119] (-) TimerEvent: {}
+[74.262475] (-) TimerEvent: {}
+[74.362841] (-) TimerEvent: {}
+[74.463198] (-) TimerEvent: {}
+[74.563560] (-) TimerEvent: {}
+[74.663919] (-) TimerEvent: {}
+[74.764256] (-) TimerEvent: {}
+[74.864609] (-) TimerEvent: {}
+[74.964965] (-) TimerEvent: {}
+[75.065323] (-) TimerEvent: {}
+[75.165651] (-) TimerEvent: {}
+[75.266020] (-) TimerEvent: {}
+[75.366405] (-) TimerEvent: {}
+[75.466765] (-) TimerEvent: {}
+[75.567124] (-) TimerEvent: {}
+[75.667494] (-) TimerEvent: {}
+[75.767861] (-) TimerEvent: {}
+[75.868220] (-) TimerEvent: {}
+[75.968608] (-) TimerEvent: {}
+[76.068950] (-) TimerEvent: {}
+[76.169319] (-) TimerEvent: {}
+[76.269726] (-) TimerEvent: {}
+[76.370112] (-) TimerEvent: {}
+[76.470468] (-) TimerEvent: {}
+[76.570842] (-) TimerEvent: {}
+[76.671216] (-) TimerEvent: {}
+[76.771550] (-) TimerEvent: {}
+[76.871898] (-) TimerEvent: {}
+[76.972260] (-) TimerEvent: {}
+[77.072615] (-) TimerEvent: {}
+[77.172985] (-) TimerEvent: {}
+[77.273401] (-) TimerEvent: {}
+[77.373776] (-) TimerEvent: {}
+[77.474156] (-) TimerEvent: {}
+[77.574489] (-) TimerEvent: {}
+[77.674840] (-) TimerEvent: {}
+[77.775195] (-) TimerEvent: {}
+[77.875537] (-) TimerEvent: {}
+[77.975917] (-) TimerEvent: {}
+[78.076309] (-) TimerEvent: {}
+[78.176671] (-) TimerEvent: {}
+[78.277030] (-) TimerEvent: {}
+[78.377396] (-) TimerEvent: {}
+[78.477781] (-) TimerEvent: {}
+[78.578122] (-) TimerEvent: {}
+[78.678497] (-) TimerEvent: {}
+[78.778872] (-) TimerEvent: {}
+[78.879235] (-) TimerEvent: {}
+[78.979605] (-) TimerEvent: {}
+[79.079995] (-) TimerEvent: {}
+[79.180427] (-) TimerEvent: {}
+[79.280833] (-) TimerEvent: {}
+[79.381192] (-) TimerEvent: {}
+[79.481471] (-) TimerEvent: {}
+[79.581815] (-) TimerEvent: {}
+[79.682162] (-) TimerEvent: {}
+[79.782520] (-) TimerEvent: {}
+[79.882910] (-) TimerEvent: {}
+[79.983284] (-) TimerEvent: {}
+[80.083639] (-) TimerEvent: {}
+[80.183992] (-) TimerEvent: {}
+[80.284345] (-) TimerEvent: {}
+[80.384742] (-) TimerEvent: {}
+[80.485101] (-) TimerEvent: {}
+[80.585399] (-) TimerEvent: {}
+[80.685698] (-) TimerEvent: {}
+[80.786055] (-) TimerEvent: {}
+[80.886435] (-) TimerEvent: {}
+[80.986841] (-) TimerEvent: {}
+[81.087210] (-) TimerEvent: {}
+[81.187556] (-) TimerEvent: {}
+[81.287914] (-) TimerEvent: {}
+[81.388269] (-) TimerEvent: {}
+[81.488624] (-) TimerEvent: {}
+[81.588993] (-) TimerEvent: {}
+[81.689480] (-) TimerEvent: {}
+[81.789837] (-) TimerEvent: {}
+[81.890220] (-) TimerEvent: {}
+[81.990588] (-) TimerEvent: {}
+[82.090979] (-) TimerEvent: {}
+[82.191354] (-) TimerEvent: {}
+[82.291755] (-) TimerEvent: {}
+[82.392161] (-) TimerEvent: {}
+[82.492551] (-) TimerEvent: {}
+[82.592916] (-) TimerEvent: {}
+[82.693294] (-) TimerEvent: {}
+[82.793586] (-) TimerEvent: {}
+[82.893938] (-) TimerEvent: {}
+[82.994292] (-) TimerEvent: {}
+[83.094664] (-) TimerEvent: {}
+[83.195020] (-) TimerEvent: {}
+[83.295390] (-) TimerEvent: {}
+[83.395744] (-) TimerEvent: {}
+[83.496107] (-) TimerEvent: {}
+[83.596502] (-) TimerEvent: {}
+[83.696892] (-) TimerEvent: {}
+[83.797290] (-) TimerEvent: {}
+[83.897596] (-) TimerEvent: {}
+[83.997943] (-) TimerEvent: {}
+[84.098321] (-) TimerEvent: {}
+[84.198664] (-) TimerEvent: {}
+[84.299040] (-) TimerEvent: {}
+[84.399389] (-) TimerEvent: {}
+[84.499739] (-) TimerEvent: {}
+[84.600127] (-) TimerEvent: {}
+[84.700489] (-) TimerEvent: {}
+[84.800849] (-) TimerEvent: {}
+[84.901275] (-) TimerEvent: {}
+[85.001577] (-) TimerEvent: {}
+[85.101943] (-) TimerEvent: {}
+[85.202312] (-) TimerEvent: {}
+[85.302645] (-) TimerEvent: {}
+[85.402998] (-) TimerEvent: {}
+[85.503371] (-) TimerEvent: {}
+[85.603746] (-) TimerEvent: {}
+[85.704100] (-) TimerEvent: {}
+[85.804470] (-) TimerEvent: {}
+[85.904822] (-) TimerEvent: {}
+[86.005171] (-) TimerEvent: {}
+[86.105488] (-) TimerEvent: {}
+[86.205880] (-) TimerEvent: {}
+[86.306230] (-) TimerEvent: {}
+[86.406569] (-) TimerEvent: {}
+[86.506917] (-) TimerEvent: {}
+[86.607293] (-) TimerEvent: {}
+[86.707651] (-) TimerEvent: {}
+[86.808030] (-) TimerEvent: {}
+[86.908377] (-) TimerEvent: {}
+[87.008738] (-) TimerEvent: {}
+[87.109118] (-) TimerEvent: {}
+[87.209421] (-) TimerEvent: {}
+[87.309787] (-) TimerEvent: {}
+[87.410137] (-) TimerEvent: {}
+[87.510515] (-) TimerEvent: {}
+[87.610897] (-) TimerEvent: {}
+[87.711301] (-) TimerEvent: {}
+[87.811655] (-) TimerEvent: {}
+[87.912002] (-) TimerEvent: {}
+[88.012431] (-) TimerEvent: {}
+[88.112779] (-) TimerEvent: {}
+[88.213125] (-) TimerEvent: {}
+[88.313424] (-) TimerEvent: {}
+[88.413794] (-) TimerEvent: {}
+[88.514166] (-) TimerEvent: {}
+[88.614515] (-) TimerEvent: {}
+[88.714871] (-) TimerEvent: {}
+[88.815243] (-) TimerEvent: {}
+[88.915598] (-) TimerEvent: {}
+[89.015983] (-) TimerEvent: {}
+[89.116327] (-) TimerEvent: {}
+[89.216675] (-) TimerEvent: {}
+[89.317061] (-) TimerEvent: {}
+[89.417415] (-) TimerEvent: {}
+[89.517779] (-) TimerEvent: {}
+[89.618123] (-) TimerEvent: {}
+[89.718467] (-) TimerEvent: {}
+[89.818820] (-) TimerEvent: {}
+[89.919204] (-) TimerEvent: {}
+[90.019585] (-) TimerEvent: {}
+[90.119947] (-) TimerEvent: {}
+[90.220301] (-) TimerEvent: {}
+[90.320671] (-) TimerEvent: {}
+[90.421066] (-) TimerEvent: {}
+[90.521444] (-) TimerEvent: {}
+[90.621797] (-) TimerEvent: {}
+[90.722167] (-) TimerEvent: {}
+[90.822556] (-) TimerEvent: {}
+[90.922922] (-) TimerEvent: {}
+[91.023281] (-) TimerEvent: {}
+[91.123653] (-) TimerEvent: {}
+[91.223999] (-) TimerEvent: {}
+[91.324340] (-) TimerEvent: {}
+[91.424679] (-) TimerEvent: {}
+[91.525060] (-) TimerEvent: {}
+[91.625392] (-) TimerEvent: {}
+[91.725709] (-) TimerEvent: {}
+[91.826091] (-) TimerEvent: {}
+[91.926452] (-) TimerEvent: {}
+[92.026810] (-) TimerEvent: {}
+[92.127157] (-) TimerEvent: {}
+[92.227504] (-) TimerEvent: {}
+[92.327874] (-) TimerEvent: {}
+[92.428251] (-) TimerEvent: {}
+[92.528597] (-) TimerEvent: {}
+[92.628939] (-) TimerEvent: {}
+[92.729288] (-) TimerEvent: {}
+[92.829554] (-) TimerEvent: {}
+[92.929874] (-) TimerEvent: {}
+[93.030231] (-) TimerEvent: {}
+[93.130593] (-) TimerEvent: {}
+[93.230998] (-) TimerEvent: {}
+[93.331377] (-) TimerEvent: {}
+[93.431745] (-) TimerEvent: {}
+[93.532130] (-) TimerEvent: {}
+[93.632477] (-) TimerEvent: {}
+[93.732889] (-) TimerEvent: {}
+[93.833285] (-) TimerEvent: {}
+[93.933607] (-) TimerEvent: {}
+[94.033956] (-) TimerEvent: {}
+[94.134359] (-) TimerEvent: {}
+[94.234753] (-) TimerEvent: {}
+[94.335114] (-) TimerEvent: {}
+[94.435470] (-) TimerEvent: {}
+[94.535832] (-) TimerEvent: {}
+[94.636185] (-) TimerEvent: {}
+[94.736580] (-) TimerEvent: {}
+[94.836921] (-) TimerEvent: {}
+[94.937305] (-) TimerEvent: {}
+[95.037619] (-) TimerEvent: {}
+[95.137970] (-) TimerEvent: {}
+[95.238321] (-) TimerEvent: {}
+[95.338679] (-) TimerEvent: {}
+[95.439038] (-) TimerEvent: {}
+[95.539448] (-) TimerEvent: {}
+[95.639802] (-) TimerEvent: {}
+[95.740147] (-) TimerEvent: {}
+[95.840527] (-) TimerEvent: {}
+[95.940891] (-) TimerEvent: {}
+[96.041257] (-) TimerEvent: {}
+[96.141512] (-) TimerEvent: {}
+[96.241851] (-) TimerEvent: {}
+[96.342190] (-) TimerEvent: {}
+[96.442556] (-) TimerEvent: {}
+[96.542912] (-) TimerEvent: {}
+[96.643293] (-) TimerEvent: {}
+[96.743673] (-) TimerEvent: {}
+[96.844032] (-) TimerEvent: {}
+[96.944449] (-) TimerEvent: {}
+[97.044839] (-) TimerEvent: {}
+[97.145209] (-) TimerEvent: {}
+[97.245522] (-) TimerEvent: {}
+[97.345888] (-) TimerEvent: {}
+[97.446238] (-) TimerEvent: {}
+[97.546598] (-) TimerEvent: {}
+[97.646988] (-) TimerEvent: {}
+[97.747377] (-) TimerEvent: {}
+[97.847728] (-) TimerEvent: {}
+[97.948027] (-) TimerEvent: {}
+[98.048415] (-) TimerEvent: {}
+[98.148803] (-) TimerEvent: {}
+[98.249199] (-) TimerEvent: {}
+[98.349494] (-) TimerEvent: {}
+[98.449893] (-) TimerEvent: {}
+[98.550268] (-) TimerEvent: {}
+[98.650622] (-) TimerEvent: {}
+[98.750968] (-) TimerEvent: {}
+[98.851348] (-) TimerEvent: {}
+[98.951729] (-) TimerEvent: {}
+[99.052067] (-) TimerEvent: {}
+[99.152409] (-) TimerEvent: {}
+[99.252769] (-) TimerEvent: {}
+[99.353154] (-) TimerEvent: {}
+[99.453465] (-) TimerEvent: {}
+[99.553802] (-) TimerEvent: {}
+[99.654140] (-) TimerEvent: {}
+[99.754511] (-) TimerEvent: {}
+[99.854884] (-) TimerEvent: {}
+[99.955252] (-) TimerEvent: {}
+[100.055631] (-) TimerEvent: {}
+[100.156042] (-) TimerEvent: {}
+[100.256402] (-) TimerEvent: {}
+[100.356835] (-) TimerEvent: {}
+[100.457282] (-) TimerEvent: {}
+[100.557576] (-) TimerEvent: {}
+[100.657930] (-) TimerEvent: {}
+[100.758312] (-) TimerEvent: {}
+[100.858702] (-) TimerEvent: {}
+[100.959148] (-) TimerEvent: {}
+[101.059537] (-) TimerEvent: {}
+[101.159891] (-) TimerEvent: {}
+[101.260239] (-) TimerEvent: {}
+[101.360616] (-) TimerEvent: {}
+[101.460900] (-) TimerEvent: {}
+[101.561259] (-) TimerEvent: {}
+[101.661571] (-) TimerEvent: {}
+[101.761938] (-) TimerEvent: {}
+[101.862307] (-) TimerEvent: {}
+[101.962689] (-) TimerEvent: {}
+[102.063066] (-) TimerEvent: {}
+[102.163451] (-) TimerEvent: {}
+[102.263824] (-) TimerEvent: {}
+[102.364197] (-) TimerEvent: {}
+[102.464592] (-) TimerEvent: {}
+[102.564968] (-) TimerEvent: {}
+[102.665364] (-) TimerEvent: {}
+[102.765650] (-) TimerEvent: {}
+[102.866010] (-) TimerEvent: {}
+[102.966387] (-) TimerEvent: {}
+[103.066731] (-) TimerEvent: {}
+[103.167081] (-) TimerEvent: {}
+[103.267468] (-) TimerEvent: {}
+[103.367860] (-) TimerEvent: {}
+[103.468249] (-) TimerEvent: {}
+[103.568626] (-) TimerEvent: {}
+[103.669003] (-) TimerEvent: {}
+[103.769396] (-) TimerEvent: {}
+[103.869690] (-) TimerEvent: {}
+[103.970036] (-) TimerEvent: {}
+[104.070416] (-) TimerEvent: {}
+[104.170772] (-) TimerEvent: {}
+[104.271146] (-) TimerEvent: {}
+[104.371497] (-) TimerEvent: {}
+[104.471834] (-) TimerEvent: {}
+[104.572197] (-) TimerEvent: {}
+[104.672585] (-) TimerEvent: {}
+[104.772949] (-) TimerEvent: {}
+[104.873402] (-) TimerEvent: {}
+[104.973730] (-) TimerEvent: {}
+[105.074072] (-) TimerEvent: {}
+[105.174416] (-) TimerEvent: {}
+[105.274757] (-) TimerEvent: {}
+[105.375102] (-) TimerEvent: {}
+[105.475443] (-) TimerEvent: {}
+[105.575779] (-) TimerEvent: {}
+[105.676116] (-) TimerEvent: {}
+[105.776421] (-) TimerEvent: {}
+[105.876763] (-) TimerEvent: {}
+[105.977092] (-) TimerEvent: {}
+[106.077423] (-) TimerEvent: {}
+[106.177731] (-) TimerEvent: {}
+[106.278016] (-) TimerEvent: {}
+[106.293852] (sim_ros2_interface) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:164: CMakeFiles/simExtROS2.dir/all] Error 2\n'}
+[106.294577] (sim_ros2_interface) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[106.299782] (sim_ros2_interface) CommandEnded: {'returncode': 2}
+[106.378113] (-) TimerEvent: {}
+[106.417508] (sim_ros2_interface) JobEnded: {'identifier': 'sim_ros2_interface', 'rc': 2}
+[106.427949] (-) EventReactorShutdown: {}

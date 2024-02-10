@@ -1,0 +1,1 @@
+/home/camilo/ros2_ws/build/ros2_bubble_rob/ament_cmake_environment_hooks/local_setup.bash

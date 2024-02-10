@@ -1,0 +1,14 @@
+[01m[K/home/camilo/ros2_ws/build/sim_ros2_interface/generated/callbacks.cpp:[m[K In function ‘[01m[Kvoid write__std_msgs__msg__Float32MultiArray(const Float32MultiArray&, int, const ROS2WriteOptions*)[m[K’:
+[01m[K/home/camilo/ros2_ws/build/sim_ros2_interface/generated/callbacks.cpp:2766:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kwrite__std_msgs__msg__MultiArrayLayout[m[K’ was not declared in this scope; did you mean ‘[01m[KDEPRECATED__std_msgs__msg__MultiArrayLayout[m[K’?
+ 2766 |             [01;31m[Kwrite__std_msgs__msg__MultiArrayLayout[m[K(msg.layout, stack, opt);
+      |             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |             [32m[KDEPRECATED__std_msgs__msg__MultiArrayLayout[m[K
+[01m[K/home/camilo/ros2_ws/build/sim_ros2_interface/generated/callbacks.cpp:[m[K In function ‘[01m[Kvoid read__std_msgs__msg__Float32MultiArray(int, std_msgs::msg::Float32MultiArray*, const ROS2ReadOptions*)[m[K’:
+[01m[K/home/camilo/ros2_ws/build/sim_ros2_interface/generated/callbacks.cpp:2827:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kread__std_msgs__msg__MultiArrayLayout[m[K’ was not declared in this scope; did you mean ‘[01m[KDEPRECATED__std_msgs__msg__MultiArrayLayout[m[K’?
+ 2827 |                         [01;31m[Kread__std_msgs__msg__MultiArrayLayout[m[K(stack, &(msg->layout), opt);
+      |                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                         [32m[KDEPRECATED__std_msgs__msg__MultiArrayLayout[m[K
+gmake[2]: *** [CMakeFiles/simExtROS2.dir/build.make:227: CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:164: CMakeFiles/simExtROS2.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

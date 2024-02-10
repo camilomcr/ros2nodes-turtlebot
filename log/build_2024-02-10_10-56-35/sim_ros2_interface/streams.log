@@ -1,0 +1,18 @@
+[0.112s] Invoking command in '/home/camilo/ros2_ws/build/sim_ros2_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --build /home/camilo/ros2_ws/build/sim_ros2_interface -- -j8 -l8
+[0.169s] [ 73%] Built target generate_ros_code
+[0.190s] [35m[1mConsolidate compiler generated dependencies of target simExtROS2[0m
+[0.227s] [ 75%] [32mBuilding CXX object CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o[0m
+[3.226s] [01m[K/home/camilo/ros2_ws/build/sim_ros2_interface/generated/callbacks.cpp:[m[K In function ‘[01m[Kvoid write__std_msgs__msg__Float32MultiArray(const Float32MultiArray&, int, const ROS2WriteOptions*)[m[K’:
+[3.226s] [01m[K/home/camilo/ros2_ws/build/sim_ros2_interface/generated/callbacks.cpp:2766:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kwrite__std_msgs__msg__MultiArrayLayout[m[K’ was not declared in this scope; did you mean ‘[01m[KDEPRECATED__std_msgs__msg__MultiArrayLayout[m[K’?
+[3.226s]  2766 |             [01;31m[Kwrite__std_msgs__msg__MultiArrayLayout[m[K(msg.layout, stack, opt);
+[3.227s]       |             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.227s]       |             [32m[KDEPRECATED__std_msgs__msg__MultiArrayLayout[m[K
+[3.256s] [01m[K/home/camilo/ros2_ws/build/sim_ros2_interface/generated/callbacks.cpp:[m[K In function ‘[01m[Kvoid read__std_msgs__msg__Float32MultiArray(int, std_msgs::msg::Float32MultiArray*, const ROS2ReadOptions*)[m[K’:
+[3.256s] [01m[K/home/camilo/ros2_ws/build/sim_ros2_interface/generated/callbacks.cpp:2827:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kread__std_msgs__msg__MultiArrayLayout[m[K’ was not declared in this scope; did you mean ‘[01m[KDEPRECATED__std_msgs__msg__MultiArrayLayout[m[K’?
+[3.256s]  2827 |                         [01;31m[Kread__std_msgs__msg__MultiArrayLayout[m[K(stack, &(msg->layout), opt);
+[3.256s]       |                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.256s]       |                         [32m[KDEPRECATED__std_msgs__msg__MultiArrayLayout[m[K
+[3.865s] gmake[2]: *** [CMakeFiles/simExtROS2.dir/build.make:227: CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o] Error 1
+[3.865s] gmake[1]: *** [CMakeFiles/Makefile2:164: CMakeFiles/simExtROS2.dir/all] Error 2
+[3.865s] gmake: *** [Makefile:146: all] Error 2
+[3.867s] Invoked command in '/home/camilo/ros2_ws/build/sim_ros2_interface' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --build /home/camilo/ros2_ws/build/sim_ros2_interface -- -j8 -l8

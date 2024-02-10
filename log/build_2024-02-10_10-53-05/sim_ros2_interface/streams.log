@@ -1,0 +1,50 @@
+[0.109s] Invoking command in '/home/camilo/ros2_ws/build/sim_ros2_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --build /home/camilo/ros2_ws/build/sim_ros2_interface -- -j8 -l8
+[0.151s] [  9%] [34m[1mGenerating generated/actcli_sendGoal.cpp[0m
+[0.151s] [  9%] [34m[1mGenerating generated/actcli_cancelLastGoal.cpp[0m
+[0.151s] [ 12%] [34m[1mGenerating generated/actsrv_action_abort.cpp[0m
+[0.151s] [  9%] [34m[1mGenerating generated/actcli_del.cpp[0m
+[0.152s] [ 12%] [34m[1mGenerating generated/actcli_new.cpp[0m
+[0.153s] [ 14%] [34m[1mGenerating generated/actsrv_action_is_active.cpp[0m
+[0.157s] [ 17%] [34m[1mGenerating generated/actsrv_action_canceled.cpp[0m
+[0.161s] [ 19%] [34m[1mGenerating generated/actsrv_action_execute.cpp[0m
+[0.427s] [ 21%] [34m[1mGenerating generated/actsrv_action_is_canceling.cpp[0m
+[0.431s] [ 26%] [34m[1mGenerating generated/actsrv_action_is_executing.cpp[0m
+[0.431s] [ 26%] [34m[1mGenerating generated/actsrv_action_publish_feedback.cpp[0m
+[0.436s] [ 29%] [34m[1mGenerating generated/actsrv_action_succeed.cpp[0m
+[0.451s] [ 31%] [34m[1mGenerating generated/actsrv_del.cpp[0m
+[0.486s] [ 34%] [34m[1mGenerating generated/actsrv_new.cpp[0m
+[0.515s] [ 36%] [34m[1mGenerating generated/callbacks.h[0m
+[0.523s] [ 39%] [34m[1mGenerating generated/callbacks.cpp[0m
+[0.711s] [ 41%] [34m[1mGenerating generated/cli_del.cpp[0m
+[0.716s] [ 43%] [34m[1mGenerating generated/cli_call.cpp[0m
+[0.728s] [ 46%] [34m[1mGenerating generated/cli_wait.cpp[0m
+[0.728s] [ 48%] [34m[1mGenerating generated/cli_new.cpp[0m
+[0.735s] [ 51%] [34m[1mGenerating generated/if_const.cpp[0m
+[0.762s] [ 53%] [34m[1mGenerating generated/if_list.cpp[0m
+[0.777s] [ 56%] [34m[1mGenerating generated/if_new.cpp[0m
+[0.891s] [ 58%] [34m[1mGenerating generated/pub_del.cpp[0m
+[0.963s] [ 60%] [34m[1mGenerating generated/pub_new.cpp[0m
+[0.964s] [ 63%] [34m[1mGenerating generated/pub_publish.cpp[0m
+[1.007s] [ 65%] [34m[1mGenerating generated/srv_del.cpp[0m
+[1.063s] [ 68%] [34m[1mGenerating generated/srv_new.cpp[0m
+[1.073s] [ 70%] [34m[1mGenerating generated/sub_del.cpp[0m
+[1.085s] [ 73%] [34m[1mGenerating generated/sub_new.cpp[0m
+[1.325s] [ 73%] Built target generate_ros_code
+[1.343s] [35m[1mConsolidate compiler generated dependencies of target simExtROS2[0m
+[1.381s] [ 75%] [32mBuilding CXX object CMakeFiles/simExtROS2.dir/src/sim_ros2_interface.cpp.o[0m
+[1.382s] [ 78%] [32mBuilding CXX object CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o[0m
+[4.610s] [01m[K/home/camilo/ros2_ws/build/sim_ros2_interface/generated/callbacks.cpp:[m[K In function ‘[01m[Kvoid write__std_msgs__msg__Float32MultiArray(const Float32MultiArray&, int, const ROS2WriteOptions*)[m[K’:
+[4.610s] [01m[K/home/camilo/ros2_ws/build/sim_ros2_interface/generated/callbacks.cpp:2766:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kwrite__std_msgs__msg__MultiArrayLayout[m[K’ was not declared in this scope; did you mean ‘[01m[KDEPRECATED__std_msgs__msg__MultiArrayLayout[m[K’?
+[4.610s]  2766 |             [01;31m[Kwrite__std_msgs__msg__MultiArrayLayout[m[K(msg.layout, stack, opt);
+[4.610s]       |             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.610s]       |             [32m[KDEPRECATED__std_msgs__msg__MultiArrayLayout[m[K
+[4.642s] [01m[K/home/camilo/ros2_ws/build/sim_ros2_interface/generated/callbacks.cpp:[m[K In function ‘[01m[Kvoid read__std_msgs__msg__Float32MultiArray(int, std_msgs::msg::Float32MultiArray*, const ROS2ReadOptions*)[m[K’:
+[4.642s] [01m[K/home/camilo/ros2_ws/build/sim_ros2_interface/generated/callbacks.cpp:2827:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kread__std_msgs__msg__MultiArrayLayout[m[K’ was not declared in this scope; did you mean ‘[01m[KDEPRECATED__std_msgs__msg__MultiArrayLayout[m[K’?
+[4.642s]  2827 |                         [01;31m[Kread__std_msgs__msg__MultiArrayLayout[m[K(stack, &(msg->layout), opt);
+[4.642s]       |                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.642s]       |                         [32m[KDEPRECATED__std_msgs__msg__MultiArrayLayout[m[K
+[5.291s] gmake[2]: *** [CMakeFiles/simExtROS2.dir/build.make:227: CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o] Error 1
+[5.291s] gmake[2]: *** Waiting for unfinished jobs....
+[106.339s] gmake[1]: *** [CMakeFiles/Makefile2:164: CMakeFiles/simExtROS2.dir/all] Error 2
+[106.339s] gmake: *** [Makefile:146: all] Error 2
+[106.345s] Invoked command in '/home/camilo/ros2_ws/build/sim_ros2_interface' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --build /home/camilo/ros2_ws/build/sim_ros2_interface -- -j8 -l8

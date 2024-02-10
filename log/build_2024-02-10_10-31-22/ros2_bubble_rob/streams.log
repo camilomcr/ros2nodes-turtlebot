@@ -1,0 +1,74 @@
+[0.150s] Invoking command in '/home/camilo/ros2_ws/build/ros2_bubble_rob': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake /home/camilo/ros2_ws/src/ros2_bubble_rob -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/camilo/ros2_ws/install/ros2_bubble_rob
+[0.204s] -- The C compiler identification is GNU 11.4.0
+[0.250s] -- The CXX compiler identification is GNU 11.4.0
+[0.256s] -- Detecting C compiler ABI info
+[0.310s] -- Detecting C compiler ABI info - done
+[0.316s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.317s] -- Detecting C compile features
+[0.317s] -- Detecting C compile features - done
+[0.320s] -- Detecting CXX compiler ABI info
+[0.382s] -- Detecting CXX compiler ABI info - done
+[0.388s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.388s] -- Detecting CXX compile features
+[0.388s] -- Detecting CXX compile features - done
+[0.395s] -- Found ament_cmake: 1.3.7 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.544s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.595s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.614s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[0.646s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.650s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.656s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.667s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.682s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.735s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.737s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.811s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.831s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.866s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.873s] -- Looking for pthread.h
+[0.929s] -- Looking for pthread.h - found
+[0.929s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.985s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.986s] -- Found Threads: TRUE  
+[1.114s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0")  
+[1.117s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.182s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.184s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.184s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/camilo/ros2_ws/src/ros2_bubble_rob/include>
+[1.184s] -- Configured cppcheck exclude dirs and/or files: 
+[1.185s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.186s] -- Configured cpplint exclude dirs and/or files: 
+[1.187s] -- Added test 'lint_cmake' to check CMake code style
+[1.189s] -- Added test 'uncrustify' to check C / C++ code style
+[1.189s] -- Configured uncrustify additional arguments: 
+[1.189s] -- Added test 'xmllint' to check XML markup files
+[1.191s] -- Configuring done
+[1.196s] -- Generating done
+[1.197s] -- Build files have been written to: /home/camilo/ros2_ws/build/ros2_bubble_rob
+[1.204s] Invoked command in '/home/camilo/ros2_ws/build/ros2_bubble_rob' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake /home/camilo/ros2_ws/src/ros2_bubble_rob -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/camilo/ros2_ws/install/ros2_bubble_rob
+[1.205s] Invoking command in '/home/camilo/ros2_ws/build/ros2_bubble_rob': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --build /home/camilo/ros2_ws/build/ros2_bubble_rob -- -j8 -l8
+[1.254s] [ 50%] [32mBuilding CXX object CMakeFiles/ros2BubbleRob.dir/src/ros2BubbleRob.cpp.o[0m
+[12.291s] [100%] [32m[1mLinking CXX executable ros2BubbleRob[0m
+[12.435s] [100%] Built target ros2BubbleRob
+[12.443s] Invoked command in '/home/camilo/ros2_ws/build/ros2_bubble_rob' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --build /home/camilo/ros2_ws/build/ros2_bubble_rob -- -j8 -l8
+[12.461s] Invoking command in '/home/camilo/ros2_ws/build/ros2_bubble_rob': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --install /home/camilo/ros2_ws/build/ros2_bubble_rob
+[12.469s] -- Install configuration: "Release"
+[12.469s] -- Execute custom install script
+[12.469s] -- Symlinking: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ament_index/resource_index/package_run_dependencies/ros2_bubble_rob
+[12.478s] -- Symlinking: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ament_index/resource_index/parent_prefix_path/ros2_bubble_rob
+[12.485s] -- Symlinking: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/environment/ament_prefix_path.sh
+[12.493s] -- Symlinking: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/environment/ament_prefix_path.dsv
+[12.500s] -- Symlinking: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/environment/path.sh
+[12.507s] -- Symlinking: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/environment/path.dsv
+[12.513s] -- Symlinking: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/local_setup.bash
+[12.519s] -- Symlinking: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/local_setup.sh
+[12.526s] -- Symlinking: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/local_setup.zsh
+[12.532s] -- Symlinking: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/local_setup.dsv
+[12.538s] -- Symlinking: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/package.dsv
+[12.544s] -- Symlinking: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ament_index/resource_index/packages/ros2_bubble_rob
+[12.551s] -- Symlinking: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/cmake/ros2_bubble_robConfig.cmake
+[12.557s] -- Symlinking: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/cmake/ros2_bubble_robConfig-version.cmake
+[12.563s] -- Symlinking: /home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/package.xml
+[12.570s] -- Installing: /home/camilo/ros2_ws/install/ros2_bubble_rob/lib/ros2_bubble_rob/ros2BubbleRob
+[12.571s] -- Set runtime path of "/home/camilo/ros2_ws/install/ros2_bubble_rob/lib/ros2_bubble_rob/ros2BubbleRob" to ""
+[12.572s] Invoked command in '/home/camilo/ros2_ws/build/ros2_bubble_rob' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --install /home/camilo/ros2_ws/build/ros2_bubble_rob
