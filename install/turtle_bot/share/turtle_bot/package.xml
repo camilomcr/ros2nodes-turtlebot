@@ -13,7 +13,9 @@
   <depend>time</depend>
   <depend>argparse</depend>
   <depend>turtle</depend>
-  <depend>multiprocessing</depend>
+  <depend>nav_msgs</depend>
+  <depend>functools</depend>
+  <depend>threading</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>

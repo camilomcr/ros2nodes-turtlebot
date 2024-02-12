@@ -1,13 +1,28 @@
 #!/usr/bin/env python3
 import rclpy
+import turtle
+import threading
+import tkinter
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
-import turtle
+from nav_msgs.srv import LoadMap
+
+
 
 class turtle_bot_interface(Node):
 
     def __init__(self):
         super().__init__("turtle_bot_interface")
+        self.gui = tkinter.Tk()
+        threading.Thread(target=self.gui_loop)
+        if (input("Reproduce a route? (y/n): ")=='y'):
+            self.file_name=input("file name (without .txt): ")
+            self.client = self.create_client(LoadMap, "/player_service")
+            self.req = LoadMap.Request()
+            while not self.client.wait_for_service(timeout_sec=1.0):
+                self.get_logger().info('Service unavailable, waiting...')
+            self.follow_path()
+            return
         self.save=(input("Save route? (y/n): ")=='y')
         if self.save:
             self.Lx = 0
@@ -29,7 +44,17 @@ class turtle_bot_interface(Node):
         self.get_logger().info("turtle bot interface started")
         self.turtle_bot_pos_suscriber = self.create_subscription(Twist, "/turtlebot_position", self.position_callback, 10)
             
-        
+    def gui_loop(self):
+        pass
+    
+    def position_loop(self):
+        pass
+
+    def save_loop(self):
+        pass
+
+    def player_loop(self):
+        pass
 
     def position_callback(self, msg: Twist):
         self.posX = msg.linear.x
@@ -48,6 +73,12 @@ class turtle_bot_interface(Node):
 
         with open(self.file_path, 'a') as file:
             file.write(f'{self.Lx},{self.Ly},{self.Lz},{self.Ax},{self.Ay},{self.Az}\n')
+
+    def follow_path(self):
+        self.req.map_url = self.file_name
+        self.future = self.client.call(self.req)
+        return self.future.result()
+        
 
 def main(args=None):
     rclpy.init(args=args)
