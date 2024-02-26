@@ -6,7 +6,6 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from nav_msgs.srv import LoadMap
 
-
 class turtle_bot_player(Node):
 
     def __init__(self):

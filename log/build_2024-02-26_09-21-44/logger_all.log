@@ -1,0 +1,253 @@
+[0.685s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.685s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7fbc1e995330>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fbc1e996fb0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fbc1e996fb0>>)
+[0.717s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.717s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.717s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.717s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.717s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.717s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.717s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/camilo/ros2_ws'
+[0.717s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.717s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.717s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.717s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.717s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.717s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.717s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.717s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.718s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.726s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_bubble_rob) by extensions ['ignore', 'ignore_ament_install']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_bubble_rob) by extension 'ignore'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_bubble_rob) by extension 'ignore_ament_install'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_bubble_rob) by extensions ['colcon_pkg']
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_bubble_rob) by extension 'colcon_pkg'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_bubble_rob) by extensions ['colcon_meta']
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_bubble_rob) by extension 'colcon_meta'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_bubble_rob) by extensions ['ros']
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_bubble_rob) by extension 'ros'
+[0.730s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_bubble_rob' with type 'ros.ament_cmake' and name 'ros2_bubble_rob'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/sim_ros2_interface) by extensions ['ignore', 'ignore_ament_install']
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/sim_ros2_interface) by extension 'ignore'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/sim_ros2_interface) by extension 'ignore_ament_install'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/sim_ros2_interface) by extensions ['colcon_pkg']
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/sim_ros2_interface) by extension 'colcon_pkg'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/sim_ros2_interface) by extensions ['colcon_meta']
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/sim_ros2_interface) by extension 'colcon_meta'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/sim_ros2_interface) by extensions ['ros']
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(src/sim_ros2_interface) by extension 'ros'
+[0.731s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sim_ros2_interface' with type 'ros.ament_cmake' and name 'sim_ros2_interface'
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_bot) by extensions ['ignore', 'ignore_ament_install']
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_bot) by extension 'ignore'
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_bot) by extension 'ignore_ament_install'
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_bot) by extensions ['colcon_pkg']
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_bot) by extension 'colcon_pkg'
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_bot) by extensions ['colcon_meta']
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_bot) by extension 'colcon_meta'
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_bot) by extensions ['ros']
+[0.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtle_bot) by extension 'ros'
+[0.733s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtle_bot' with type 'ros.ament_python' and name 'turtle_bot'
+[0.733s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.733s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.733s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.733s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.733s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.796s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.796s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.815s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/camilo/ros2_ws/install
+[0.825s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 270 installed packages in /opt/ros/humble
+[0.826s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.900s] Level 5:colcon.colcon_core.verb:set package 'ros2_bubble_rob' build argument 'cmake_args' from command line to 'None'
+[0.900s] Level 5:colcon.colcon_core.verb:set package 'ros2_bubble_rob' build argument 'cmake_target' from command line to 'None'
+[0.900s] Level 5:colcon.colcon_core.verb:set package 'ros2_bubble_rob' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.900s] Level 5:colcon.colcon_core.verb:set package 'ros2_bubble_rob' build argument 'cmake_clean_cache' from command line to 'False'
+[0.900s] Level 5:colcon.colcon_core.verb:set package 'ros2_bubble_rob' build argument 'cmake_clean_first' from command line to 'False'
+[0.900s] Level 5:colcon.colcon_core.verb:set package 'ros2_bubble_rob' build argument 'cmake_force_configure' from command line to 'False'
+[0.900s] Level 5:colcon.colcon_core.verb:set package 'ros2_bubble_rob' build argument 'ament_cmake_args' from command line to 'None'
+[0.900s] Level 5:colcon.colcon_core.verb:set package 'ros2_bubble_rob' build argument 'catkin_cmake_args' from command line to 'None'
+[0.900s] Level 5:colcon.colcon_core.verb:set package 'ros2_bubble_rob' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.900s] DEBUG:colcon.colcon_core.verb:Building package 'ros2_bubble_rob' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/camilo/ros2_ws/build/ros2_bubble_rob', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/camilo/ros2_ws/install/ros2_bubble_rob', 'merge_install': False, 'path': '/home/camilo/ros2_ws/src/ros2_bubble_rob', 'symlink_install': False, 'test_result_base': None}
+[0.910s] Level 5:colcon.colcon_core.verb:set package 'sim_ros2_interface' build argument 'cmake_args' from command line to 'None'
+[0.910s] Level 5:colcon.colcon_core.verb:set package 'sim_ros2_interface' build argument 'cmake_target' from command line to 'None'
+[0.910s] Level 5:colcon.colcon_core.verb:set package 'sim_ros2_interface' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.910s] Level 5:colcon.colcon_core.verb:set package 'sim_ros2_interface' build argument 'cmake_clean_cache' from command line to 'False'
+[0.910s] Level 5:colcon.colcon_core.verb:set package 'sim_ros2_interface' build argument 'cmake_clean_first' from command line to 'False'
+[0.910s] Level 5:colcon.colcon_core.verb:set package 'sim_ros2_interface' build argument 'cmake_force_configure' from command line to 'False'
+[0.910s] Level 5:colcon.colcon_core.verb:set package 'sim_ros2_interface' build argument 'ament_cmake_args' from command line to 'None'
+[0.910s] Level 5:colcon.colcon_core.verb:set package 'sim_ros2_interface' build argument 'catkin_cmake_args' from command line to 'None'
+[0.910s] Level 5:colcon.colcon_core.verb:set package 'sim_ros2_interface' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.910s] DEBUG:colcon.colcon_core.verb:Building package 'sim_ros2_interface' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/camilo/ros2_ws/build/sim_ros2_interface', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/camilo/ros2_ws/install/sim_ros2_interface', 'merge_install': False, 'path': '/home/camilo/ros2_ws/src/sim_ros2_interface', 'symlink_install': False, 'test_result_base': None}
+[0.920s] Level 5:colcon.colcon_core.verb:set package 'turtle_bot' build argument 'cmake_args' from command line to 'None'
+[0.920s] Level 5:colcon.colcon_core.verb:set package 'turtle_bot' build argument 'cmake_target' from command line to 'None'
+[0.920s] Level 5:colcon.colcon_core.verb:set package 'turtle_bot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.920s] Level 5:colcon.colcon_core.verb:set package 'turtle_bot' build argument 'cmake_clean_cache' from command line to 'False'
+[0.920s] Level 5:colcon.colcon_core.verb:set package 'turtle_bot' build argument 'cmake_clean_first' from command line to 'False'
+[0.920s] Level 5:colcon.colcon_core.verb:set package 'turtle_bot' build argument 'cmake_force_configure' from command line to 'False'
+[0.920s] Level 5:colcon.colcon_core.verb:set package 'turtle_bot' build argument 'ament_cmake_args' from command line to 'None'
+[0.920s] Level 5:colcon.colcon_core.verb:set package 'turtle_bot' build argument 'catkin_cmake_args' from command line to 'None'
+[0.920s] Level 5:colcon.colcon_core.verb:set package 'turtle_bot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.920s] DEBUG:colcon.colcon_core.verb:Building package 'turtle_bot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/camilo/ros2_ws/build/turtle_bot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/camilo/ros2_ws/install/turtle_bot', 'merge_install': False, 'path': '/home/camilo/ros2_ws/src/turtle_bot', 'symlink_install': False, 'test_result_base': None}
+[0.929s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.940s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.940s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/camilo/ros2_ws/src/ros2_bubble_rob' with build type 'ament_cmake'
+[0.940s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/camilo/ros2_ws/src/ros2_bubble_rob'
+[0.951s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.951s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.951s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.983s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/camilo/ros2_ws/src/sim_ros2_interface' with build type 'ament_cmake'
+[0.983s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/camilo/ros2_ws/src/sim_ros2_interface'
+[0.994s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.994s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.024s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/camilo/ros2_ws/src/turtle_bot' with build type 'ament_python'
+[1.025s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtle_bot', 'ament_prefix_path')
+[1.037s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/camilo/ros2_ws/install/turtle_bot/share/turtle_bot/hook/ament_prefix_path.ps1'
+[1.038s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/camilo/ros2_ws/install/turtle_bot/share/turtle_bot/hook/ament_prefix_path.dsv'
+[1.038s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/camilo/ros2_ws/install/turtle_bot/share/turtle_bot/hook/ament_prefix_path.sh'
+[1.049s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.049s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.086s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/camilo/ros2_ws/build/ros2_bubble_rob': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --build /home/camilo/ros2_ws/build/ros2_bubble_rob -- -j8 -l8
+[1.089s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/camilo/ros2_ws/build/sim_ros2_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --build /home/camilo/ros2_ws/build/sim_ros2_interface -- -j8 -l8
+[1.299s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/camilo/ros2_ws/src/turtle_bot'
+[1.310s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.310s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.341s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/camilo/ros2_ws/build/sim_ros2_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --build /home/camilo/ros2_ws/build/sim_ros2_interface -- -j8 -l8
+[1.342s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/camilo/ros2_ws/build/ros2_bubble_rob' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --build /home/camilo/ros2_ws/build/ros2_bubble_rob -- -j8 -l8
+[1.368s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/camilo/ros2_ws/build/ros2_bubble_rob': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --install /home/camilo/ros2_ws/build/ros2_bubble_rob
+[1.372s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/camilo/ros2_ws/build/sim_ros2_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --install /home/camilo/ros2_ws/build/sim_ros2_interface
+[1.386s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_bubble_rob)
+[1.386s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/camilo/ros2_ws/build/ros2_bubble_rob' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --install /home/camilo/ros2_ws/build/ros2_bubble_rob
+[1.400s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/ros2_bubble_rob' for CMake module files
+[1.401s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/ros2_bubble_rob' for CMake config files
+[1.401s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_bubble_rob', 'cmake_prefix_path')
+[1.411s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/hook/cmake_prefix_path.ps1'
+[1.412s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/hook/cmake_prefix_path.dsv'
+[1.412s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/hook/cmake_prefix_path.sh'
+[1.413s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/ros2_bubble_rob/lib'
+[1.413s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/ros2_bubble_rob/bin'
+[1.413s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/ros2_bubble_rob/lib/pkgconfig/ros2_bubble_rob.pc'
+[1.413s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/ros2_bubble_rob/lib/python3.10/site-packages'
+[1.413s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/ros2_bubble_rob/bin'
+[1.424s] INFO:colcon.colcon_core.shell:Creating package script '/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/package.ps1'
+[1.425s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/package.dsv'
+[1.425s] INFO:colcon.colcon_core.shell:Creating package script '/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/package.sh'
+[1.426s] INFO:colcon.colcon_core.shell:Creating package script '/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/package.bash'
+[1.426s] INFO:colcon.colcon_core.shell:Creating package script '/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/package.zsh'
+[1.427s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/camilo/ros2_ws/install/ros2_bubble_rob/share/colcon-core/packages/ros2_bubble_rob)
+[1.428s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sim_ros2_interface)
+[1.429s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/camilo/ros2_ws/build/sim_ros2_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --install /home/camilo/ros2_ws/build/sim_ros2_interface
+[1.440s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/sim_ros2_interface' for CMake module files
+[1.441s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/sim_ros2_interface' for CMake config files
+[1.441s] Level 1:colcon.colcon_core.shell:create_environment_hook('sim_ros2_interface', 'cmake_prefix_path')
+[1.452s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/hook/cmake_prefix_path.ps1'
+[1.452s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/hook/cmake_prefix_path.dsv'
+[1.453s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/hook/cmake_prefix_path.sh'
+[1.453s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/sim_ros2_interface/bin'
+[1.453s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/sim_ros2_interface/lib/pkgconfig/sim_ros2_interface.pc'
+[1.453s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/sim_ros2_interface/lib/python3.10/site-packages'
+[1.454s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/sim_ros2_interface/bin'
+[1.464s] INFO:colcon.colcon_core.shell:Creating package script '/home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/package.ps1'
+[1.465s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/package.dsv'
+[1.465s] INFO:colcon.colcon_core.shell:Creating package script '/home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/package.sh'
+[1.465s] INFO:colcon.colcon_core.shell:Creating package script '/home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/package.bash'
+[1.465s] INFO:colcon.colcon_core.shell:Creating package script '/home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/package.zsh'
+[1.466s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/camilo/ros2_ws/install/sim_ros2_interface/share/colcon-core/packages/sim_ros2_interface)
+[1.479s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_bubble_rob)
+[1.490s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/ros2_bubble_rob' for CMake module files
+[1.490s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/ros2_bubble_rob' for CMake config files
+[1.490s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_bubble_rob', 'cmake_prefix_path')
+[1.502s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/hook/cmake_prefix_path.ps1'
+[1.503s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/hook/cmake_prefix_path.dsv'
+[1.503s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/hook/cmake_prefix_path.sh'
+[1.504s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/ros2_bubble_rob/lib'
+[1.504s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/ros2_bubble_rob/bin'
+[1.504s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/ros2_bubble_rob/lib/pkgconfig/ros2_bubble_rob.pc'
+[1.504s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/ros2_bubble_rob/lib/python3.10/site-packages'
+[1.504s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/ros2_bubble_rob/bin'
+[1.515s] INFO:colcon.colcon_core.shell:Creating package script '/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/package.ps1'
+[1.516s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/package.dsv'
+[1.516s] INFO:colcon.colcon_core.shell:Creating package script '/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/package.sh'
+[1.517s] INFO:colcon.colcon_core.shell:Creating package script '/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/package.bash'
+[1.517s] INFO:colcon.colcon_core.shell:Creating package script '/home/camilo/ros2_ws/install/ros2_bubble_rob/share/ros2_bubble_rob/package.zsh'
+[1.517s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/camilo/ros2_ws/install/ros2_bubble_rob/share/colcon-core/packages/ros2_bubble_rob)
+[1.530s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sim_ros2_interface)
+[1.541s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/sim_ros2_interface' for CMake module files
+[1.542s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/sim_ros2_interface' for CMake config files
+[1.542s] Level 1:colcon.colcon_core.shell:create_environment_hook('sim_ros2_interface', 'cmake_prefix_path')
+[1.552s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/hook/cmake_prefix_path.ps1'
+[1.553s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/hook/cmake_prefix_path.dsv'
+[1.553s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/hook/cmake_prefix_path.sh'
+[1.553s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/sim_ros2_interface/bin'
+[1.553s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/sim_ros2_interface/lib/pkgconfig/sim_ros2_interface.pc'
+[1.554s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/sim_ros2_interface/lib/python3.10/site-packages'
+[1.554s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/sim_ros2_interface/bin'
+[1.567s] INFO:colcon.colcon_core.shell:Creating package script '/home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/package.ps1'
+[1.568s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/package.dsv'
+[1.568s] INFO:colcon.colcon_core.shell:Creating package script '/home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/package.sh'
+[1.568s] INFO:colcon.colcon_core.shell:Creating package script '/home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/package.bash'
+[1.569s] INFO:colcon.colcon_core.shell:Creating package script '/home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/package.zsh'
+[1.569s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/camilo/ros2_ws/install/sim_ros2_interface/share/colcon-core/packages/sim_ros2_interface)
+[1.626s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/camilo/ros2_ws/src/turtle_bot': PYTHONPATH=/home/camilo/ros2_ws/build/turtle_bot/prefix_override:/home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtle_bot build --build-base /home/camilo/ros2_ws/build/turtle_bot/build install --record /home/camilo/ros2_ws/build/turtle_bot/install.log --single-version-externally-managed
+[1.850s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/camilo/ros2_ws/src/turtle_bot' returned '0': PYTHONPATH=/home/camilo/ros2_ws/build/turtle_bot/prefix_override:/home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtle_bot build --build-base /home/camilo/ros2_ws/build/turtle_bot/build install --record /home/camilo/ros2_ws/build/turtle_bot/install.log --single-version-externally-managed
+[1.860s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/turtle_bot' for CMake module files
+[1.861s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/turtle_bot' for CMake config files
+[1.861s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/turtle_bot/lib'
+[1.861s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/turtle_bot/bin'
+[1.861s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/turtle_bot/lib/pkgconfig/turtle_bot.pc'
+[1.861s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages'
+[1.862s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtle_bot', 'pythonpath')
+[1.872s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/camilo/ros2_ws/install/turtle_bot/share/turtle_bot/hook/pythonpath.ps1'
+[1.872s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/camilo/ros2_ws/install/turtle_bot/share/turtle_bot/hook/pythonpath.dsv'
+[1.872s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/camilo/ros2_ws/install/turtle_bot/share/turtle_bot/hook/pythonpath.sh'
+[1.873s] Level 1:colcon.colcon_core.environment:checking '/home/camilo/ros2_ws/install/turtle_bot/bin'
+[1.873s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtle_bot)
+[1.883s] INFO:colcon.colcon_core.shell:Creating package script '/home/camilo/ros2_ws/install/turtle_bot/share/turtle_bot/package.ps1'
+[1.883s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/camilo/ros2_ws/install/turtle_bot/share/turtle_bot/package.dsv'
+[1.883s] INFO:colcon.colcon_core.shell:Creating package script '/home/camilo/ros2_ws/install/turtle_bot/share/turtle_bot/package.sh'
+[1.884s] INFO:colcon.colcon_core.shell:Creating package script '/home/camilo/ros2_ws/install/turtle_bot/share/turtle_bot/package.bash'
+[1.884s] INFO:colcon.colcon_core.shell:Creating package script '/home/camilo/ros2_ws/install/turtle_bot/share/turtle_bot/package.zsh'
+[1.884s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/camilo/ros2_ws/install/turtle_bot/share/colcon-core/packages/turtle_bot)
+[1.884s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.885s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.885s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.885s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.900s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.900s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.900s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.909s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.922s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/camilo/ros2_ws/install/local_setup.ps1'
+[1.922s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/camilo/ros2_ws/install/_local_setup_util_ps1.py'
+[1.923s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/camilo/ros2_ws/install/setup.ps1'
+[1.934s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/camilo/ros2_ws/install/local_setup.sh'
+[1.934s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/camilo/ros2_ws/install/_local_setup_util_sh.py'
+[1.935s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/camilo/ros2_ws/install/setup.sh'
+[1.945s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/camilo/ros2_ws/install/local_setup.bash'
+[1.946s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/camilo/ros2_ws/install/setup.bash'
+[1.956s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/camilo/ros2_ws/install/local_setup.zsh'
+[1.957s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/camilo/ros2_ws/install/setup.zsh'

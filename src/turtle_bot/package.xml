@@ -12,7 +12,7 @@
   <depend>curses</depend>
   <depend>time</depend>
   <depend>argparse</depend>
-  <depend>turtle</depend>
+  <depend>matplotlib</depend>
   <depend>nav_msgs</depend>
   <depend>threading</depend>
   <depend>tkinter</depend>

@@ -1,1 +1,1 @@
-argparse:curses:functools:geometry_msgs:nav_msgs:rclpy:threading:time:turtle
+argparse:curses:geometry_msgs:matplotlib:nav_msgs:rclpy:threading:time:tkinter
