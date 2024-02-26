@@ -5,7 +5,8 @@ import tkinter as tk
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from nav_msgs.srv import LoadMap
-from matplotlib import pyplot as plt
+from matplotlib.figure import Figure
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 
 
@@ -15,12 +16,24 @@ class turtle_bot_interface(Node):
         super().__init__("turtle_bot_interface")
         self.get_logger().info(f'turtle bot interface started')             
        
-    def position_loop(self):
+    def position_loop(self, gui):
         self.posX = 0
         self.posY = 0
-        plt.ion()
+        self.fig = Figure(figsize=(5, 4), dpi=100)
+        self.subplot= self.fig.add_subplot()
+        self.subplot.set_xlim(-300, 300)
+        self.subplot.set_ylim(-300, 300)
+        self.canvas = FigureCanvasTkAgg(self.fig, master=gui)
+        self.canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
         self.turtle_bot_pos_suscriber = self.create_subscription(Twist, "/turtlebot_position", self.position_callback, 10)
         self.get_logger().info("turtle bot position drawer started")
+
+    def position_callback(self, msg: Twist):
+        self.posX = msg.linear.x
+        self.posY = msg.linear.y
+        self.subplot.scatter(int(100*self.posX),int(100*self.posY),c='r')
+        self.canvas.draw()
+        self.get_logger().info(f'[drawer] moving to ({self.posX}, {self.posX})')
         
 
     def save_loop(self, file_name: str):
@@ -44,16 +57,6 @@ class turtle_bot_interface(Node):
             self.get_logger().info('Service unavailable, waiting...')
         self.follow_path(file_name)
         self.get_logger().info("turtle bot path follower started")
-
-    def position_callback(self, msg: Twist):
-        
-        self.posX = msg.linear.x
-        self.posY = msg.linear.y
-        plt.scatter(int(100*self.posX),int(100*self.posY),c='r')
-        plt.xlim(-300,300)
-        plt.ylim(-300,300)
-        plt.pause(0.01)
-        self.get_logger().info(f'[drawer] moving to ({self.posX}, {self.posX})')
         
 
     def save_callback(self, msg: Twist):
@@ -76,7 +79,6 @@ class gui_class():
 
     def __init__(self, args):
         self.gui = tk.Tk()
-        self.gui.geometry("400x250")
         self.gui.title('Turtle bot interface')
         self.button_position = tk.Button(self.gui, text='Position tracker', width=25, command=self.gui_position)
         self.save_text_box = tk.Text(self.gui,height= 1, width=20)
@@ -98,7 +100,7 @@ class gui_class():
         rclpy.shutdown()
     
     def gui_position(self):
-        self.node.position_loop()
+        self.node.position_loop(self.gui)
 
     def gui_save(self):
         self.node.save_loop(self.save_text_box.get(1.0, "end-1c"))
