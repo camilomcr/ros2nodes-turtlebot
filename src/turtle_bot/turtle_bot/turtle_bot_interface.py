@@ -31,10 +31,11 @@ class turtle_bot_interface(Node):
         self.Ay = 0
         self.Az = 0
         self.file_name= file_name
-        self.file_path="src/turtle_bot/resource/"+self.file_name
+        self.file_path="src/turtle_bot/resource/"+self.file_name+".txt"
         with open(self.file_path, 'a') as file:
             file.write(f'Lx,Ly,Lz,Ax,Ay,Az\n')
         self.turtle_bot_vel_suscriber = self.create_subscription(Twist, "/turtlebot_cmdVel", self.save_callback, 10)
+        self.get_logger().info("turtle bot saver started")
 
     def player_loop(self, file_name: str):
         self.client = self.create_client(LoadMap, "/player_service")
@@ -42,6 +43,7 @@ class turtle_bot_interface(Node):
         while not self.client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('Service unavailable, waiting...')
         self.follow_path(file_name)
+        self.get_logger().info("turtle bot path follower started")
 
     def position_callback(self, msg: Twist):
         
