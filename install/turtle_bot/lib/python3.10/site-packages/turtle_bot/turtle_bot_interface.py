@@ -2,10 +2,13 @@
 import rclpy
 import threading
 import tkinter as tk
+import os
+from tkinter import messagebox
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from nav_msgs.srv import LoadMap
 from matplotlib.figure import Figure
+from matplotlib import pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 
@@ -16,28 +19,33 @@ class turtle_bot_interface(Node):
         super().__init__("turtle_bot_interface")
         self.get_logger().info(f'turtle bot interface started')             
        
-    def position_loop(self, gui):
-        self.posX = 0
-        self.posY = 0
+    def position_loop(self, gui: tk.Tk, open_pos: bool):
+        if not open_pos:
+            self.plot_frame.destroy()
+            self.destroy_subscription(self.turtle_bot_pos_suscriber)
+            return
+        self.pos = False
         self.fig = Figure(figsize=(5, 4), dpi=100)
+        self.plot_frame = tk.Frame(gui)
+        self.plot_frame.pack(side=tk.RIGHT,fill=tk.BOTH, expand = True)
         self.subplot= self.fig.add_subplot()
-        self.subplot.set_xlim(-300, 300)
-        self.subplot.set_ylim(-300, 300)
-        self.canvas = FigureCanvasTkAgg(self.fig, master=gui)
-        self.canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
+        self.subplot.set_xlim(-250, 250)
+        self.subplot.set_ylim(-250, 250)
+        self.canvas = FigureCanvasTkAgg(self.fig, master=self.plot_frame)
+        self.canvas.get_tk_widget().pack(side=tk.RIGHT, fill=tk.BOTH, expand=1)
         self.turtle_bot_pos_suscriber = self.create_subscription(Twist, "/turtlebot_position", self.position_callback, 10)
         self.get_logger().info("turtle bot position drawer started")
 
     def position_callback(self, msg: Twist):
-        self.posX = msg.linear.x
-        self.posY = msg.linear.y
-        self.subplot.scatter(int(100*self.posX),int(100*self.posY),c='r')
+        if self.pos==False:
+            self.posX = int(100*msg.linear.x)
+            self.posY = int(100*msg.linear.y)
+            self.pos=True
+            return
+        self.subplot.plot([self.posX, int(100*msg.linear.x)], [self.posY, int(100*msg.linear.y)],c='r')
+        self.posX = int(100*msg.linear.x)
+        self.posY = int(100*msg.linear.y)
         self.canvas.draw()
-        # plt.scatter(int(100*self.posX),int(100*self.posY),c='r')
-        # plt.xlim(-300,300)
-        # plt.ylim(-300,300)
-        # plt.pause(0.01)
-        self.get_logger().info(f'[drawer] moving to ({self.posX}, {self.posX})')
         
 
     def save_loop(self, file_name: str):
@@ -53,16 +61,7 @@ class turtle_bot_interface(Node):
             file.write(f'Lx,Ly,Lz,Ax,Ay,Az\n')
         self.turtle_bot_vel_suscriber = self.create_subscription(Twist, "/turtlebot_cmdVel", self.save_callback, 10)
         self.get_logger().info("turtle bot saver started")
-
-    def player_loop(self, file_name: str):
-        self.client = self.create_client(LoadMap, "/player_service")
-        self.req = LoadMap.Request()
-        while not self.client.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info('Service unavailable, waiting...')
-        self.follow_path(file_name)
-        self.get_logger().info("turtle bot path follower started")
-        
-
+    
     def save_callback(self, msg: Twist):
         self.Lx = msg.linear.x
         self.Ly = msg.linear.y
@@ -73,6 +72,15 @@ class turtle_bot_interface(Node):
 
         with open(self.file_path, 'a') as file:
             file.write(f'{self.Lx},{self.Ly},{self.Lz},{self.Ax},{self.Ay},{self.Az}\n')
+
+    def player_loop(self, file_name: str):
+        self.client = self.create_client(LoadMap, "/player_service")
+        self.req = LoadMap.Request()
+        while not self.client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Service unavailable, waiting...')
+        self.follow_path(file_name)
+        self.get_logger().info("turtle bot path follower started")
+        
 
     def follow_path(self, file_name: str):
         self.req.map_url = file_name
@@ -94,6 +102,7 @@ class gui_class():
         self.button_save.pack(pady=10)
         self.follow_text_box.pack(pady=10)
         self.button_follow.pack(pady=10)
+        self.open_pos = False
         threading.Thread(target=self.start_node, args=(args,)).start()
         self.gui.mainloop()
     
@@ -104,13 +113,22 @@ class gui_class():
         rclpy.shutdown()
     
     def gui_position(self):
-        self.node.position_loop(self.gui)
+        self.open_pos= not self.open_pos
+        self.node.position_loop(self.gui, self.open_pos)
 
     def gui_save(self):
-        self.node.save_loop(self.save_text_box.get(1.0, "end-1c"))
+        text = self.save_text_box.get(1.0, "end-1c")
+        if text=='':
+            messagebox.showwarning("Warning","Invalid file name")
+            return
+        self.node.save_loop(text)
 
     def gui_follow(self):
-        self.node.player_loop(self.follow_text_box.get(1.0, "end-1c"))
+        text = self.follow_text_box.get(1.0, "end-1c")
+        if not os.path.exists("src/turtle_bot/resource/"+text+".txt"):
+            messagebox.showwarning("Warning","File not found")
+            return
+        self.node.player_loop()
 
 
 def main(args=None):
