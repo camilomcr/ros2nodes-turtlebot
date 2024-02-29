@@ -27,7 +27,7 @@ class turtle_bot_interface(Node):
         self.pos = False
         self.fig = Figure(figsize=(5, 4), dpi=100)
         self.plot_frame = tk.Frame(gui)
-        self.plot_frame.grid(row=0, column=2, rowspan=5)
+        self.plot_frame.grid(row=0, column=2, rowspan=6)
         self.subplot= self.fig.add_subplot()
         self.subplot.set_xlim(-250, 250)
         self.subplot.set_ylim(-250, 250)
@@ -85,7 +85,6 @@ class turtle_bot_interface(Node):
     def follow_path(self, file_name: str):
         self.req.map_url =  file_name
         self.future = self.client.call(self.req)
-        return self.future.result()
     
     def stop_save(self):
         self.destroy_subscription(self.turtle_bot_vel_suscriber)
@@ -96,13 +95,16 @@ class gui_class():
         threading.Thread(target=self.start_node, args=(args,)).start()
         self.gui = tk.Tk()
         self.gui.title('Turtle bot interface')
+
         self.saving=False
-        self.button_position = tk.Button(self.gui, text='Position tracker', width=25, command=self.gui_position)
+        self.button_position = tk.Button(self.gui, text='Start position tracker', width=25, command=self.gui_position)
         self.save_text_box = tk.Text(self.gui,height= 1, width=20)
-        self.button_save = tk.Button(self.gui, text='Save position', width=15, command=self.gui_save)
-        self.button_stop_save = tk.Button(self.gui, text='Stop saving position', width=15, command=self.gui_stop_save)
+        self.button_save = tk.Button(self.gui, text='Start recording route', width=15, command=self.gui_save)
+        self.button_stop_save = tk.Button(self.gui, text='Stop recording route', width=15, command=self.gui_stop_save)
         self.follow_text_box = tk.Text(self.gui,height= 1, width=20)
-        self.button_follow = tk.Button(self.gui, text='Follow path', width=25, command=self.gui_follow)
+        self.button_follow = tk.Button(self.gui, text='Start route follower', width=25, command=self.gui_follow)
+        self.button_teleop = tk.Button(self.gui, text='Start teleop node', width=15, command=self.start_teleop)
+        self.button_player = tk.Button(self.gui, text='Start player service', width=15, command=self.start_player)
 
 
         self.button_position.grid(row = 0, column = 0, columnspan=2, pady=10)
@@ -113,6 +115,8 @@ class gui_class():
         tk.Label(self.gui, text="Path file name").grid(row=3, column=0, pady=10)
         self.follow_text_box.grid(row = 3, column = 1, pady=10)
         self.button_follow.grid(row = 4, column = 0, columnspan=2, pady=10)
+        self.button_teleop.grid(row = 5, column = 0, pady=10)
+        self.button_player.grid(row = 5, column = 1, pady=10)
         self.open_pos = False
         self.gui.mainloop()
     
@@ -142,6 +146,7 @@ class gui_class():
             messagebox.showwarning("Warning","There is no route being saved")
             return
         self.saving = False
+        messagebox.showinfo("Saved", "The route has been saved")
         threading.Thread(target=self.node.stop_save).start()
 
     def gui_follow(self):
@@ -150,6 +155,13 @@ class gui_class():
             messagebox.showwarning("Warning","File not found")
             return
         threading.Thread(target=self.node.player_loop, args=(text,)).start()
+
+    
+    def start_teleop(self):
+        os.system("gnome-terminal -x ros2 run turtle_bot turtle_bot_teleop")
+    
+    def start_player(self):
+        os.system("gnome-terminal -x ros2 run turtle_bot turtle_bot_player")
 
 
 def main(args=None):
