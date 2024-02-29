@@ -4,6 +4,7 @@ import threading
 import tkinter as tk
 import os
 from tkinter import messagebox
+from tkinter.filedialog import asksaveasfilename
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from nav_msgs.srv import LoadMap
@@ -21,6 +22,13 @@ class turtle_bot_interface(Node):
        
     def position_loop(self, gui: tk.Tk, open_pos: bool):
         if not open_pos:
+            file_path = asksaveasfilename(
+                defaultextension='.jpg',
+                filetypes=[("PNG files", '*.png'), ("JPEG files", '*.jpg'), ("All files", '*.*')],
+                title="Save the figure")
+            if file_path:
+                self.canvas.print_figure(file_path)
+                messagebox.showinfo("Saved", "The figure has been saved")
             self.plot_frame.destroy()
             self.destroy_subscription(self.turtle_bot_pos_suscriber)
             return
