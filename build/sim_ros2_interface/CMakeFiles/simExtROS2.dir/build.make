@@ -69,31 +69,31 @@ include CMakeFiles/simExtROS2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/simExtROS2.dir/flags.make
 
-generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/__init__.py
-generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/generate.py
-generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/generate_api_index.py
-generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/generate_cmake_metadata.py
-generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/generate_lua_calltips.py
-generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/generate_lua_typechecker.py
-generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/generate_lua_xml.py
-generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/parse.py
-generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/model/__init__.py
-generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/model/command.py
-generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/model/enum.py
-generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/model/param.py
-generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/model/plugin.py
-generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/model/script_function.py
-generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/model/struct.py
-generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/cpp/plugin.h
-generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/cpp/stubs.cpp
-generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/cpp/stubs.h
-generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/cpp/stubsPlusPlus.cpp
-generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/xsd/callbacks.xsd
-generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/xsl/reference.xsl
+generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/__init__.py
+generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/generate.py
+generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/generate_api_index.py
+generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/generate_cmake_metadata.py
+generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/generate_lua_calltips.py
+generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/generate_lua_typechecker.py
+generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/generate_lua_xml.py
+generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/parse.py
+generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/model/__init__.py
+generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/model/command.py
+generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/model/enum.py
+generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/model/param.py
+generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/model/plugin.py
+generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/model/script_function.py
+generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/model/struct.py
+generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/cpp/plugin.h
+generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/cpp/stubs.cpp
+generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/cpp/stubs.h
+generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/cpp/stubsPlusPlus.cpp
+generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/xsd/callbacks.xsd
+generated/stubs.cpp: /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/xsl/reference.xsl
 generated/stubs.cpp: /home/camilo/ros2_ws/src/sim_ros2_interface/meta/callbacks.xml
 generated/stubs.cpp: /home/camilo/ros2_ws/src/sim_ros2_interface/simROS2.lua
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/camilo/ros2_ws/build/sim_ros2_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating generated/stubs.cpp, generated/stubs.h, generated/plugin.h, generated/stubsPlusPlus.cpp, generated/index.json, generated/reference.html, generated/lua_calltips.cpp, generated/simROS2-typecheck.lua"
-	/usr/bin/python3.10 /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/generate.py --verbose --xml-file /home/camilo/ros2_ws/src/sim_ros2_interface/meta/callbacks.xml --gen-all /home/camilo/ros2_ws/build/sim_ros2_interface/generated --lua-file /home/camilo/ros2_ws/src/sim_ros2_interface/simROS2.lua
+	/usr/bin/python3 /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/generate.py --verbose --xml-file /home/camilo/ros2_ws/src/sim_ros2_interface/meta/callbacks.xml --gen-all /home/camilo/ros2_ws/build/sim_ros2_interface/generated --lua-file /home/camilo/ros2_ws/src/sim_ros2_interface/simROS2.lua
 
 generated/stubs.h: generated/stubs.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate generated/stubs.h
@@ -120,21 +120,21 @@ generated/callbacks.cpp: /home/camilo/ros2_ws/src/sim_ros2_interface/tools/parse
 generated/callbacks.cpp: /home/camilo/ros2_ws/src/sim_ros2_interface/meta/interfaces.txt
 generated/callbacks.cpp: /home/camilo/ros2_ws/src/sim_ros2_interface/templates/callbacks.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/camilo/ros2_ws/build/sim_ros2_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating generated/callbacks.cpp"
-	/usr/bin/python3.10 /home/camilo/Downloads/Coppelia/programming/libPlugin/simStubsGen/external/pycpp/pycpp.py -p interfaces_file=/home/camilo/ros2_ws/src/sim_ros2_interface/meta/interfaces.txt -i /home/camilo/ros2_ws/src/sim_ros2_interface/templates/callbacks.cpp -o /home/camilo/ros2_ws/build/sim_ros2_interface/generated/callbacks.cpp -P /home/camilo/ros2_ws/src/sim_ros2_interface/tools
+	/usr/bin/python3 /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/external/pycpp/pycpp.py -p interfaces_file=/home/camilo/ros2_ws/src/sim_ros2_interface/meta/interfaces.txt -i /home/camilo/ros2_ws/src/sim_ros2_interface/templates/callbacks.cpp -o /home/camilo/ros2_ws/build/sim_ros2_interface/generated/callbacks.cpp -P /home/camilo/ros2_ws/src/sim_ros2_interface/tools
 
-CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.o: CMakeFiles/simExtROS2.dir/flags.make
-CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.o: /home/camilo/Downloads/Coppelia/programming/common/simLib.cpp
-CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.o: CMakeFiles/simExtROS2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camilo/ros2_ws/build/sim_ros2_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.o -MF CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.o.d -o CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.o -c /home/camilo/Downloads/Coppelia/programming/common/simLib.cpp
+CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.o: CMakeFiles/simExtROS2.dir/flags.make
+CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.o: /home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp
+CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.o: CMakeFiles/simExtROS2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camilo/ros2_ws/build/sim_ros2_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.o -MF CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.o.d -o CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.o -c /home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp
 
-CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/camilo/Downloads/Coppelia/programming/common/simLib.cpp > CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.i
+CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp > CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.i
 
-CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/camilo/Downloads/Coppelia/programming/common/simLib.cpp -o CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.s
+CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp -o CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.s
 
 CMakeFiles/simExtROS2.dir/generated/stubs.cpp.o: CMakeFiles/simExtROS2.dir/flags.make
 CMakeFiles/simExtROS2.dir/generated/stubs.cpp.o: generated/stubs.cpp
@@ -150,52 +150,38 @@ CMakeFiles/simExtROS2.dir/generated/stubs.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simExtROS2.dir/generated/stubs.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/camilo/ros2_ws/build/sim_ros2_interface/generated/stubs.cpp -o CMakeFiles/simExtROS2.dir/generated/stubs.cpp.s
 
-CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.o: CMakeFiles/simExtROS2.dir/flags.make
-CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.o: /home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp
-CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.o: CMakeFiles/simExtROS2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camilo/ros2_ws/build/sim_ros2_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.o -MF CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.o.d -o CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.o -c /home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp
+CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.o: CMakeFiles/simExtROS2.dir/flags.make
+CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.o: /home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp
+CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.o: CMakeFiles/simExtROS2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camilo/ros2_ws/build/sim_ros2_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.o -MF CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.o.d -o CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.o -c /home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp
 
-CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp > CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.i
+CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp > CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.i
 
-CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp -o CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.s
+CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp -o CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.s
 
-CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.o: CMakeFiles/simExtROS2.dir/flags.make
-CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.o: /home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp
-CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.o: CMakeFiles/simExtROS2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camilo/ros2_ws/build/sim_ros2_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.o -MF CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.o.d -o CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.o -c /home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp
+CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.o: CMakeFiles/simExtROS2.dir/flags.make
+CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.o: /home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp
+CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.o: CMakeFiles/simExtROS2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camilo/ros2_ws/build/sim_ros2_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.o -MF CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.o.d -o CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.o -c /home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp
 
-CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp > CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.i
+CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp > CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.i
 
-CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp -o CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.s
-
-CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.o: CMakeFiles/simExtROS2.dir/flags.make
-CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.o: /home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp
-CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.o: CMakeFiles/simExtROS2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camilo/ros2_ws/build/sim_ros2_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.o -MF CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.o.d -o CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.o -c /home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp
-
-CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp > CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.i
-
-CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp -o CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.s
+CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp -o CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.s
 
 CMakeFiles/simExtROS2.dir/src/sim_ros2_interface.cpp.o: CMakeFiles/simExtROS2.dir/flags.make
 CMakeFiles/simExtROS2.dir/src/sim_ros2_interface.cpp.o: /home/camilo/ros2_ws/src/sim_ros2_interface/src/sim_ros2_interface.cpp
 CMakeFiles/simExtROS2.dir/src/sim_ros2_interface.cpp.o: CMakeFiles/simExtROS2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camilo/ros2_ws/build/sim_ros2_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/simExtROS2.dir/src/sim_ros2_interface.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camilo/ros2_ws/build/sim_ros2_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/simExtROS2.dir/src/sim_ros2_interface.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simExtROS2.dir/src/sim_ros2_interface.cpp.o -MF CMakeFiles/simExtROS2.dir/src/sim_ros2_interface.cpp.o.d -o CMakeFiles/simExtROS2.dir/src/sim_ros2_interface.cpp.o -c /home/camilo/ros2_ws/src/sim_ros2_interface/src/sim_ros2_interface.cpp
 
 CMakeFiles/simExtROS2.dir/src/sim_ros2_interface.cpp.i: cmake_force
@@ -209,7 +195,7 @@ CMakeFiles/simExtROS2.dir/src/sim_ros2_interface.cpp.s: cmake_force
 CMakeFiles/simExtROS2.dir/src/ros_msg_builtin_io.cpp.o: CMakeFiles/simExtROS2.dir/flags.make
 CMakeFiles/simExtROS2.dir/src/ros_msg_builtin_io.cpp.o: /home/camilo/ros2_ws/src/sim_ros2_interface/src/ros_msg_builtin_io.cpp
 CMakeFiles/simExtROS2.dir/src/ros_msg_builtin_io.cpp.o: CMakeFiles/simExtROS2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camilo/ros2_ws/build/sim_ros2_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/simExtROS2.dir/src/ros_msg_builtin_io.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camilo/ros2_ws/build/sim_ros2_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/simExtROS2.dir/src/ros_msg_builtin_io.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simExtROS2.dir/src/ros_msg_builtin_io.cpp.o -MF CMakeFiles/simExtROS2.dir/src/ros_msg_builtin_io.cpp.o.d -o CMakeFiles/simExtROS2.dir/src/ros_msg_builtin_io.cpp.o -c /home/camilo/ros2_ws/src/sim_ros2_interface/src/ros_msg_builtin_io.cpp
 
 CMakeFiles/simExtROS2.dir/src/ros_msg_builtin_io.cpp.i: cmake_force
@@ -223,7 +209,7 @@ CMakeFiles/simExtROS2.dir/src/ros_msg_builtin_io.cpp.s: cmake_force
 CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o: CMakeFiles/simExtROS2.dir/flags.make
 CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o: generated/callbacks.cpp
 CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o: CMakeFiles/simExtROS2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camilo/ros2_ws/build/sim_ros2_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/camilo/ros2_ws/build/sim_ros2_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o -MF CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o.d -o CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o -c /home/camilo/ros2_ws/build/sim_ros2_interface/generated/callbacks.cpp
 
 CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.i: cmake_force
@@ -236,11 +222,10 @@ CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.s: cmake_force
 
 # Object files for target simExtROS2
 simExtROS2_OBJECTS = \
-"CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.o" \
+"CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.o" \
 "CMakeFiles/simExtROS2.dir/generated/stubs.cpp.o" \
-"CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.o" \
-"CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.o" \
-"CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.o" \
+"CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.o" \
+"CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.o" \
 "CMakeFiles/simExtROS2.dir/src/sim_ros2_interface.cpp.o" \
 "CMakeFiles/simExtROS2.dir/src/ros_msg_builtin_io.cpp.o" \
 "CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o"
@@ -248,11 +233,10 @@ simExtROS2_OBJECTS = \
 # External object files for target simExtROS2
 simExtROS2_EXTERNAL_OBJECTS =
 
-libsimExtROS2.so: CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.o
+libsimExtROS2.so: CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.o
 libsimExtROS2.so: CMakeFiles/simExtROS2.dir/generated/stubs.cpp.o
-libsimExtROS2.so: CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.o
-libsimExtROS2.so: CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.o
-libsimExtROS2.so: CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.o
+libsimExtROS2.so: CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.o
+libsimExtROS2.so: CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.o
 libsimExtROS2.so: CMakeFiles/simExtROS2.dir/src/sim_ros2_interface.cpp.o
 libsimExtROS2.so: CMakeFiles/simExtROS2.dir/src/ros_msg_builtin_io.cpp.o
 libsimExtROS2.so: CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o
@@ -456,7 +440,7 @@ libsimExtROS2.so: /opt/ros/humble/lib/librcpputils.so
 libsimExtROS2.so: /opt/ros/humble/lib/librcutils.so
 libsimExtROS2.so: /opt/ros/humble/lib/libtracetools.so
 libsimExtROS2.so: CMakeFiles/simExtROS2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/camilo/ros2_ws/build/sim_ros2_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX shared library libsimExtROS2.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/camilo/ros2_ws/build/sim_ros2_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX shared library libsimExtROS2.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/simExtROS2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

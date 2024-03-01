@@ -80,7 +80,7 @@ void simThread()
 
 void readFromStack(int stack, bool *value, const ReadOptions &rdopt)
 {
-    simBool v;
+    bool v;
     if(sim::getStackBoolValue(stack, &v) == 1)
     {
         *value = v;
@@ -122,7 +122,7 @@ void readFromStack(int stack, long *value, const ReadOptions &rdopt)
 
 void readFromStack(int stack, float *value, const ReadOptions &rdopt)
 {
-    simFloat v;
+    float v;
     if(sim::getStackFloatValue(stack, &v) == 1)
     {
         *value = v;
@@ -136,7 +136,7 @@ void readFromStack(int stack, float *value, const ReadOptions &rdopt)
 
 void readFromStack(int stack, double *value, const ReadOptions &rdopt)
 {
-    simDouble v;
+    double v;
     if(sim::getStackDoubleValue(stack, &v) == 1)
     {
         *value = v;
@@ -215,7 +215,7 @@ void readFromStack(int stack, std::vector<T> *vec, const ReadOptions &rdopt = {}
 }
 
 template<typename T>
-void readFromStack(int stack, std::vector<T> *vec, simInt (*f)(simInt, std::vector<T>*), const ReadOptions &rdopt = {})
+void readFromStack(int stack, std::vector<T> *vec, int (*f)(int, std::vector<T>*), const ReadOptions &rdopt = {})
 {
     int sz = sim::getStackTableInfo(stack, 0);
     if(sz < 0)
@@ -259,7 +259,7 @@ void readFromStack(int stack, Grid<T> *grid, const ReadOptions &rdopt = {})
 {
     try
     {
-        simInt info = sim::getStackTableInfo(stack, 0);
+        int info = sim::getStackTableInfo(stack, 0);
         if(info != sim_stack_table_map && info != sim_stack_table_empty)
         {
             throw sim::exception("expected a map");
@@ -329,7 +329,7 @@ void readFromStack(int stack, sim_ros2_time *value, const ReadOptions &rdopt)
 
     try
     {
-        simInt info = sim::getStackTableInfo(stack, 0);
+        int info = sim::getStackTableInfo(stack, 0);
         if(info != sim_stack_table_map && info != sim_stack_table_empty)
         {
             throw sim::exception("expected a map");
@@ -546,12 +546,12 @@ sim_ros2_time::sim_ros2_time()
 
 void checkRuntimeVersion()
 {
-    simInt simVer = sim::programVersion();
+    int simVer = sim::programVersion();
 
     // version required by simStubsGen:
     int minVer = 4010000; // 4.1.0rev0
     if(simVer < minVer)
-        throw sim::exception("requires at least %s (libPlugin)", sim::versionString(minVer));
+        throw sim::exception("requires at least %s (simStubsGen)", sim::versionString(minVer));
 
     // version required by plugin:
     if(simVer < SIM_REQUIRED_PROGRAM_VERSION_NB)
@@ -568,8 +568,8 @@ bool registerScriptStuff()
     {
         checkRuntimeVersion();
 
-        auto dbg = sim::getStringNamedParam("simStubsGen.debug");
-        if(dbg && *dbg != "0")
+        auto dbg = sim::getNamedBoolParam("simStubsGen.debug");
+        if(dbg && *dbg)
             sim::enableStackDebug();
 
         try
@@ -716,41 +716,6 @@ createSubscription_out::createSubscription_out()
 {
 }
 
-void createSubscription(SScriptCallBack *p, createSubscription_in *in_args, createSubscription_out *out_args)
-{
-    createSubscription(p, "simROS2.createSubscription", in_args, out_args);
-}
-
-std::string createSubscription(SScriptCallBack *p, std::string topicName, std::string topicType, std::string topicCallback, int queueSize)
-{
-    createSubscription_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.topicName = topicName;
-    in_args.topicType = topicType;
-    in_args.topicCallback = topicCallback;
-    in_args.queueSize = queueSize;
-    createSubscription_out out_args;
-    createSubscription(p, &in_args, &out_args);
-    return out_args.subscriptionHandle;
-}
-
-void createSubscription(SScriptCallBack *p, createSubscription_out *out_args, std::string topicName, std::string topicType, std::string topicCallback, int queueSize)
-{
-    createSubscription_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.topicName = topicName;
-    in_args.topicType = topicType;
-    in_args.topicCallback = topicCallback;
-    in_args.queueSize = queueSize;
-    createSubscription(p, &in_args, out_args);
-}
-
 void createSubscription_callback(SScriptCallBack *p)
 {
     addStubsDebugLog("createSubscription_callback: reading input arguments...");
@@ -843,7 +808,7 @@ void createSubscription_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("createSubscription_callback: calling callback (createSubscription)");
-        createSubscription(p, cmd, &in_args, &out_args);
+        simExtROS2_createSubscription(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -891,34 +856,6 @@ shutdownSubscription_in::shutdownSubscription_in()
 
 shutdownSubscription_out::shutdownSubscription_out()
 {
-}
-
-void shutdownSubscription(SScriptCallBack *p, shutdownSubscription_in *in_args, shutdownSubscription_out *out_args)
-{
-    shutdownSubscription(p, "simROS2.shutdownSubscription", in_args, out_args);
-}
-
-void shutdownSubscription(SScriptCallBack *p, std::string subscriptionHandle)
-{
-    shutdownSubscription_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.subscriptionHandle = subscriptionHandle;
-    shutdownSubscription_out out_args;
-    shutdownSubscription(p, &in_args, &out_args);
-}
-
-void shutdownSubscription(SScriptCallBack *p, shutdownSubscription_out *out_args, std::string subscriptionHandle)
-{
-    shutdownSubscription_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.subscriptionHandle = subscriptionHandle;
-    shutdownSubscription(p, &in_args, out_args);
 }
 
 void shutdownSubscription_callback(SScriptCallBack *p)
@@ -971,7 +908,7 @@ void shutdownSubscription_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("shutdownSubscription_callback: calling callback (shutdownSubscription)");
-        shutdownSubscription(p, cmd, &in_args, &out_args);
+        simExtROS2_shutdownSubscription(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -1010,34 +947,6 @@ subscriptionTreatUInt8ArrayAsString_in::subscriptionTreatUInt8ArrayAsString_in()
 
 subscriptionTreatUInt8ArrayAsString_out::subscriptionTreatUInt8ArrayAsString_out()
 {
-}
-
-void subscriptionTreatUInt8ArrayAsString(SScriptCallBack *p, subscriptionTreatUInt8ArrayAsString_in *in_args, subscriptionTreatUInt8ArrayAsString_out *out_args)
-{
-    subscriptionTreatUInt8ArrayAsString(p, "simROS2.subscriptionTreatUInt8ArrayAsString", in_args, out_args);
-}
-
-void subscriptionTreatUInt8ArrayAsString(SScriptCallBack *p, std::string subscriptionHandle)
-{
-    subscriptionTreatUInt8ArrayAsString_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.subscriptionHandle = subscriptionHandle;
-    subscriptionTreatUInt8ArrayAsString_out out_args;
-    subscriptionTreatUInt8ArrayAsString(p, &in_args, &out_args);
-}
-
-void subscriptionTreatUInt8ArrayAsString(SScriptCallBack *p, subscriptionTreatUInt8ArrayAsString_out *out_args, std::string subscriptionHandle)
-{
-    subscriptionTreatUInt8ArrayAsString_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.subscriptionHandle = subscriptionHandle;
-    subscriptionTreatUInt8ArrayAsString(p, &in_args, out_args);
 }
 
 void subscriptionTreatUInt8ArrayAsString_callback(SScriptCallBack *p)
@@ -1090,7 +999,7 @@ void subscriptionTreatUInt8ArrayAsString_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("subscriptionTreatUInt8ArrayAsString_callback: calling callback (subscriptionTreatUInt8ArrayAsString)");
-        subscriptionTreatUInt8ArrayAsString(p, cmd, &in_args, &out_args);
+        simExtROS2_subscriptionTreatUInt8ArrayAsString(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -1131,41 +1040,6 @@ createPublisher_in::createPublisher_in()
 
 createPublisher_out::createPublisher_out()
 {
-}
-
-void createPublisher(SScriptCallBack *p, createPublisher_in *in_args, createPublisher_out *out_args)
-{
-    createPublisher(p, "simROS2.createPublisher", in_args, out_args);
-}
-
-std::string createPublisher(SScriptCallBack *p, std::string topicName, std::string topicType, int queueSize, bool latch)
-{
-    createPublisher_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.topicName = topicName;
-    in_args.topicType = topicType;
-    in_args.queueSize = queueSize;
-    in_args.latch = latch;
-    createPublisher_out out_args;
-    createPublisher(p, &in_args, &out_args);
-    return out_args.publisherHandle;
-}
-
-void createPublisher(SScriptCallBack *p, createPublisher_out *out_args, std::string topicName, std::string topicType, int queueSize, bool latch)
-{
-    createPublisher_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.topicName = topicName;
-    in_args.topicType = topicType;
-    in_args.queueSize = queueSize;
-    in_args.latch = latch;
-    createPublisher(p, &in_args, out_args);
 }
 
 void createPublisher_callback(SScriptCallBack *p)
@@ -1260,7 +1134,7 @@ void createPublisher_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("createPublisher_callback: calling callback (createPublisher)");
-        createPublisher(p, cmd, &in_args, &out_args);
+        simExtROS2_createPublisher(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -1308,34 +1182,6 @@ shutdownPublisher_in::shutdownPublisher_in()
 
 shutdownPublisher_out::shutdownPublisher_out()
 {
-}
-
-void shutdownPublisher(SScriptCallBack *p, shutdownPublisher_in *in_args, shutdownPublisher_out *out_args)
-{
-    shutdownPublisher(p, "simROS2.shutdownPublisher", in_args, out_args);
-}
-
-void shutdownPublisher(SScriptCallBack *p, std::string publisherHandle)
-{
-    shutdownPublisher_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.publisherHandle = publisherHandle;
-    shutdownPublisher_out out_args;
-    shutdownPublisher(p, &in_args, &out_args);
-}
-
-void shutdownPublisher(SScriptCallBack *p, shutdownPublisher_out *out_args, std::string publisherHandle)
-{
-    shutdownPublisher_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.publisherHandle = publisherHandle;
-    shutdownPublisher(p, &in_args, out_args);
 }
 
 void shutdownPublisher_callback(SScriptCallBack *p)
@@ -1388,7 +1234,7 @@ void shutdownPublisher_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("shutdownPublisher_callback: calling callback (shutdownPublisher)");
-        shutdownPublisher(p, cmd, &in_args, &out_args);
+        simExtROS2_shutdownPublisher(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -1427,34 +1273,6 @@ publisherTreatUInt8ArrayAsString_in::publisherTreatUInt8ArrayAsString_in()
 
 publisherTreatUInt8ArrayAsString_out::publisherTreatUInt8ArrayAsString_out()
 {
-}
-
-void publisherTreatUInt8ArrayAsString(SScriptCallBack *p, publisherTreatUInt8ArrayAsString_in *in_args, publisherTreatUInt8ArrayAsString_out *out_args)
-{
-    publisherTreatUInt8ArrayAsString(p, "simROS2.publisherTreatUInt8ArrayAsString", in_args, out_args);
-}
-
-void publisherTreatUInt8ArrayAsString(SScriptCallBack *p, std::string publisherHandle)
-{
-    publisherTreatUInt8ArrayAsString_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.publisherHandle = publisherHandle;
-    publisherTreatUInt8ArrayAsString_out out_args;
-    publisherTreatUInt8ArrayAsString(p, &in_args, &out_args);
-}
-
-void publisherTreatUInt8ArrayAsString(SScriptCallBack *p, publisherTreatUInt8ArrayAsString_out *out_args, std::string publisherHandle)
-{
-    publisherTreatUInt8ArrayAsString_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.publisherHandle = publisherHandle;
-    publisherTreatUInt8ArrayAsString(p, &in_args, out_args);
 }
 
 void publisherTreatUInt8ArrayAsString_callback(SScriptCallBack *p)
@@ -1507,7 +1325,7 @@ void publisherTreatUInt8ArrayAsString_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("publisherTreatUInt8ArrayAsString_callback: calling callback (publisherTreatUInt8ArrayAsString)");
-        publisherTreatUInt8ArrayAsString(p, cmd, &in_args, &out_args);
+        simExtROS2_publisherTreatUInt8ArrayAsString(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -1546,34 +1364,6 @@ publish_in::publish_in()
 
 publish_out::publish_out()
 {
-}
-
-void publish(SScriptCallBack *p, publish_in *in_args, publish_out *out_args)
-{
-    publish(p, "simROS2.publish", in_args, out_args);
-}
-
-void publish(SScriptCallBack *p, std::string publisherHandle)
-{
-    publish_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.publisherHandle = publisherHandle;
-    publish_out out_args;
-    publish(p, &in_args, &out_args);
-}
-
-void publish(SScriptCallBack *p, publish_out *out_args, std::string publisherHandle)
-{
-    publish_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.publisherHandle = publisherHandle;
-    publish(p, &in_args, out_args);
 }
 
 void publish_callback(SScriptCallBack *p)
@@ -1622,7 +1412,7 @@ void publish_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("publish_callback: calling callback (publish)");
-        publish(p, cmd, &in_args, &out_args);
+        simExtROS2_publish(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -1661,37 +1451,6 @@ createClient_in::createClient_in()
 
 createClient_out::createClient_out()
 {
-}
-
-void createClient(SScriptCallBack *p, createClient_in *in_args, createClient_out *out_args)
-{
-    createClient(p, "simROS2.createClient", in_args, out_args);
-}
-
-std::string createClient(SScriptCallBack *p, std::string serviceName, std::string serviceType)
-{
-    createClient_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.serviceName = serviceName;
-    in_args.serviceType = serviceType;
-    createClient_out out_args;
-    createClient(p, &in_args, &out_args);
-    return out_args.clientHandle;
-}
-
-void createClient(SScriptCallBack *p, createClient_out *out_args, std::string serviceName, std::string serviceType)
-{
-    createClient_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.serviceName = serviceName;
-    in_args.serviceType = serviceType;
-    createClient(p, &in_args, out_args);
 }
 
 void createClient_callback(SScriptCallBack *p)
@@ -1758,7 +1517,7 @@ void createClient_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("createClient_callback: calling callback (createClient)");
-        createClient(p, cmd, &in_args, &out_args);
+        simExtROS2_createClient(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -1806,34 +1565,6 @@ shutdownClient_in::shutdownClient_in()
 
 shutdownClient_out::shutdownClient_out()
 {
-}
-
-void shutdownClient(SScriptCallBack *p, shutdownClient_in *in_args, shutdownClient_out *out_args)
-{
-    shutdownClient(p, "simROS2.shutdownClient", in_args, out_args);
-}
-
-void shutdownClient(SScriptCallBack *p, std::string clientHandle)
-{
-    shutdownClient_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.clientHandle = clientHandle;
-    shutdownClient_out out_args;
-    shutdownClient(p, &in_args, &out_args);
-}
-
-void shutdownClient(SScriptCallBack *p, shutdownClient_out *out_args, std::string clientHandle)
-{
-    shutdownClient_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.clientHandle = clientHandle;
-    shutdownClient(p, &in_args, out_args);
 }
 
 void shutdownClient_callback(SScriptCallBack *p)
@@ -1886,7 +1617,7 @@ void shutdownClient_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("shutdownClient_callback: calling callback (shutdownClient)");
-        shutdownClient(p, cmd, &in_args, &out_args);
+        simExtROS2_shutdownClient(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -1925,34 +1656,6 @@ clientTreatUInt8ArrayAsString_in::clientTreatUInt8ArrayAsString_in()
 
 clientTreatUInt8ArrayAsString_out::clientTreatUInt8ArrayAsString_out()
 {
-}
-
-void clientTreatUInt8ArrayAsString(SScriptCallBack *p, clientTreatUInt8ArrayAsString_in *in_args, clientTreatUInt8ArrayAsString_out *out_args)
-{
-    clientTreatUInt8ArrayAsString(p, "simROS2.clientTreatUInt8ArrayAsString", in_args, out_args);
-}
-
-void clientTreatUInt8ArrayAsString(SScriptCallBack *p, std::string clientHandle)
-{
-    clientTreatUInt8ArrayAsString_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.clientHandle = clientHandle;
-    clientTreatUInt8ArrayAsString_out out_args;
-    clientTreatUInt8ArrayAsString(p, &in_args, &out_args);
-}
-
-void clientTreatUInt8ArrayAsString(SScriptCallBack *p, clientTreatUInt8ArrayAsString_out *out_args, std::string clientHandle)
-{
-    clientTreatUInt8ArrayAsString_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.clientHandle = clientHandle;
-    clientTreatUInt8ArrayAsString(p, &in_args, out_args);
 }
 
 void clientTreatUInt8ArrayAsString_callback(SScriptCallBack *p)
@@ -2005,7 +1708,7 @@ void clientTreatUInt8ArrayAsString_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("clientTreatUInt8ArrayAsString_callback: calling callback (clientTreatUInt8ArrayAsString)");
-        clientTreatUInt8ArrayAsString(p, cmd, &in_args, &out_args);
+        simExtROS2_clientTreatUInt8ArrayAsString(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -2044,37 +1747,6 @@ waitForService_in::waitForService_in()
 
 waitForService_out::waitForService_out()
 {
-}
-
-void waitForService(SScriptCallBack *p, waitForService_in *in_args, waitForService_out *out_args)
-{
-    waitForService(p, "simROS2.waitForService", in_args, out_args);
-}
-
-bool waitForService(SScriptCallBack *p, std::string clientHandle, float timeout)
-{
-    waitForService_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.clientHandle = clientHandle;
-    in_args.timeout = timeout;
-    waitForService_out out_args;
-    waitForService(p, &in_args, &out_args);
-    return out_args.result;
-}
-
-void waitForService(SScriptCallBack *p, waitForService_out *out_args, std::string clientHandle, float timeout)
-{
-    waitForService_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.clientHandle = clientHandle;
-    in_args.timeout = timeout;
-    waitForService(p, &in_args, out_args);
 }
 
 void waitForService_callback(SScriptCallBack *p)
@@ -2141,7 +1813,7 @@ void waitForService_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("waitForService_callback: calling callback (waitForService)");
-        waitForService(p, cmd, &in_args, &out_args);
+        simExtROS2_waitForService(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -2191,34 +1863,6 @@ call_out::call_out()
 {
 }
 
-void call(SScriptCallBack *p, call_in *in_args, call_out *out_args)
-{
-    call(p, "simROS2.call", in_args, out_args);
-}
-
-void call(SScriptCallBack *p, std::string clientHandle)
-{
-    call_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.clientHandle = clientHandle;
-    call_out out_args;
-    call(p, &in_args, &out_args);
-}
-
-void call(SScriptCallBack *p, call_out *out_args, std::string clientHandle)
-{
-    call_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.clientHandle = clientHandle;
-    call(p, &in_args, out_args);
-}
-
 void call_callback(SScriptCallBack *p)
 {
     addStubsDebugLog("call_callback: reading input arguments...");
@@ -2265,7 +1909,7 @@ void call_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("call_callback: calling callback (call)");
-        call(p, cmd, &in_args, &out_args);
+        simExtROS2_call(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -2300,39 +1944,6 @@ createService_in::createService_in()
 
 createService_out::createService_out()
 {
-}
-
-void createService(SScriptCallBack *p, createService_in *in_args, createService_out *out_args)
-{
-    createService(p, "simROS2.createService", in_args, out_args);
-}
-
-std::string createService(SScriptCallBack *p, std::string serviceName, std::string serviceType, std::string serviceCallback)
-{
-    createService_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.serviceName = serviceName;
-    in_args.serviceType = serviceType;
-    in_args.serviceCallback = serviceCallback;
-    createService_out out_args;
-    createService(p, &in_args, &out_args);
-    return out_args.serviceHandle;
-}
-
-void createService(SScriptCallBack *p, createService_out *out_args, std::string serviceName, std::string serviceType, std::string serviceCallback)
-{
-    createService_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.serviceName = serviceName;
-    in_args.serviceType = serviceType;
-    in_args.serviceCallback = serviceCallback;
-    createService(p, &in_args, out_args);
 }
 
 void createService_callback(SScriptCallBack *p)
@@ -2413,7 +2024,7 @@ void createService_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("createService_callback: calling callback (createService)");
-        createService(p, cmd, &in_args, &out_args);
+        simExtROS2_createService(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -2461,34 +2072,6 @@ shutdownService_in::shutdownService_in()
 
 shutdownService_out::shutdownService_out()
 {
-}
-
-void shutdownService(SScriptCallBack *p, shutdownService_in *in_args, shutdownService_out *out_args)
-{
-    shutdownService(p, "simROS2.shutdownService", in_args, out_args);
-}
-
-void shutdownService(SScriptCallBack *p, std::string serviceHandle)
-{
-    shutdownService_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.serviceHandle = serviceHandle;
-    shutdownService_out out_args;
-    shutdownService(p, &in_args, &out_args);
-}
-
-void shutdownService(SScriptCallBack *p, shutdownService_out *out_args, std::string serviceHandle)
-{
-    shutdownService_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.serviceHandle = serviceHandle;
-    shutdownService(p, &in_args, out_args);
 }
 
 void shutdownService_callback(SScriptCallBack *p)
@@ -2541,7 +2124,7 @@ void shutdownService_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("shutdownService_callback: calling callback (shutdownService)");
-        shutdownService(p, cmd, &in_args, &out_args);
+        simExtROS2_shutdownService(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -2580,34 +2163,6 @@ serviceTreatUInt8ArrayAsString_in::serviceTreatUInt8ArrayAsString_in()
 
 serviceTreatUInt8ArrayAsString_out::serviceTreatUInt8ArrayAsString_out()
 {
-}
-
-void serviceTreatUInt8ArrayAsString(SScriptCallBack *p, serviceTreatUInt8ArrayAsString_in *in_args, serviceTreatUInt8ArrayAsString_out *out_args)
-{
-    serviceTreatUInt8ArrayAsString(p, "simROS2.serviceTreatUInt8ArrayAsString", in_args, out_args);
-}
-
-void serviceTreatUInt8ArrayAsString(SScriptCallBack *p, std::string serviceHandle)
-{
-    serviceTreatUInt8ArrayAsString_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.serviceHandle = serviceHandle;
-    serviceTreatUInt8ArrayAsString_out out_args;
-    serviceTreatUInt8ArrayAsString(p, &in_args, &out_args);
-}
-
-void serviceTreatUInt8ArrayAsString(SScriptCallBack *p, serviceTreatUInt8ArrayAsString_out *out_args, std::string serviceHandle)
-{
-    serviceTreatUInt8ArrayAsString_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.serviceHandle = serviceHandle;
-    serviceTreatUInt8ArrayAsString(p, &in_args, out_args);
 }
 
 void serviceTreatUInt8ArrayAsString_callback(SScriptCallBack *p)
@@ -2660,7 +2215,7 @@ void serviceTreatUInt8ArrayAsString_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("serviceTreatUInt8ArrayAsString_callback: calling callback (serviceTreatUInt8ArrayAsString)");
-        serviceTreatUInt8ArrayAsString(p, cmd, &in_args, &out_args);
+        simExtROS2_serviceTreatUInt8ArrayAsString(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -2699,43 +2254,6 @@ createActionClient_in::createActionClient_in()
 
 createActionClient_out::createActionClient_out()
 {
-}
-
-void createActionClient(SScriptCallBack *p, createActionClient_in *in_args, createActionClient_out *out_args)
-{
-    createActionClient(p, "simROS2.createActionClient", in_args, out_args);
-}
-
-std::string createActionClient(SScriptCallBack *p, std::string actionName, std::string actionType, std::string goalResponseCallback, std::string feedbackCallback, std::string resultCallback)
-{
-    createActionClient_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionName = actionName;
-    in_args.actionType = actionType;
-    in_args.goalResponseCallback = goalResponseCallback;
-    in_args.feedbackCallback = feedbackCallback;
-    in_args.resultCallback = resultCallback;
-    createActionClient_out out_args;
-    createActionClient(p, &in_args, &out_args);
-    return out_args.actionClientHandle;
-}
-
-void createActionClient(SScriptCallBack *p, createActionClient_out *out_args, std::string actionName, std::string actionType, std::string goalResponseCallback, std::string feedbackCallback, std::string resultCallback)
-{
-    createActionClient_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionName = actionName;
-    in_args.actionType = actionType;
-    in_args.goalResponseCallback = goalResponseCallback;
-    in_args.feedbackCallback = feedbackCallback;
-    in_args.resultCallback = resultCallback;
-    createActionClient(p, &in_args, out_args);
 }
 
 void createActionClient_callback(SScriptCallBack *p)
@@ -2844,7 +2362,7 @@ void createActionClient_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("createActionClient_callback: calling callback (createActionClient)");
-        createActionClient(p, cmd, &in_args, &out_args);
+        simExtROS2_createActionClient(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -2892,34 +2410,6 @@ shutdownActionClient_in::shutdownActionClient_in()
 
 shutdownActionClient_out::shutdownActionClient_out()
 {
-}
-
-void shutdownActionClient(SScriptCallBack *p, shutdownActionClient_in *in_args, shutdownActionClient_out *out_args)
-{
-    shutdownActionClient(p, "simROS2.shutdownActionClient", in_args, out_args);
-}
-
-void shutdownActionClient(SScriptCallBack *p, std::string actionClientHandle)
-{
-    shutdownActionClient_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionClientHandle = actionClientHandle;
-    shutdownActionClient_out out_args;
-    shutdownActionClient(p, &in_args, &out_args);
-}
-
-void shutdownActionClient(SScriptCallBack *p, shutdownActionClient_out *out_args, std::string actionClientHandle)
-{
-    shutdownActionClient_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionClientHandle = actionClientHandle;
-    shutdownActionClient(p, &in_args, out_args);
 }
 
 void shutdownActionClient_callback(SScriptCallBack *p)
@@ -2972,7 +2462,7 @@ void shutdownActionClient_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("shutdownActionClient_callback: calling callback (shutdownActionClient)");
-        shutdownActionClient(p, cmd, &in_args, &out_args);
+        simExtROS2_shutdownActionClient(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -3011,34 +2501,6 @@ actionClientTreatUInt8ArrayAsString_in::actionClientTreatUInt8ArrayAsString_in()
 
 actionClientTreatUInt8ArrayAsString_out::actionClientTreatUInt8ArrayAsString_out()
 {
-}
-
-void actionClientTreatUInt8ArrayAsString(SScriptCallBack *p, actionClientTreatUInt8ArrayAsString_in *in_args, actionClientTreatUInt8ArrayAsString_out *out_args)
-{
-    actionClientTreatUInt8ArrayAsString(p, "simROS2.actionClientTreatUInt8ArrayAsString", in_args, out_args);
-}
-
-void actionClientTreatUInt8ArrayAsString(SScriptCallBack *p, std::string actionClientHandle)
-{
-    actionClientTreatUInt8ArrayAsString_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionClientHandle = actionClientHandle;
-    actionClientTreatUInt8ArrayAsString_out out_args;
-    actionClientTreatUInt8ArrayAsString(p, &in_args, &out_args);
-}
-
-void actionClientTreatUInt8ArrayAsString(SScriptCallBack *p, actionClientTreatUInt8ArrayAsString_out *out_args, std::string actionClientHandle)
-{
-    actionClientTreatUInt8ArrayAsString_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionClientHandle = actionClientHandle;
-    actionClientTreatUInt8ArrayAsString(p, &in_args, out_args);
 }
 
 void actionClientTreatUInt8ArrayAsString_callback(SScriptCallBack *p)
@@ -3091,7 +2553,7 @@ void actionClientTreatUInt8ArrayAsString_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("actionClientTreatUInt8ArrayAsString_callback: calling callback (actionClientTreatUInt8ArrayAsString)");
-        actionClientTreatUInt8ArrayAsString(p, cmd, &in_args, &out_args);
+        simExtROS2_actionClientTreatUInt8ArrayAsString(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -3130,35 +2592,6 @@ sendGoal_in::sendGoal_in()
 
 sendGoal_out::sendGoal_out()
 {
-}
-
-void sendGoal(SScriptCallBack *p, sendGoal_in *in_args, sendGoal_out *out_args)
-{
-    sendGoal(p, "simROS2.sendGoal", in_args, out_args);
-}
-
-bool sendGoal(SScriptCallBack *p, std::string actionClientHandle)
-{
-    sendGoal_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionClientHandle = actionClientHandle;
-    sendGoal_out out_args;
-    sendGoal(p, &in_args, &out_args);
-    return out_args.success;
-}
-
-void sendGoal(SScriptCallBack *p, sendGoal_out *out_args, std::string actionClientHandle)
-{
-    sendGoal_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionClientHandle = actionClientHandle;
-    sendGoal(p, &in_args, out_args);
 }
 
 void sendGoal_callback(SScriptCallBack *p)
@@ -3207,7 +2640,7 @@ void sendGoal_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("sendGoal_callback: calling callback (sendGoal)");
-        sendGoal(p, cmd, &in_args, &out_args);
+        simExtROS2_sendGoal(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -3255,35 +2688,6 @@ cancelLastGoal_in::cancelLastGoal_in()
 
 cancelLastGoal_out::cancelLastGoal_out()
 {
-}
-
-void cancelLastGoal(SScriptCallBack *p, cancelLastGoal_in *in_args, cancelLastGoal_out *out_args)
-{
-    cancelLastGoal(p, "simROS2.cancelLastGoal", in_args, out_args);
-}
-
-bool cancelLastGoal(SScriptCallBack *p, std::string actionClientHandle)
-{
-    cancelLastGoal_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionClientHandle = actionClientHandle;
-    cancelLastGoal_out out_args;
-    cancelLastGoal(p, &in_args, &out_args);
-    return out_args.success;
-}
-
-void cancelLastGoal(SScriptCallBack *p, cancelLastGoal_out *out_args, std::string actionClientHandle)
-{
-    cancelLastGoal_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionClientHandle = actionClientHandle;
-    cancelLastGoal(p, &in_args, out_args);
 }
 
 void cancelLastGoal_callback(SScriptCallBack *p)
@@ -3336,7 +2740,7 @@ void cancelLastGoal_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("cancelLastGoal_callback: calling callback (cancelLastGoal)");
-        cancelLastGoal(p, cmd, &in_args, &out_args);
+        simExtROS2_cancelLastGoal(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -3384,43 +2788,6 @@ createActionServer_in::createActionServer_in()
 
 createActionServer_out::createActionServer_out()
 {
-}
-
-void createActionServer(SScriptCallBack *p, createActionServer_in *in_args, createActionServer_out *out_args)
-{
-    createActionServer(p, "simROS2.createActionServer", in_args, out_args);
-}
-
-std::string createActionServer(SScriptCallBack *p, std::string actionName, std::string actionType, std::string handleGoalCallback, std::string handleCancelCallback, std::string handleAcceptedCallback)
-{
-    createActionServer_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionName = actionName;
-    in_args.actionType = actionType;
-    in_args.handleGoalCallback = handleGoalCallback;
-    in_args.handleCancelCallback = handleCancelCallback;
-    in_args.handleAcceptedCallback = handleAcceptedCallback;
-    createActionServer_out out_args;
-    createActionServer(p, &in_args, &out_args);
-    return out_args.actionServerHandle;
-}
-
-void createActionServer(SScriptCallBack *p, createActionServer_out *out_args, std::string actionName, std::string actionType, std::string handleGoalCallback, std::string handleCancelCallback, std::string handleAcceptedCallback)
-{
-    createActionServer_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionName = actionName;
-    in_args.actionType = actionType;
-    in_args.handleGoalCallback = handleGoalCallback;
-    in_args.handleCancelCallback = handleCancelCallback;
-    in_args.handleAcceptedCallback = handleAcceptedCallback;
-    createActionServer(p, &in_args, out_args);
 }
 
 void createActionServer_callback(SScriptCallBack *p)
@@ -3529,7 +2896,7 @@ void createActionServer_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("createActionServer_callback: calling callback (createActionServer)");
-        createActionServer(p, cmd, &in_args, &out_args);
+        simExtROS2_createActionServer(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -3577,34 +2944,6 @@ shutdownActionServer_in::shutdownActionServer_in()
 
 shutdownActionServer_out::shutdownActionServer_out()
 {
-}
-
-void shutdownActionServer(SScriptCallBack *p, shutdownActionServer_in *in_args, shutdownActionServer_out *out_args)
-{
-    shutdownActionServer(p, "simROS2.shutdownActionServer", in_args, out_args);
-}
-
-void shutdownActionServer(SScriptCallBack *p, std::string actionServerHandle)
-{
-    shutdownActionServer_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionServerHandle = actionServerHandle;
-    shutdownActionServer_out out_args;
-    shutdownActionServer(p, &in_args, &out_args);
-}
-
-void shutdownActionServer(SScriptCallBack *p, shutdownActionServer_out *out_args, std::string actionServerHandle)
-{
-    shutdownActionServer_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionServerHandle = actionServerHandle;
-    shutdownActionServer(p, &in_args, out_args);
 }
 
 void shutdownActionServer_callback(SScriptCallBack *p)
@@ -3657,7 +2996,7 @@ void shutdownActionServer_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("shutdownActionServer_callback: calling callback (shutdownActionServer)");
-        shutdownActionServer(p, cmd, &in_args, &out_args);
+        simExtROS2_shutdownActionServer(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -3696,34 +3035,6 @@ actionServerTreatUInt8ArrayAsString_in::actionServerTreatUInt8ArrayAsString_in()
 
 actionServerTreatUInt8ArrayAsString_out::actionServerTreatUInt8ArrayAsString_out()
 {
-}
-
-void actionServerTreatUInt8ArrayAsString(SScriptCallBack *p, actionServerTreatUInt8ArrayAsString_in *in_args, actionServerTreatUInt8ArrayAsString_out *out_args)
-{
-    actionServerTreatUInt8ArrayAsString(p, "simROS2.actionServerTreatUInt8ArrayAsString", in_args, out_args);
-}
-
-void actionServerTreatUInt8ArrayAsString(SScriptCallBack *p, std::string actionServerHandle)
-{
-    actionServerTreatUInt8ArrayAsString_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionServerHandle = actionServerHandle;
-    actionServerTreatUInt8ArrayAsString_out out_args;
-    actionServerTreatUInt8ArrayAsString(p, &in_args, &out_args);
-}
-
-void actionServerTreatUInt8ArrayAsString(SScriptCallBack *p, actionServerTreatUInt8ArrayAsString_out *out_args, std::string actionServerHandle)
-{
-    actionServerTreatUInt8ArrayAsString_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionServerHandle = actionServerHandle;
-    actionServerTreatUInt8ArrayAsString(p, &in_args, out_args);
 }
 
 void actionServerTreatUInt8ArrayAsString_callback(SScriptCallBack *p)
@@ -3776,7 +3087,7 @@ void actionServerTreatUInt8ArrayAsString_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("actionServerTreatUInt8ArrayAsString_callback: calling callback (actionServerTreatUInt8ArrayAsString)");
-        actionServerTreatUInt8ArrayAsString(p, cmd, &in_args, &out_args);
+        simExtROS2_actionServerTreatUInt8ArrayAsString(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -3815,36 +3126,6 @@ actionServerPublishFeedback_in::actionServerPublishFeedback_in()
 
 actionServerPublishFeedback_out::actionServerPublishFeedback_out()
 {
-}
-
-void actionServerPublishFeedback(SScriptCallBack *p, actionServerPublishFeedback_in *in_args, actionServerPublishFeedback_out *out_args)
-{
-    actionServerPublishFeedback(p, "simROS2.actionServerPublishFeedback", in_args, out_args);
-}
-
-void actionServerPublishFeedback(SScriptCallBack *p, std::string actionServerHandle, std::string goalUUID)
-{
-    actionServerPublishFeedback_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionServerHandle = actionServerHandle;
-    in_args.goalUUID = goalUUID;
-    actionServerPublishFeedback_out out_args;
-    actionServerPublishFeedback(p, &in_args, &out_args);
-}
-
-void actionServerPublishFeedback(SScriptCallBack *p, actionServerPublishFeedback_out *out_args, std::string actionServerHandle, std::string goalUUID)
-{
-    actionServerPublishFeedback_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionServerHandle = actionServerHandle;
-    in_args.goalUUID = goalUUID;
-    actionServerPublishFeedback(p, &in_args, out_args);
 }
 
 void actionServerPublishFeedback_callback(SScriptCallBack *p)
@@ -3907,7 +3188,7 @@ void actionServerPublishFeedback_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("actionServerPublishFeedback_callback: calling callback (actionServerPublishFeedback)");
-        actionServerPublishFeedback(p, cmd, &in_args, &out_args);
+        simExtROS2_actionServerPublishFeedback(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -3946,36 +3227,6 @@ actionServerActionAbort_in::actionServerActionAbort_in()
 
 actionServerActionAbort_out::actionServerActionAbort_out()
 {
-}
-
-void actionServerActionAbort(SScriptCallBack *p, actionServerActionAbort_in *in_args, actionServerActionAbort_out *out_args)
-{
-    actionServerActionAbort(p, "simROS2.actionServerActionAbort", in_args, out_args);
-}
-
-void actionServerActionAbort(SScriptCallBack *p, std::string actionServerHandle, std::string goalUUID)
-{
-    actionServerActionAbort_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionServerHandle = actionServerHandle;
-    in_args.goalUUID = goalUUID;
-    actionServerActionAbort_out out_args;
-    actionServerActionAbort(p, &in_args, &out_args);
-}
-
-void actionServerActionAbort(SScriptCallBack *p, actionServerActionAbort_out *out_args, std::string actionServerHandle, std::string goalUUID)
-{
-    actionServerActionAbort_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionServerHandle = actionServerHandle;
-    in_args.goalUUID = goalUUID;
-    actionServerActionAbort(p, &in_args, out_args);
 }
 
 void actionServerActionAbort_callback(SScriptCallBack *p)
@@ -4038,7 +3289,7 @@ void actionServerActionAbort_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("actionServerActionAbort_callback: calling callback (actionServerActionAbort)");
-        actionServerActionAbort(p, cmd, &in_args, &out_args);
+        simExtROS2_actionServerActionAbort(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -4077,36 +3328,6 @@ actionServerActionSucceed_in::actionServerActionSucceed_in()
 
 actionServerActionSucceed_out::actionServerActionSucceed_out()
 {
-}
-
-void actionServerActionSucceed(SScriptCallBack *p, actionServerActionSucceed_in *in_args, actionServerActionSucceed_out *out_args)
-{
-    actionServerActionSucceed(p, "simROS2.actionServerActionSucceed", in_args, out_args);
-}
-
-void actionServerActionSucceed(SScriptCallBack *p, std::string actionServerHandle, std::string goalUUID)
-{
-    actionServerActionSucceed_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionServerHandle = actionServerHandle;
-    in_args.goalUUID = goalUUID;
-    actionServerActionSucceed_out out_args;
-    actionServerActionSucceed(p, &in_args, &out_args);
-}
-
-void actionServerActionSucceed(SScriptCallBack *p, actionServerActionSucceed_out *out_args, std::string actionServerHandle, std::string goalUUID)
-{
-    actionServerActionSucceed_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionServerHandle = actionServerHandle;
-    in_args.goalUUID = goalUUID;
-    actionServerActionSucceed(p, &in_args, out_args);
 }
 
 void actionServerActionSucceed_callback(SScriptCallBack *p)
@@ -4169,7 +3390,7 @@ void actionServerActionSucceed_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("actionServerActionSucceed_callback: calling callback (actionServerActionSucceed)");
-        actionServerActionSucceed(p, cmd, &in_args, &out_args);
+        simExtROS2_actionServerActionSucceed(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -4208,36 +3429,6 @@ actionServerActionCanceled_in::actionServerActionCanceled_in()
 
 actionServerActionCanceled_out::actionServerActionCanceled_out()
 {
-}
-
-void actionServerActionCanceled(SScriptCallBack *p, actionServerActionCanceled_in *in_args, actionServerActionCanceled_out *out_args)
-{
-    actionServerActionCanceled(p, "simROS2.actionServerActionCanceled", in_args, out_args);
-}
-
-void actionServerActionCanceled(SScriptCallBack *p, std::string actionServerHandle, std::string goalUUID)
-{
-    actionServerActionCanceled_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionServerHandle = actionServerHandle;
-    in_args.goalUUID = goalUUID;
-    actionServerActionCanceled_out out_args;
-    actionServerActionCanceled(p, &in_args, &out_args);
-}
-
-void actionServerActionCanceled(SScriptCallBack *p, actionServerActionCanceled_out *out_args, std::string actionServerHandle, std::string goalUUID)
-{
-    actionServerActionCanceled_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionServerHandle = actionServerHandle;
-    in_args.goalUUID = goalUUID;
-    actionServerActionCanceled(p, &in_args, out_args);
 }
 
 void actionServerActionCanceled_callback(SScriptCallBack *p)
@@ -4300,7 +3491,7 @@ void actionServerActionCanceled_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("actionServerActionCanceled_callback: calling callback (actionServerActionCanceled)");
-        actionServerActionCanceled(p, cmd, &in_args, &out_args);
+        simExtROS2_actionServerActionCanceled(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -4339,36 +3530,6 @@ actionServerActionExecute_in::actionServerActionExecute_in()
 
 actionServerActionExecute_out::actionServerActionExecute_out()
 {
-}
-
-void actionServerActionExecute(SScriptCallBack *p, actionServerActionExecute_in *in_args, actionServerActionExecute_out *out_args)
-{
-    actionServerActionExecute(p, "simROS2.actionServerActionExecute", in_args, out_args);
-}
-
-void actionServerActionExecute(SScriptCallBack *p, std::string actionServerHandle, std::string goalUUID)
-{
-    actionServerActionExecute_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionServerHandle = actionServerHandle;
-    in_args.goalUUID = goalUUID;
-    actionServerActionExecute_out out_args;
-    actionServerActionExecute(p, &in_args, &out_args);
-}
-
-void actionServerActionExecute(SScriptCallBack *p, actionServerActionExecute_out *out_args, std::string actionServerHandle, std::string goalUUID)
-{
-    actionServerActionExecute_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionServerHandle = actionServerHandle;
-    in_args.goalUUID = goalUUID;
-    actionServerActionExecute(p, &in_args, out_args);
 }
 
 void actionServerActionExecute_callback(SScriptCallBack *p)
@@ -4435,7 +3596,7 @@ void actionServerActionExecute_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("actionServerActionExecute_callback: calling callback (actionServerActionExecute)");
-        actionServerActionExecute(p, cmd, &in_args, &out_args);
+        simExtROS2_actionServerActionExecute(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -4474,37 +3635,6 @@ actionServerActionIsCanceling_in::actionServerActionIsCanceling_in()
 
 actionServerActionIsCanceling_out::actionServerActionIsCanceling_out()
 {
-}
-
-void actionServerActionIsCanceling(SScriptCallBack *p, actionServerActionIsCanceling_in *in_args, actionServerActionIsCanceling_out *out_args)
-{
-    actionServerActionIsCanceling(p, "simROS2.actionServerActionIsCanceling", in_args, out_args);
-}
-
-bool actionServerActionIsCanceling(SScriptCallBack *p, std::string actionServerHandle, std::string goalUUID)
-{
-    actionServerActionIsCanceling_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionServerHandle = actionServerHandle;
-    in_args.goalUUID = goalUUID;
-    actionServerActionIsCanceling_out out_args;
-    actionServerActionIsCanceling(p, &in_args, &out_args);
-    return out_args.result;
-}
-
-void actionServerActionIsCanceling(SScriptCallBack *p, actionServerActionIsCanceling_out *out_args, std::string actionServerHandle, std::string goalUUID)
-{
-    actionServerActionIsCanceling_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionServerHandle = actionServerHandle;
-    in_args.goalUUID = goalUUID;
-    actionServerActionIsCanceling(p, &in_args, out_args);
 }
 
 void actionServerActionIsCanceling_callback(SScriptCallBack *p)
@@ -4571,7 +3701,7 @@ void actionServerActionIsCanceling_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("actionServerActionIsCanceling_callback: calling callback (actionServerActionIsCanceling)");
-        actionServerActionIsCanceling(p, cmd, &in_args, &out_args);
+        simExtROS2_actionServerActionIsCanceling(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -4619,37 +3749,6 @@ actionServerActionIsActive_in::actionServerActionIsActive_in()
 
 actionServerActionIsActive_out::actionServerActionIsActive_out()
 {
-}
-
-void actionServerActionIsActive(SScriptCallBack *p, actionServerActionIsActive_in *in_args, actionServerActionIsActive_out *out_args)
-{
-    actionServerActionIsActive(p, "simROS2.actionServerActionIsActive", in_args, out_args);
-}
-
-bool actionServerActionIsActive(SScriptCallBack *p, std::string actionServerHandle, std::string goalUUID)
-{
-    actionServerActionIsActive_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionServerHandle = actionServerHandle;
-    in_args.goalUUID = goalUUID;
-    actionServerActionIsActive_out out_args;
-    actionServerActionIsActive(p, &in_args, &out_args);
-    return out_args.result;
-}
-
-void actionServerActionIsActive(SScriptCallBack *p, actionServerActionIsActive_out *out_args, std::string actionServerHandle, std::string goalUUID)
-{
-    actionServerActionIsActive_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionServerHandle = actionServerHandle;
-    in_args.goalUUID = goalUUID;
-    actionServerActionIsActive(p, &in_args, out_args);
 }
 
 void actionServerActionIsActive_callback(SScriptCallBack *p)
@@ -4716,7 +3815,7 @@ void actionServerActionIsActive_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("actionServerActionIsActive_callback: calling callback (actionServerActionIsActive)");
-        actionServerActionIsActive(p, cmd, &in_args, &out_args);
+        simExtROS2_actionServerActionIsActive(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -4764,37 +3863,6 @@ actionServerActionIsExecuting_in::actionServerActionIsExecuting_in()
 
 actionServerActionIsExecuting_out::actionServerActionIsExecuting_out()
 {
-}
-
-void actionServerActionIsExecuting(SScriptCallBack *p, actionServerActionIsExecuting_in *in_args, actionServerActionIsExecuting_out *out_args)
-{
-    actionServerActionIsExecuting(p, "simROS2.actionServerActionIsExecuting", in_args, out_args);
-}
-
-bool actionServerActionIsExecuting(SScriptCallBack *p, std::string actionServerHandle, std::string goalUUID)
-{
-    actionServerActionIsExecuting_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionServerHandle = actionServerHandle;
-    in_args.goalUUID = goalUUID;
-    actionServerActionIsExecuting_out out_args;
-    actionServerActionIsExecuting(p, &in_args, &out_args);
-    return out_args.result;
-}
-
-void actionServerActionIsExecuting(SScriptCallBack *p, actionServerActionIsExecuting_out *out_args, std::string actionServerHandle, std::string goalUUID)
-{
-    actionServerActionIsExecuting_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.actionServerHandle = actionServerHandle;
-    in_args.goalUUID = goalUUID;
-    actionServerActionIsExecuting(p, &in_args, out_args);
 }
 
 void actionServerActionIsExecuting_callback(SScriptCallBack *p)
@@ -4861,7 +3929,7 @@ void actionServerActionIsExecuting_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("actionServerActionIsExecuting_callback: calling callback (actionServerActionIsExecuting)");
-        actionServerActionIsExecuting(p, cmd, &in_args, &out_args);
+        simExtROS2_actionServerActionIsExecuting(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -4911,32 +3979,6 @@ sendTransform_out::sendTransform_out()
 {
 }
 
-void sendTransform(SScriptCallBack *p, sendTransform_in *in_args, sendTransform_out *out_args)
-{
-    sendTransform(p, "simROS2.sendTransform", in_args, out_args);
-}
-
-void sendTransform(SScriptCallBack *p)
-{
-    sendTransform_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    sendTransform_out out_args;
-    sendTransform(p, &in_args, &out_args);
-}
-
-void sendTransform(SScriptCallBack *p, sendTransform_out *out_args)
-{
-    sendTransform_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    sendTransform(p, &in_args, out_args);
-}
-
 void sendTransform_callback(SScriptCallBack *p)
 {
     addStubsDebugLog("sendTransform_callback: reading input arguments...");
@@ -4969,7 +4011,7 @@ void sendTransform_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("sendTransform_callback: calling callback (sendTransform)");
-        sendTransform(p, cmd, &in_args, &out_args);
+        simExtROS2_sendTransform(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -5010,32 +4052,6 @@ sendTransforms_out::sendTransforms_out()
 {
 }
 
-void sendTransforms(SScriptCallBack *p, sendTransforms_in *in_args, sendTransforms_out *out_args)
-{
-    sendTransforms(p, "simROS2.sendTransforms", in_args, out_args);
-}
-
-void sendTransforms(SScriptCallBack *p)
-{
-    sendTransforms_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    sendTransforms_out out_args;
-    sendTransforms(p, &in_args, &out_args);
-}
-
-void sendTransforms(SScriptCallBack *p, sendTransforms_out *out_args)
-{
-    sendTransforms_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    sendTransforms(p, &in_args, out_args);
-}
-
 void sendTransforms_callback(SScriptCallBack *p)
 {
     addStubsDebugLog("sendTransforms_callback: reading input arguments...");
@@ -5068,7 +4084,7 @@ void sendTransforms_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("sendTransforms_callback: calling callback (sendTransforms)");
-        sendTransforms(p, cmd, &in_args, &out_args);
+        simExtROS2_sendTransforms(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -5108,39 +4124,6 @@ imageTransportCreateSubscription_in::imageTransportCreateSubscription_in()
 
 imageTransportCreateSubscription_out::imageTransportCreateSubscription_out()
 {
-}
-
-void imageTransportCreateSubscription(SScriptCallBack *p, imageTransportCreateSubscription_in *in_args, imageTransportCreateSubscription_out *out_args)
-{
-    imageTransportCreateSubscription(p, "simROS2.imageTransportCreateSubscription", in_args, out_args);
-}
-
-std::string imageTransportCreateSubscription(SScriptCallBack *p, std::string topicName, std::string topicCallback, int queueSize)
-{
-    imageTransportCreateSubscription_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.topicName = topicName;
-    in_args.topicCallback = topicCallback;
-    in_args.queueSize = queueSize;
-    imageTransportCreateSubscription_out out_args;
-    imageTransportCreateSubscription(p, &in_args, &out_args);
-    return out_args.subscriptionHandle;
-}
-
-void imageTransportCreateSubscription(SScriptCallBack *p, imageTransportCreateSubscription_out *out_args, std::string topicName, std::string topicCallback, int queueSize)
-{
-    imageTransportCreateSubscription_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.topicName = topicName;
-    in_args.topicCallback = topicCallback;
-    in_args.queueSize = queueSize;
-    imageTransportCreateSubscription(p, &in_args, out_args);
 }
 
 void imageTransportCreateSubscription_callback(SScriptCallBack *p)
@@ -5221,7 +4204,7 @@ void imageTransportCreateSubscription_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("imageTransportCreateSubscription_callback: calling callback (imageTransportCreateSubscription)");
-        imageTransportCreateSubscription(p, cmd, &in_args, &out_args);
+        simExtROS2_imageTransportCreateSubscription(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -5269,34 +4252,6 @@ imageTransportShutdownSubscription_in::imageTransportShutdownSubscription_in()
 
 imageTransportShutdownSubscription_out::imageTransportShutdownSubscription_out()
 {
-}
-
-void imageTransportShutdownSubscription(SScriptCallBack *p, imageTransportShutdownSubscription_in *in_args, imageTransportShutdownSubscription_out *out_args)
-{
-    imageTransportShutdownSubscription(p, "simROS2.imageTransportShutdownSubscription", in_args, out_args);
-}
-
-void imageTransportShutdownSubscription(SScriptCallBack *p, std::string subscriptionHandle)
-{
-    imageTransportShutdownSubscription_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.subscriptionHandle = subscriptionHandle;
-    imageTransportShutdownSubscription_out out_args;
-    imageTransportShutdownSubscription(p, &in_args, &out_args);
-}
-
-void imageTransportShutdownSubscription(SScriptCallBack *p, imageTransportShutdownSubscription_out *out_args, std::string subscriptionHandle)
-{
-    imageTransportShutdownSubscription_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.subscriptionHandle = subscriptionHandle;
-    imageTransportShutdownSubscription(p, &in_args, out_args);
 }
 
 void imageTransportShutdownSubscription_callback(SScriptCallBack *p)
@@ -5349,7 +4304,7 @@ void imageTransportShutdownSubscription_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("imageTransportShutdownSubscription_callback: calling callback (imageTransportShutdownSubscription)");
-        imageTransportShutdownSubscription(p, cmd, &in_args, &out_args);
+        simExtROS2_imageTransportShutdownSubscription(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -5389,37 +4344,6 @@ imageTransportCreatePublisher_in::imageTransportCreatePublisher_in()
 
 imageTransportCreatePublisher_out::imageTransportCreatePublisher_out()
 {
-}
-
-void imageTransportCreatePublisher(SScriptCallBack *p, imageTransportCreatePublisher_in *in_args, imageTransportCreatePublisher_out *out_args)
-{
-    imageTransportCreatePublisher(p, "simROS2.imageTransportCreatePublisher", in_args, out_args);
-}
-
-std::string imageTransportCreatePublisher(SScriptCallBack *p, std::string topicName, int queueSize)
-{
-    imageTransportCreatePublisher_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.topicName = topicName;
-    in_args.queueSize = queueSize;
-    imageTransportCreatePublisher_out out_args;
-    imageTransportCreatePublisher(p, &in_args, &out_args);
-    return out_args.publisherHandle;
-}
-
-void imageTransportCreatePublisher(SScriptCallBack *p, imageTransportCreatePublisher_out *out_args, std::string topicName, int queueSize)
-{
-    imageTransportCreatePublisher_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.topicName = topicName;
-    in_args.queueSize = queueSize;
-    imageTransportCreatePublisher(p, &in_args, out_args);
 }
 
 void imageTransportCreatePublisher_callback(SScriptCallBack *p)
@@ -5486,7 +4410,7 @@ void imageTransportCreatePublisher_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("imageTransportCreatePublisher_callback: calling callback (imageTransportCreatePublisher)");
-        imageTransportCreatePublisher(p, cmd, &in_args, &out_args);
+        simExtROS2_imageTransportCreatePublisher(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -5534,34 +4458,6 @@ imageTransportShutdownPublisher_in::imageTransportShutdownPublisher_in()
 
 imageTransportShutdownPublisher_out::imageTransportShutdownPublisher_out()
 {
-}
-
-void imageTransportShutdownPublisher(SScriptCallBack *p, imageTransportShutdownPublisher_in *in_args, imageTransportShutdownPublisher_out *out_args)
-{
-    imageTransportShutdownPublisher(p, "simROS2.imageTransportShutdownPublisher", in_args, out_args);
-}
-
-void imageTransportShutdownPublisher(SScriptCallBack *p, std::string publisherHandle)
-{
-    imageTransportShutdownPublisher_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.publisherHandle = publisherHandle;
-    imageTransportShutdownPublisher_out out_args;
-    imageTransportShutdownPublisher(p, &in_args, &out_args);
-}
-
-void imageTransportShutdownPublisher(SScriptCallBack *p, imageTransportShutdownPublisher_out *out_args, std::string publisherHandle)
-{
-    imageTransportShutdownPublisher_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.publisherHandle = publisherHandle;
-    imageTransportShutdownPublisher(p, &in_args, out_args);
 }
 
 void imageTransportShutdownPublisher_callback(SScriptCallBack *p)
@@ -5614,7 +4510,7 @@ void imageTransportShutdownPublisher_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("imageTransportShutdownPublisher_callback: calling callback (imageTransportShutdownPublisher)");
-        imageTransportShutdownPublisher(p, cmd, &in_args, &out_args);
+        simExtROS2_imageTransportShutdownPublisher(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -5653,42 +4549,6 @@ imageTransportPublish_in::imageTransportPublish_in()
 
 imageTransportPublish_out::imageTransportPublish_out()
 {
-}
-
-void imageTransportPublish(SScriptCallBack *p, imageTransportPublish_in *in_args, imageTransportPublish_out *out_args)
-{
-    imageTransportPublish(p, "simROS2.imageTransportPublish", in_args, out_args);
-}
-
-void imageTransportPublish(SScriptCallBack *p, std::string publisherHandle, std::string data, int width, int height, std::string frame_id)
-{
-    imageTransportPublish_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.publisherHandle = publisherHandle;
-    in_args.data = data;
-    in_args.width = width;
-    in_args.height = height;
-    in_args.frame_id = frame_id;
-    imageTransportPublish_out out_args;
-    imageTransportPublish(p, &in_args, &out_args);
-}
-
-void imageTransportPublish(SScriptCallBack *p, imageTransportPublish_out *out_args, std::string publisherHandle, std::string data, int width, int height, std::string frame_id)
-{
-    imageTransportPublish_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.publisherHandle = publisherHandle;
-    in_args.data = data;
-    in_args.width = width;
-    in_args.height = height;
-    in_args.frame_id = frame_id;
-    imageTransportPublish(p, &in_args, out_args);
 }
 
 void imageTransportPublish_callback(SScriptCallBack *p)
@@ -5797,7 +4657,7 @@ void imageTransportPublish_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("imageTransportPublish_callback: calling callback (imageTransportPublish)");
-        imageTransportPublish(p, cmd, &in_args, &out_args);
+        simExtROS2_imageTransportPublish(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -5837,35 +4697,6 @@ getTime_in::getTime_in()
 
 getTime_out::getTime_out()
 {
-}
-
-void getTime(SScriptCallBack *p, getTime_in *in_args, getTime_out *out_args)
-{
-    getTime(p, "simROS2.getTime", in_args, out_args);
-}
-
-sim_ros2_time getTime(SScriptCallBack *p, int clock_type)
-{
-    getTime_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.clock_type = clock_type;
-    getTime_out out_args;
-    getTime(p, &in_args, &out_args);
-    return out_args.time;
-}
-
-void getTime(SScriptCallBack *p, getTime_out *out_args, int clock_type)
-{
-    getTime_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.clock_type = clock_type;
-    getTime(p, &in_args, out_args);
 }
 
 void getTime_callback(SScriptCallBack *p)
@@ -5918,7 +4749,7 @@ void getTime_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("getTime_callback: calling callback (getTime)");
-        getTime(p, cmd, &in_args, &out_args);
+        simExtROS2_getTime(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -5968,23 +4799,6 @@ getParamString_in::getParamString_in()
 getParamString_out::getParamString_out()
 {
     value = "";
-}
-
-void getParamString(SScriptCallBack *p, getParamString_in *in_args, getParamString_out *out_args)
-{
-    getParamString(p, "simROS2.getParamString", in_args, out_args);
-}
-
-void getParamString(SScriptCallBack *p, getParamString_out *out_args, std::string name, std::string defaultValue)
-{
-    getParamString_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.name = name;
-    in_args.defaultValue = defaultValue;
-    getParamString(p, &in_args, out_args);
 }
 
 void getParamString_callback(SScriptCallBack *p)
@@ -6051,7 +4865,7 @@ void getParamString_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("getParamString_callback: calling callback (getParamString)");
-        getParamString(p, cmd, &in_args, &out_args);
+        simExtROS2_getParamString(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -6110,23 +4924,6 @@ getParamInt_in::getParamInt_in()
 getParamInt_out::getParamInt_out()
 {
     value = 0;
-}
-
-void getParamInt(SScriptCallBack *p, getParamInt_in *in_args, getParamInt_out *out_args)
-{
-    getParamInt(p, "simROS2.getParamInt", in_args, out_args);
-}
-
-void getParamInt(SScriptCallBack *p, getParamInt_out *out_args, std::string name, int defaultValue)
-{
-    getParamInt_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.name = name;
-    in_args.defaultValue = defaultValue;
-    getParamInt(p, &in_args, out_args);
 }
 
 void getParamInt_callback(SScriptCallBack *p)
@@ -6193,7 +4990,7 @@ void getParamInt_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("getParamInt_callback: calling callback (getParamInt)");
-        getParamInt(p, cmd, &in_args, &out_args);
+        simExtROS2_getParamInt(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -6252,23 +5049,6 @@ getParamDouble_in::getParamDouble_in()
 getParamDouble_out::getParamDouble_out()
 {
     value = 0.0;
-}
-
-void getParamDouble(SScriptCallBack *p, getParamDouble_in *in_args, getParamDouble_out *out_args)
-{
-    getParamDouble(p, "simROS2.getParamDouble", in_args, out_args);
-}
-
-void getParamDouble(SScriptCallBack *p, getParamDouble_out *out_args, std::string name, double defaultValue)
-{
-    getParamDouble_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.name = name;
-    in_args.defaultValue = defaultValue;
-    getParamDouble(p, &in_args, out_args);
 }
 
 void getParamDouble_callback(SScriptCallBack *p)
@@ -6335,7 +5115,7 @@ void getParamDouble_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("getParamDouble_callback: calling callback (getParamDouble)");
-        getParamDouble(p, cmd, &in_args, &out_args);
+        simExtROS2_getParamDouble(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -6394,23 +5174,6 @@ getParamBool_in::getParamBool_in()
 getParamBool_out::getParamBool_out()
 {
     value = false;
-}
-
-void getParamBool(SScriptCallBack *p, getParamBool_in *in_args, getParamBool_out *out_args)
-{
-    getParamBool(p, "simROS2.getParamBool", in_args, out_args);
-}
-
-void getParamBool(SScriptCallBack *p, getParamBool_out *out_args, std::string name, bool defaultValue)
-{
-    getParamBool_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.name = name;
-    in_args.defaultValue = defaultValue;
-    getParamBool(p, &in_args, out_args);
 }
 
 void getParamBool_callback(SScriptCallBack *p)
@@ -6477,7 +5240,7 @@ void getParamBool_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("getParamBool_callback: calling callback (getParamBool)");
-        getParamBool(p, cmd, &in_args, &out_args);
+        simExtROS2_getParamBool(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -6534,36 +5297,6 @@ setParamString_in::setParamString_in()
 
 setParamString_out::setParamString_out()
 {
-}
-
-void setParamString(SScriptCallBack *p, setParamString_in *in_args, setParamString_out *out_args)
-{
-    setParamString(p, "simROS2.setParamString", in_args, out_args);
-}
-
-void setParamString(SScriptCallBack *p, std::string name, std::string value)
-{
-    setParamString_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.name = name;
-    in_args.value = value;
-    setParamString_out out_args;
-    setParamString(p, &in_args, &out_args);
-}
-
-void setParamString(SScriptCallBack *p, setParamString_out *out_args, std::string name, std::string value)
-{
-    setParamString_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.name = name;
-    in_args.value = value;
-    setParamString(p, &in_args, out_args);
 }
 
 void setParamString_callback(SScriptCallBack *p)
@@ -6630,7 +5363,7 @@ void setParamString_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("setParamString_callback: calling callback (setParamString)");
-        setParamString(p, cmd, &in_args, &out_args);
+        simExtROS2_setParamString(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -6669,36 +5402,6 @@ setParamInt_in::setParamInt_in()
 
 setParamInt_out::setParamInt_out()
 {
-}
-
-void setParamInt(SScriptCallBack *p, setParamInt_in *in_args, setParamInt_out *out_args)
-{
-    setParamInt(p, "simROS2.setParamInt", in_args, out_args);
-}
-
-void setParamInt(SScriptCallBack *p, std::string name, int value)
-{
-    setParamInt_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.name = name;
-    in_args.value = value;
-    setParamInt_out out_args;
-    setParamInt(p, &in_args, &out_args);
-}
-
-void setParamInt(SScriptCallBack *p, setParamInt_out *out_args, std::string name, int value)
-{
-    setParamInt_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.name = name;
-    in_args.value = value;
-    setParamInt(p, &in_args, out_args);
 }
 
 void setParamInt_callback(SScriptCallBack *p)
@@ -6765,7 +5468,7 @@ void setParamInt_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("setParamInt_callback: calling callback (setParamInt)");
-        setParamInt(p, cmd, &in_args, &out_args);
+        simExtROS2_setParamInt(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -6804,36 +5507,6 @@ setParamDouble_in::setParamDouble_in()
 
 setParamDouble_out::setParamDouble_out()
 {
-}
-
-void setParamDouble(SScriptCallBack *p, setParamDouble_in *in_args, setParamDouble_out *out_args)
-{
-    setParamDouble(p, "simROS2.setParamDouble", in_args, out_args);
-}
-
-void setParamDouble(SScriptCallBack *p, std::string name, double value)
-{
-    setParamDouble_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.name = name;
-    in_args.value = value;
-    setParamDouble_out out_args;
-    setParamDouble(p, &in_args, &out_args);
-}
-
-void setParamDouble(SScriptCallBack *p, setParamDouble_out *out_args, std::string name, double value)
-{
-    setParamDouble_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.name = name;
-    in_args.value = value;
-    setParamDouble(p, &in_args, out_args);
 }
 
 void setParamDouble_callback(SScriptCallBack *p)
@@ -6900,7 +5573,7 @@ void setParamDouble_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("setParamDouble_callback: calling callback (setParamDouble)");
-        setParamDouble(p, cmd, &in_args, &out_args);
+        simExtROS2_setParamDouble(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -6939,36 +5612,6 @@ setParamBool_in::setParamBool_in()
 
 setParamBool_out::setParamBool_out()
 {
-}
-
-void setParamBool(SScriptCallBack *p, setParamBool_in *in_args, setParamBool_out *out_args)
-{
-    setParamBool(p, "simROS2.setParamBool", in_args, out_args);
-}
-
-void setParamBool(SScriptCallBack *p, std::string name, bool value)
-{
-    setParamBool_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.name = name;
-    in_args.value = value;
-    setParamBool_out out_args;
-    setParamBool(p, &in_args, &out_args);
-}
-
-void setParamBool(SScriptCallBack *p, setParamBool_out *out_args, std::string name, bool value)
-{
-    setParamBool_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.name = name;
-    in_args.value = value;
-    setParamBool(p, &in_args, out_args);
 }
 
 void setParamBool_callback(SScriptCallBack *p)
@@ -7035,7 +5678,7 @@ void setParamBool_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("setParamBool_callback: calling callback (setParamBool)");
-        setParamBool(p, cmd, &in_args, &out_args);
+        simExtROS2_setParamBool(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -7074,35 +5717,6 @@ hasParam_in::hasParam_in()
 
 hasParam_out::hasParam_out()
 {
-}
-
-void hasParam(SScriptCallBack *p, hasParam_in *in_args, hasParam_out *out_args)
-{
-    hasParam(p, "simROS2.hasParam", in_args, out_args);
-}
-
-bool hasParam(SScriptCallBack *p, std::string name)
-{
-    hasParam_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.name = name;
-    hasParam_out out_args;
-    hasParam(p, &in_args, &out_args);
-    return out_args.exists;
-}
-
-void hasParam(SScriptCallBack *p, hasParam_out *out_args, std::string name)
-{
-    hasParam_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.name = name;
-    hasParam(p, &in_args, out_args);
 }
 
 void hasParam_callback(SScriptCallBack *p)
@@ -7155,7 +5769,7 @@ void hasParam_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("hasParam_callback: calling callback (hasParam)");
-        hasParam(p, cmd, &in_args, &out_args);
+        simExtROS2_hasParam(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -7203,34 +5817,6 @@ deleteParam_in::deleteParam_in()
 
 deleteParam_out::deleteParam_out()
 {
-}
-
-void deleteParam(SScriptCallBack *p, deleteParam_in *in_args, deleteParam_out *out_args)
-{
-    deleteParam(p, "simROS2.deleteParam", in_args, out_args);
-}
-
-void deleteParam(SScriptCallBack *p, std::string name)
-{
-    deleteParam_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.name = name;
-    deleteParam_out out_args;
-    deleteParam(p, &in_args, &out_args);
-}
-
-void deleteParam(SScriptCallBack *p, deleteParam_out *out_args, std::string name)
-{
-    deleteParam_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.name = name;
-    deleteParam(p, &in_args, out_args);
 }
 
 void deleteParam_callback(SScriptCallBack *p)
@@ -7283,7 +5869,7 @@ void deleteParam_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("deleteParam_callback: calling callback (deleteParam)");
-        deleteParam(p, cmd, &in_args, &out_args);
+        simExtROS2_deleteParam(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -7322,34 +5908,6 @@ createInterface_in::createInterface_in()
 
 createInterface_out::createInterface_out()
 {
-}
-
-void createInterface(SScriptCallBack *p, createInterface_in *in_args, createInterface_out *out_args)
-{
-    createInterface(p, "simROS2.createInterface", in_args, out_args);
-}
-
-void createInterface(SScriptCallBack *p, std::string type)
-{
-    createInterface_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.type = type;
-    createInterface_out out_args;
-    createInterface(p, &in_args, &out_args);
-}
-
-void createInterface(SScriptCallBack *p, createInterface_out *out_args, std::string type)
-{
-    createInterface_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.type = type;
-    createInterface(p, &in_args, out_args);
 }
 
 void createInterface_callback(SScriptCallBack *p)
@@ -7402,7 +5960,7 @@ void createInterface_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("createInterface_callback: calling callback (createInterface)");
-        createInterface(p, cmd, &in_args, &out_args);
+        simExtROS2_createInterface(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -7437,34 +5995,6 @@ getInterfaceConstants_in::getInterfaceConstants_in()
 
 getInterfaceConstants_out::getInterfaceConstants_out()
 {
-}
-
-void getInterfaceConstants(SScriptCallBack *p, getInterfaceConstants_in *in_args, getInterfaceConstants_out *out_args)
-{
-    getInterfaceConstants(p, "simROS2.getInterfaceConstants", in_args, out_args);
-}
-
-void getInterfaceConstants(SScriptCallBack *p, std::string type)
-{
-    getInterfaceConstants_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.type = type;
-    getInterfaceConstants_out out_args;
-    getInterfaceConstants(p, &in_args, &out_args);
-}
-
-void getInterfaceConstants(SScriptCallBack *p, getInterfaceConstants_out *out_args, std::string type)
-{
-    getInterfaceConstants_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    in_args.type = type;
-    getInterfaceConstants(p, &in_args, out_args);
 }
 
 void getInterfaceConstants_callback(SScriptCallBack *p)
@@ -7517,7 +6047,7 @@ void getInterfaceConstants_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("getInterfaceConstants_callback: calling callback (getInterfaceConstants)");
-        getInterfaceConstants(p, cmd, &in_args, &out_args);
+        simExtROS2_getInterfaceConstants(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -7552,33 +6082,6 @@ supportedInterfaces_in::supportedInterfaces_in()
 
 supportedInterfaces_out::supportedInterfaces_out()
 {
-}
-
-void supportedInterfaces(SScriptCallBack *p, supportedInterfaces_in *in_args, supportedInterfaces_out *out_args)
-{
-    supportedInterfaces(p, "simROS2.supportedInterfaces", in_args, out_args);
-}
-
-std::vector< std::string > supportedInterfaces(SScriptCallBack *p)
-{
-    supportedInterfaces_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    supportedInterfaces_out out_args;
-    supportedInterfaces(p, &in_args, &out_args);
-    return out_args.result;
-}
-
-void supportedInterfaces(SScriptCallBack *p, supportedInterfaces_out *out_args)
-{
-    supportedInterfaces_in in_args;
-    if(p)
-    {
-        std::memcpy(&in_args._, p, sizeof(SScriptCallBack));
-    }
-    supportedInterfaces(p, &in_args, out_args);
 }
 
 void supportedInterfaces_callback(SScriptCallBack *p)
@@ -7617,7 +6120,7 @@ void supportedInterfaces_callback(SScriptCallBack *p)
 
 
         addStubsDebugLog("supportedInterfaces_callback: calling callback (supportedInterfaces)");
-        supportedInterfaces(p, cmd, &in_args, &out_args);
+        simExtROS2_supportedInterfaces(&in_args, &out_args);
     }
     catch(std::exception &ex)
     {
@@ -7667,7 +6170,7 @@ subscriptionCallback_out::subscriptionCallback_out()
 {
 }
 
-bool subscriptionCallback(simInt scriptId, const char *func, subscriptionCallback_in *in_args, subscriptionCallback_out *out_args)
+bool subscriptionCallback(int scriptId, const char *func, subscriptionCallback_in *in_args, subscriptionCallback_out *out_args)
 {
     addStubsDebugLog("subscriptionCallback: writing input arguments...");
 
@@ -7717,7 +6220,7 @@ imageTransportCallback_out::imageTransportCallback_out()
 {
 }
 
-bool imageTransportCallback(simInt scriptId, const char *func, imageTransportCallback_in *in_args, imageTransportCallback_out *out_args)
+bool imageTransportCallback(int scriptId, const char *func, imageTransportCallback_in *in_args, imageTransportCallback_out *out_args)
 {
     addStubsDebugLog("imageTransportCallback: writing input arguments...");
 
@@ -7794,7 +6297,7 @@ actionGoalResponseCallback_out::actionGoalResponseCallback_out()
 {
 }
 
-bool actionGoalResponseCallback(simInt scriptId, const char *func, actionGoalResponseCallback_in *in_args, actionGoalResponseCallback_out *out_args)
+bool actionGoalResponseCallback(int scriptId, const char *func, actionGoalResponseCallback_in *in_args, actionGoalResponseCallback_out *out_args)
 {
     addStubsDebugLog("actionGoalResponseCallback: writing input arguments...");
 

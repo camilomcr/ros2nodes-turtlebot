@@ -1,5 +1,5 @@
 #include <callbacks.h>
-#include <simLib.h>
+#include <simLib/simLib.h>
 #include <stubs.h>
 #include <cstring>
 
@@ -1521,7 +1521,7 @@ void write__sensor_msgs__msg__Image(const sensor_msgs::msg::Image& msg, int stac
             // write field 'data' (using fast specialized function)
             sim::pushStringOntoStack(stack, "data", 0);
             if(opt && opt->uint8array_as_string)
-                sim::pushStringOntoStack(stack, (simChar*)&(msg.data[0]), msg.data.size());
+                sim::pushStringOntoStack(stack, (char*)&(msg.data[0]), msg.data.size());
             else
                 sim::pushUInt8TableOntoStack(stack, &(msg.data[0]), msg.data.size());
             sim::insertDataIntoStackTable(stack);
@@ -1657,8 +1657,8 @@ void read__sensor_msgs__msg__Image(int stack, sensor_msgs::msg::Image *msg, cons
                         if(opt && opt->uint8array_as_string)
                         {
                             // read field 'data' (uint8[]) as string
-                            simChar *str;
-                            simInt sz;
+                            char *str;
+                            int sz;
                             if((str = sim::getStackStringValue(stack, &sz)) != NULL && sz > 0)
                             {
                                 /*
@@ -1823,7 +1823,7 @@ void write__sensor_msgs__msg__PointCloud2(const sensor_msgs::msg::PointCloud2& m
             // write field 'data' (using fast specialized function)
             sim::pushStringOntoStack(stack, "data", 0);
             if(opt && opt->uint8array_as_string)
-                sim::pushStringOntoStack(stack, (simChar*)&(msg.data[0]), msg.data.size());
+                sim::pushStringOntoStack(stack, (char*)&(msg.data[0]), msg.data.size());
             else
                 sim::pushUInt8TableOntoStack(stack, &(msg.data[0]), msg.data.size());
             sim::insertDataIntoStackTable(stack);
@@ -2000,8 +2000,8 @@ void read__sensor_msgs__msg__PointCloud2(int stack, sensor_msgs::msg::PointCloud
                         if(opt && opt->uint8array_as_string)
                         {
                             // read field 'data' (uint8[]) as string
-                            simChar *str;
-                            simInt sz;
+                            char *str;
+                            int sz;
                             if((str = sim::getStackStringValue(stack, &sz)) != NULL && sz > 0)
                             {
                                 /*

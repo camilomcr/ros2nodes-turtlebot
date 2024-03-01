@@ -1,0 +1,6 @@
+[ 75%] Built target generate_ros_code
+[ 77%] [34m[1mGenerating generated/stubs.cpp, generated/stubs.h, generated/plugin.h, generated/stubsPlusPlus.cpp, generated/index.json, generated/reference.html, generated/lua_calltips.cpp, generated/simROS2-typecheck.lua[0m
+/home/camilo/Downloads/Coppelia/programming/include/simStubsGen/generate.py --verbose --xml-file /home/camilo/ros2_ws/src/sim_ros2_interface/meta/callbacks.xml --gen-all /home/camilo/ros2_ws/build/sim_ros2_interface/generated --lua-file /home/camilo/ros2_ws/src/sim_ros2_interface/simROS2.lua
+/usr/bin/python3 /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/generate_lua_xml.py /home/camilo/ros2_ws/src/sim_ros2_interface/meta/callbacks.xml /home/camilo/ros2_ws/src/sim_ros2_interface/simROS2.lua /home/camilo/ros2_ws/build/sim_ros2_interface/generated/lua.xml
+/usr/bin/python3 /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/merge_xml.py /home/camilo/ros2_ws/src/sim_ros2_interface/meta/callbacks.xml /home/camilo/ros2_ws/build/sim_ros2_interface/generated/lua.xml /home/camilo/ros2_ws/build/sim_ros2_interface/generated/reference.xml
+xsltproc -o /home/camilo/ros2_ws/build/sim_ros2_interface/generated/reference.html /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/xsl/reference.xsl /home/camilo/ros2_ws/build/sim_ros2_interface/generated/reference.xml

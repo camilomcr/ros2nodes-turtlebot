@@ -11,27 +11,29 @@ function simROS2.__addTypeCheck()
 
     wrapFunc('timeFromFloat',function(origFunc)
         return function(...)
-            t=checkargsEx(
+            local t=checkargsEx(
                 {level=1},
                 {
                     {type='float'},
                 },
                 ...
             )
-            return origFunc(t)
+            local _rets={origFunc(t)}
+            return table.unpack(_rets)
         end
     end)
 
     wrapFunc('timeToFloat',function(origFunc)
         return function(...)
-            t=checkargsEx(
+            local t=checkargsEx(
                 {level=1},
                 {
                     {type='table'},
                 },
                 ...
             )
-            return origFunc(t)
+            local _rets={origFunc(t)}
+            return table.unpack(_rets)
         end
     end)
 
@@ -43,7 +45,8 @@ function simROS2.__addTypeCheck()
                 },
                 ...
             )
-            return origFunc()
+            local _rets={origFunc()}
+            return table.unpack(_rets)
         end
     end)
 
@@ -55,23 +58,26 @@ function simROS2.__addTypeCheck()
                 },
                 ...
             )
-            return origFunc()
+            local _rets={origFunc()}
+            return table.unpack(_rets)
         end
     end)
 
     wrapFunc('importInterface',function(origFunc)
         return function(...)
-            name=checkargsEx(
+            local name=checkargsEx(
                 {level=1},
                 {
                     {type='string'},
                 },
                 ...
             )
-            return origFunc(name)
+            local _rets={origFunc(name)}
+            return table.unpack(_rets)
         end
     end)
 
+    simROS2.__addTypeCheck=nil
 end
 
 sim.registerScriptFuncHook('sysCall_init','simROS2.__addTypeCheck',true)

@@ -1,0 +1,31 @@
+running develop
+Removing /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle-bot.egg-link (link to .)
+running egg_info
+writing ../../build/turtle_bot/turtle_bot.egg-info/PKG-INFO
+writing dependency_links to ../../build/turtle_bot/turtle_bot.egg-info/dependency_links.txt
+writing entry points to ../../build/turtle_bot/turtle_bot.egg-info/entry_points.txt
+writing requirements to ../../build/turtle_bot/turtle_bot.egg-info/requires.txt
+writing top-level names to ../../build/turtle_bot/turtle_bot.egg-info/top_level.txt
+reading manifest file '../../build/turtle_bot/turtle_bot.egg-info/SOURCES.txt'
+writing manifest file '../../build/turtle_bot/turtle_bot.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+creating /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot
+copying /home/camilo/ros2_ws/build/turtle_bot/build/lib/turtle_bot/turtle_bot_interface.py -> /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot
+copying /home/camilo/ros2_ws/build/turtle_bot/build/lib/turtle_bot/turtle_bot_teleop.py -> /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot
+copying /home/camilo/ros2_ws/build/turtle_bot/build/lib/turtle_bot/__init__.py -> /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot
+copying /home/camilo/ros2_ws/build/turtle_bot/build/lib/turtle_bot/turtle_bot_player.py -> /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot
+byte-compiling /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot/turtle_bot_interface.py to turtle_bot_interface.cpython-310.pyc
+byte-compiling /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot/turtle_bot_teleop.py to turtle_bot_teleop.cpython-310.pyc
+byte-compiling /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot/turtle_bot_player.py to turtle_bot_player.cpython-310.pyc
+running install_data
+running install_egg_info
+Copying ../../build/turtle_bot/turtle_bot.egg-info to /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot-0.0.0-py3.10.egg-info
+running install_scripts
+Installing turtle_bot_interface script to /home/camilo/ros2_ws/install/turtle_bot/lib/turtle_bot
+Installing turtle_bot_player script to /home/camilo/ros2_ws/install/turtle_bot/lib/turtle_bot
+Installing turtle_bot_teleop script to /home/camilo/ros2_ws/install/turtle_bot/lib/turtle_bot
+writing list of installed files to '/home/camilo/ros2_ws/build/turtle_bot/install.log'

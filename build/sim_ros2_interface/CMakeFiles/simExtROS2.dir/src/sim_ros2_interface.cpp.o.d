@@ -747,6 +747,7 @@ CMakeFiles/simExtROS2.dir/src/sim_ros2_interface.cpp.o: \
  /usr/include/boost/type_traits/remove_bounds.hpp \
  /usr/include/boost/type_traits/remove_extent.hpp \
  /home/camilo/ros2_ws/build/sim_ros2_interface/include/sim_ros2_interface/config.h \
+ /home/camilo/ros2_ws/build/sim_ros2_interface/generated/plugin.h \
  /opt/ros/humble/include/image_transport/image_transport/image_transport.hpp \
  /usr/include/c++/11/memory \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
@@ -1200,7 +1201,8 @@ CMakeFiles/simExtROS2.dir/src/sim_ros2_interface.cpp.o: \
  /opt/ros/humble/include/rclcpp_action/rclcpp_action/server.hpp \
  /opt/ros/humble/include/rclcpp_action/rclcpp_action/server_goal_handle.hpp \
  /home/camilo/ros2_ws/build/sim_ros2_interface/generated/stubs.h \
- /home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simLib/simExp.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.h \
  /usr/include/boost/optional.hpp /usr/include/boost/optional/optional.hpp \
  /usr/include/boost/core/explicit_operator_bool.hpp \
  /usr/include/boost/optional/bad_optional_access.hpp \
@@ -1294,9 +1296,10 @@ CMakeFiles/simExtROS2.dir/src/sim_ros2_interface.cpp.o: \
  /usr/include/boost/format/parsing.hpp \
  /usr/include/boost/format/free_funcs.hpp \
  /usr/include/boost/format/detail/unset_macros.hpp \
- /home/camilo/Downloads/Coppelia/programming/include/simLib.h \
- /home/camilo/Downloads/Coppelia/programming/include/simConst.h \
- /home/camilo/Downloads/Coppelia/programming/include/simTypes.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simLib/simConst.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simLib/simTypes.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simLib/simLib-old.h \
  /usr/include/boost/algorithm/string.hpp \
  /usr/include/boost/algorithm/string/std_containers_traits.hpp \
  /usr/include/boost/algorithm/string/std/string_traits.hpp \
@@ -1508,175 +1511,9 @@ CMakeFiles/simExtROS2.dir/src/sim_ros2_interface.cpp.o: \
  /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__struct.hpp \
  /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__builder.hpp \
  /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__traits.hpp \
- /home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.h \
- /home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.h \
- /usr/include/boost/regex.hpp /usr/include/boost/regex/config.hpp \
- /usr/include/boost/regex/user.hpp /usr/include/boost/predef.h \
- /usr/include/boost/predef/language.h \
- /usr/include/boost/predef/language/stdc.h \
- /usr/include/boost/predef/language/stdcpp.h \
- /usr/include/boost/predef/language/objc.h \
- /usr/include/boost/predef/language/cuda.h \
- /usr/include/boost/predef/architecture.h \
- /usr/include/boost/predef/architecture/alpha.h \
- /usr/include/boost/predef/architecture/arm.h \
- /usr/include/boost/predef/architecture/blackfin.h \
- /usr/include/boost/predef/architecture/convex.h \
- /usr/include/boost/predef/architecture/ia64.h \
- /usr/include/boost/predef/architecture/m68k.h \
- /usr/include/boost/predef/architecture/mips.h \
- /usr/include/boost/predef/architecture/parisc.h \
- /usr/include/boost/predef/architecture/ppc.h \
- /usr/include/boost/predef/architecture/ptx.h \
- /usr/include/boost/predef/architecture/pyramid.h \
- /usr/include/boost/predef/architecture/riscv.h \
- /usr/include/boost/predef/architecture/rs6k.h \
- /usr/include/boost/predef/architecture/sparc.h \
- /usr/include/boost/predef/architecture/superh.h \
- /usr/include/boost/predef/architecture/sys370.h \
- /usr/include/boost/predef/architecture/sys390.h \
- /usr/include/boost/predef/architecture/z.h \
- /usr/include/boost/predef/compiler.h \
- /usr/include/boost/predef/compiler/borland.h \
- /usr/include/boost/predef/compiler/clang.h \
- /usr/include/boost/predef/compiler/comeau.h \
- /usr/include/boost/predef/compiler/compaq.h \
- /usr/include/boost/predef/compiler/diab.h \
- /usr/include/boost/predef/compiler/digitalmars.h \
- /usr/include/boost/predef/compiler/dignus.h \
- /usr/include/boost/predef/compiler/edg.h \
- /usr/include/boost/predef/compiler/ekopath.h \
- /usr/include/boost/predef/compiler/gcc_xml.h \
- /usr/include/boost/predef/compiler/gcc.h \
- /usr/include/boost/predef/detail/comp_detected.h \
- /usr/include/boost/predef/compiler/greenhills.h \
- /usr/include/boost/predef/compiler/hp_acc.h \
- /usr/include/boost/predef/compiler/iar.h \
- /usr/include/boost/predef/compiler/ibm.h \
- /usr/include/boost/predef/compiler/intel.h \
- /usr/include/boost/predef/compiler/kai.h \
- /usr/include/boost/predef/compiler/llvm.h \
- /usr/include/boost/predef/compiler/metaware.h \
- /usr/include/boost/predef/compiler/metrowerks.h \
- /usr/include/boost/predef/compiler/microtec.h \
- /usr/include/boost/predef/compiler/mpw.h \
- /usr/include/boost/predef/compiler/nvcc.h \
- /usr/include/boost/predef/compiler/palm.h \
- /usr/include/boost/predef/compiler/pgi.h \
- /usr/include/boost/predef/compiler/sgi_mipspro.h \
- /usr/include/boost/predef/compiler/sunpro.h \
- /usr/include/boost/predef/compiler/tendra.h \
- /usr/include/boost/predef/compiler/visualc.h \
- /usr/include/boost/predef/compiler/watcom.h \
- /usr/include/boost/predef/library.h \
- /usr/include/boost/predef/library/c.h \
- /usr/include/boost/predef/library/c/cloudabi.h \
- /usr/include/boost/predef/library/c/uc.h \
- /usr/include/boost/predef/library/c/vms.h \
- /usr/include/boost/predef/library/c/zos.h \
- /usr/include/boost/predef/library/std.h \
- /usr/include/boost/predef/library/std/_prefix.h \
- /usr/include/boost/predef/detail/_exception.h \
- /usr/include/boost/predef/library/std/cxx.h \
- /usr/include/boost/predef/library/std/dinkumware.h \
- /usr/include/boost/predef/library/std/libcomo.h \
- /usr/include/boost/predef/library/std/modena.h \
- /usr/include/boost/predef/library/std/msl.h \
- /usr/include/boost/predef/library/std/roguewave.h \
- /usr/include/boost/predef/library/std/sgi.h \
- /usr/include/boost/predef/library/std/stdcpp3.h \
- /usr/include/boost/predef/library/std/stlport.h \
- /usr/include/boost/predef/library/std/vacpp.h \
- /usr/include/boost/predef/os.h /usr/include/boost/predef/os/aix.h \
- /usr/include/boost/predef/os/amigaos.h \
- /usr/include/boost/predef/os/beos.h \
- /usr/include/boost/predef/os/cygwin.h \
- /usr/include/boost/predef/os/haiku.h /usr/include/boost/predef/os/hpux.h \
- /usr/include/boost/predef/os/irix.h /usr/include/boost/predef/os/linux.h \
- /usr/include/boost/predef/detail/os_detected.h \
- /usr/include/boost/predef/os/os400.h \
- /usr/include/boost/predef/os/qnxnto.h \
- /usr/include/boost/predef/os/solaris.h \
- /usr/include/boost/predef/os/unix.h /usr/include/boost/predef/os/vms.h \
- /usr/include/boost/predef/os/windows.h /usr/include/boost/predef/other.h \
- /usr/include/boost/predef/platform.h \
- /usr/include/boost/predef/platform/cloudabi.h \
- /usr/include/boost/predef/platform/mingw.h \
- /usr/include/boost/predef/platform/mingw32.h \
- /usr/include/boost/predef/platform/mingw64.h \
- /usr/include/boost/predef/platform/windows_uwp.h \
- /usr/include/boost/predef/platform/windows_desktop.h \
- /usr/include/boost/predef/platform/windows_phone.h \
- /usr/include/boost/predef/platform/windows_server.h \
- /usr/include/boost/predef/platform/windows_store.h \
- /usr/include/boost/predef/platform/windows_system.h \
- /usr/include/boost/predef/platform/windows_runtime.h \
- /usr/include/boost/predef/platform/ios.h \
- /usr/include/boost/predef/hardware.h \
- /usr/include/boost/predef/hardware/simd.h \
- /usr/include/boost/predef/hardware/simd/x86.h \
- /usr/include/boost/predef/hardware/simd/x86/versions.h \
- /usr/include/boost/predef/hardware/simd/x86_amd.h \
- /usr/include/boost/predef/hardware/simd/x86_amd/versions.h \
- /usr/include/boost/predef/hardware/simd/arm.h \
- /usr/include/boost/predef/hardware/simd/arm/versions.h \
- /usr/include/boost/predef/hardware/simd/ppc.h \
- /usr/include/boost/predef/hardware/simd/ppc/versions.h \
- /usr/include/boost/predef/version.h \
- /usr/include/boost/regex/config/cwchar.hpp \
- /usr/include/boost/regex/v4/regex.hpp \
- /usr/include/boost/regex/v4/regex_workaround.hpp \
- /usr/include/boost/scoped_ptr.hpp \
- /usr/include/boost/smart_ptr/scoped_ptr.hpp \
- /usr/include/boost/scoped_array.hpp \
- /usr/include/boost/smart_ptr/scoped_array.hpp \
- /usr/include/boost/regex_fwd.hpp \
- /usr/include/boost/regex/v4/regex_fwd.hpp \
- /usr/include/boost/regex/regex_traits.hpp \
- /usr/include/boost/regex/v4/regex_traits.hpp \
- /usr/include/boost/regex/v4/syntax_type.hpp \
- /usr/include/boost/regex/v4/error_type.hpp \
- /usr/include/boost/regex/v4/regex_traits_defaults.hpp \
- /usr/include/boost/regex/v4/cpp_regex_traits.hpp \
- /usr/include/boost/regex/pattern_except.hpp \
- /usr/include/boost/regex/pending/static_mutex.hpp \
- /usr/include/boost/regex/v4/primary_transform.hpp \
- /usr/include/boost/regex/pending/object_cache.hpp \
- /usr/include/boost/regex/v4/c_regex_traits.hpp \
- /usr/include/boost/regex/v4/match_flags.hpp \
- /usr/include/boost/regex/v4/regex_raw_buffer.hpp \
- /usr/include/boost/regex/v4/char_regex_traits.hpp \
- /usr/include/boost/regex/v4/states.hpp \
- /usr/include/boost/regex/v4/regbase.hpp \
- /usr/include/boost/regex/v4/iterator_traits.hpp \
- /usr/include/boost/regex/v4/basic_regex.hpp \
- /usr/include/boost/container_hash/hash.hpp \
- /usr/include/boost/container_hash/detail/hash_float.hpp \
- /usr/include/boost/container_hash/detail/float_functions.hpp \
- /usr/include/boost/container_hash/detail/limits.hpp \
- /usr/include/boost/integer/static_log2.hpp \
- /usr/include/boost/container_hash/extensions.hpp \
- /usr/include/boost/detail/container_fwd.hpp /usr/include/c++/11/bitset \
- /usr/include/boost/regex/v4/basic_regex_creator.hpp \
- /usr/include/boost/regex/v4/indexed_bit_flag.hpp \
- /usr/include/boost/regex/v4/basic_regex_parser.hpp \
- /usr/include/boost/regex/v4/sub_match.hpp \
- /usr/include/boost/regex/v4/regex_format.hpp \
- /usr/include/boost/regex/v4/match_results.hpp \
- /usr/include/boost/regex/v4/protected_call.hpp \
- /usr/include/boost/regex/v4/perl_matcher.hpp \
- /usr/include/boost/regex/v4/iterator_category.hpp \
- /usr/include/boost/regex/v4/perl_matcher_non_recursive.hpp \
- /usr/include/boost/regex/v4/perl_matcher_common.hpp \
- /usr/include/boost/regex/v4/instances.hpp \
- /usr/include/boost/regex/v4/regex_match.hpp \
- /usr/include/boost/regex/v4/regex_search.hpp \
- /usr/include/boost/regex/v4/regex_iterator.hpp \
- /usr/include/boost/regex/v4/regex_token_iterator.hpp \
- /usr/include/boost/regex/v4/regex_grep.hpp \
- /usr/include/boost/regex/v4/regex_replace.hpp \
- /usr/include/boost/regex/v4/regex_merge.hpp \
- /usr/include/boost/regex/v4/regex_split.hpp \
+ /home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Handles.h \
  /usr/include/boost/type_erasure/any_cast.hpp \
  /usr/include/boost/type_erasure/any.hpp \
  /usr/include/boost/utility/addressof.hpp /usr/include/boost/mpl/map.hpp \

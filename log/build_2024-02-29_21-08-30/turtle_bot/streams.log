@@ -1,0 +1,19 @@
+[0.572s] Invoking command in '/home/camilo/ros2_ws/build/turtle_bot': PYTHONPATH=/home/camilo/ros2_ws/build/turtle_bot/prefix_override:/home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/camilo/ros2_ws/build/turtle_bot/build --no-deps install_data
+[0.766s] running develop
+[0.877s] running egg_info
+[0.877s] writing turtle_bot.egg-info/PKG-INFO
+[0.877s] writing dependency_links to turtle_bot.egg-info/dependency_links.txt
+[0.878s] writing entry points to turtle_bot.egg-info/entry_points.txt
+[0.878s] writing requirements to turtle_bot.egg-info/requires.txt
+[0.878s] writing top-level names to turtle_bot.egg-info/top_level.txt
+[0.879s] reading manifest file 'turtle_bot.egg-info/SOURCES.txt'
+[0.880s] writing manifest file 'turtle_bot.egg-info/SOURCES.txt'
+[0.881s] running build_ext
+[0.881s] Creating /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle-bot.egg-link (link to .)
+[0.882s] Installing turtle_bot_interface script to /home/camilo/ros2_ws/install/turtle_bot/lib/turtle_bot
+[0.882s] Installing turtle_bot_player script to /home/camilo/ros2_ws/install/turtle_bot/lib/turtle_bot
+[0.882s] Installing turtle_bot_teleop script to /home/camilo/ros2_ws/install/turtle_bot/lib/turtle_bot
+[0.882s] 
+[0.882s] Installed /home/camilo/ros2_ws/build/turtle_bot
+[0.882s] running install_data
+[0.908s] Invoked command in '/home/camilo/ros2_ws/build/turtle_bot' returned '0': PYTHONPATH=/home/camilo/ros2_ws/build/turtle_bot/prefix_override:/home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/camilo/ros2_ws/build/turtle_bot/build --no-deps install_data

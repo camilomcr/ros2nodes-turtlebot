@@ -271,101 +271,77 @@ generated/stubs.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/simExtROS2.dir/build.make CMakeFiles/simExtROS2.dir/generated/stubs.cpp.s
 .PHONY : generated/stubs.cpp.s
 
-home/camilo/Downloads/Coppelia/programming/common/simLib.o: home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.o
-.PHONY : home/camilo/Downloads/Coppelia/programming/common/simLib.o
+home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.o: home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.o
+.PHONY : home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.o
 
 # target to build an object file
-home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simExtROS2.dir/build.make CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.o
-.PHONY : home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.o
+home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simExtROS2.dir/build.make CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.o
+.PHONY : home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.o
 
-home/camilo/Downloads/Coppelia/programming/common/simLib.i: home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.i
-.PHONY : home/camilo/Downloads/Coppelia/programming/common/simLib.i
+home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.i: home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.i
+.PHONY : home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.i
 
 # target to preprocess a source file
-home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simExtROS2.dir/build.make CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.i
-.PHONY : home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.i
+home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simExtROS2.dir/build.make CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.i
+.PHONY : home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.i
 
-home/camilo/Downloads/Coppelia/programming/common/simLib.s: home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.s
-.PHONY : home/camilo/Downloads/Coppelia/programming/common/simLib.s
+home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.s: home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.s
+.PHONY : home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.s
 
 # target to generate assembly for a file
-home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simExtROS2.dir/build.make CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.s
-.PHONY : home/camilo/Downloads/Coppelia/programming/common/simLib.cpp.s
+home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simExtROS2.dir/build.make CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.s
+.PHONY : home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.s
 
-home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.o: home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.o
-.PHONY : home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.o
+home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.o: home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.o
+.PHONY : home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.o
 
 # target to build an object file
-home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simExtROS2.dir/build.make CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.o
-.PHONY : home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.o
+home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simExtROS2.dir/build.make CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.o
+.PHONY : home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.o
 
-home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.i: home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.i
-.PHONY : home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.i
+home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.i: home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.i
+.PHONY : home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.i
 
 # target to preprocess a source file
-home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simExtROS2.dir/build.make CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.i
-.PHONY : home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.i
+home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simExtROS2.dir/build.make CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.i
+.PHONY : home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.i
 
-home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.s: home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.s
-.PHONY : home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.s
+home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.s: home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.s
+.PHONY : home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.s
 
 # target to generate assembly for a file
-home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simExtROS2.dir/build.make CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.s
-.PHONY : home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.cpp.s
+home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simExtROS2.dir/build.make CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.s
+.PHONY : home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.s
 
-home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.o: home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.o
-.PHONY : home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.o
+home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.o: home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.o
+.PHONY : home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.o
 
 # target to build an object file
-home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simExtROS2.dir/build.make CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.o
-.PHONY : home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.o
+home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simExtROS2.dir/build.make CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.o
+.PHONY : home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.o
 
-home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.i: home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.i
-.PHONY : home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.i
-
-# target to preprocess a source file
-home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simExtROS2.dir/build.make CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.i
-.PHONY : home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.i
-
-home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.s: home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.s
-.PHONY : home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.s
-
-# target to generate assembly for a file
-home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simExtROS2.dir/build.make CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.s
-.PHONY : home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.cpp.s
-
-home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.o: home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.o
-.PHONY : home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.o
-
-# target to build an object file
-home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simExtROS2.dir/build.make CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.o
-.PHONY : home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.o
-
-home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.i: home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.i
-.PHONY : home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.i
+home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.i: home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.i
+.PHONY : home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.i
 
 # target to preprocess a source file
-home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simExtROS2.dir/build.make CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.i
-.PHONY : home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.i
+home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simExtROS2.dir/build.make CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.i
+.PHONY : home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.i
 
-home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.s: home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.s
-.PHONY : home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.s
+home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.s: home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.s
+.PHONY : home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.s
 
 # target to generate assembly for a file
-home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simExtROS2.dir/build.make CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.s
-.PHONY : home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.cpp.s
+home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simExtROS2.dir/build.make CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.s
+.PHONY : home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.s
 
 src/ros_msg_builtin_io.o: src/ros_msg_builtin_io.cpp.o
 .PHONY : src/ros_msg_builtin_io.o
@@ -438,18 +414,15 @@ help:
 	@echo "... generated/stubs.o"
 	@echo "... generated/stubs.i"
 	@echo "... generated/stubs.s"
-	@echo "... home/camilo/Downloads/Coppelia/programming/common/simLib.o"
-	@echo "... home/camilo/Downloads/Coppelia/programming/common/simLib.i"
-	@echo "... home/camilo/Downloads/Coppelia/programming/common/simLib.s"
-	@echo "... home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.o"
-	@echo "... home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.i"
-	@echo "... home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Handle.s"
-	@echo "... home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.o"
-	@echo "... home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.i"
-	@echo "... home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.s"
-	@echo "... home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.o"
-	@echo "... home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.i"
-	@echo "... home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Plugin.s"
+	@echo "... home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.o"
+	@echo "... home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.i"
+	@echo "... home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.s"
+	@echo "... home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.o"
+	@echo "... home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.i"
+	@echo "... home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.s"
+	@echo "... home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.o"
+	@echo "... home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.i"
+	@echo "... home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.s"
 	@echo "... src/ros_msg_builtin_io.o"
 	@echo "... src/ros_msg_builtin_io.i"
 	@echo "... src/ros_msg_builtin_io.s"

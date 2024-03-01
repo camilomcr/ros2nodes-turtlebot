@@ -666,17 +666,18 @@ CMakeFiles/simExtROS2.dir/src/ros_msg_builtin_io.cpp.o: \
  /opt/ros/humble/include/rcl_action/rcl_action/goal_state_machine.h \
  /opt/ros/humble/include/rclcpp_action/rclcpp_action/server.hpp \
  /opt/ros/humble/include/rclcpp_action/rclcpp_action/server_goal_handle.hpp \
- /home/camilo/Downloads/Coppelia/programming/include/simLib.h \
- /home/camilo/Downloads/Coppelia/programming/include/simConst.h \
- /home/camilo/Downloads/Coppelia/programming/include/simTypes.h \
- /usr/include/c++/11/cstddef \
+ /home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simLib/simConst.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simLib/simTypes.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simLib/simLib-old.h \
  /home/camilo/ros2_ws/build/sim_ros2_interface/generated/stubs.h \
- /home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simLib/simExp.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.h \
  /usr/include/boost/optional.hpp /usr/include/boost/optional/optional.hpp \
  /usr/include/boost/assert.hpp /usr/include/boost/core/addressof.hpp \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \
- /usr/include/boost/config/compiler/gcc.hpp \
+ /usr/include/boost/config/compiler/gcc.hpp /usr/include/c++/11/cstddef \
  /usr/include/boost/config/detail/select_stdlib_config.hpp \
  /usr/include/c++/11/version \
  /usr/include/boost/config/stdlib/libstdcpp3.hpp \

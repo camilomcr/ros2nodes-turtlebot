@@ -1185,6 +1185,7 @@ CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o: \
  /usr/include/boost/type_traits/remove_bounds.hpp \
  /usr/include/boost/type_traits/remove_extent.hpp \
  /home/camilo/ros2_ws/build/sim_ros2_interface/include/sim_ros2_interface/config.h \
+ /home/camilo/ros2_ws/build/sim_ros2_interface/generated/plugin.h \
  /opt/ros/humble/include/image_transport/image_transport/image_transport.hpp \
  /opt/ros/humble/include/image_transport/image_transport/camera_publisher.hpp \
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp \
@@ -1208,7 +1209,8 @@ CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o: \
  /opt/ros/humble/include/image_transport/image_transport/subscriber.hpp \
  /opt/ros/humble/include/image_transport/image_transport/transport_hints.hpp \
  /home/camilo/ros2_ws/build/sim_ros2_interface/generated/stubs.h \
- /home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simLib/simExp.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.h \
  /usr/include/boost/optional.hpp /usr/include/boost/optional/optional.hpp \
  /usr/include/boost/core/explicit_operator_bool.hpp \
  /usr/include/boost/optional/bad_optional_access.hpp \
@@ -1302,9 +1304,10 @@ CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o: \
  /usr/include/boost/format/parsing.hpp \
  /usr/include/boost/format/free_funcs.hpp \
  /usr/include/boost/format/detail/unset_macros.hpp \
- /home/camilo/Downloads/Coppelia/programming/include/simLib.h \
- /home/camilo/Downloads/Coppelia/programming/include/simConst.h \
- /home/camilo/Downloads/Coppelia/programming/include/simTypes.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simLib/simConst.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simLib/simTypes.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simLib/simLib-old.h \
  /usr/include/boost/algorithm/string.hpp \
  /usr/include/boost/algorithm/string/std_containers_traits.hpp \
  /usr/include/boost/algorithm/string/std/string_traits.hpp \

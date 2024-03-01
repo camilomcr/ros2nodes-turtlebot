@@ -1,0 +1,37 @@
+[0.107s] Invoking command in '/home/camilo/ros2_ws/build/sim_ros2_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --build /home/camilo/ros2_ws/build/sim_ros2_interface -- -j8 -l8
+[0.143s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.268s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.324s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.333s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.337s] -- Found diagnostic_msgs: 4.2.3 (/opt/ros/humble/share/diagnostic_msgs/cmake)
+[0.362s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.363s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.369s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.378s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.391s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.487s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.523s] -- Found lifecycle_msgs: 1.2.1 (/opt/ros/humble/share/lifecycle_msgs/cmake)
+[0.537s] -- Found map_msgs: 2.1.0 (/opt/ros/humble/share/map_msgs/cmake)
+[0.793s] -- Found pendulum_msgs: 0.20.3 (/opt/ros/humble/share/pendulum_msgs/cmake)
+[0.818s] -- Found rosgraph_msgs: 1.2.1 (/opt/ros/humble/share/rosgraph_msgs/cmake)
+[0.845s] -- Found shape_msgs: 4.2.3 (/opt/ros/humble/share/shape_msgs/cmake)
+[0.890s] -- Found stereo_msgs: 4.2.3 (/opt/ros/humble/share/stereo_msgs/cmake)
+[0.958s] -- Found tf2_geometry_msgs: 0.25.6 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[0.961s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.962s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.049s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.050s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.136s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.438s] -- Found trajectory_msgs: 4.2.3 (/opt/ros/humble/share/trajectory_msgs/cmake)
+[1.502s] -- Found visualization_msgs: 4.2.3 (/opt/ros/humble/share/visualization_msgs/cmake)
+[1.593s] -- Found std_srvs: 4.2.3 (/opt/ros/humble/share/std_srvs/cmake)
+[1.605s] -- Found example_interfaces: 0.9.3 (/opt/ros/humble/share/example_interfaces/cmake)
+[1.646s] -- Found image_transport: 3.1.8 (/opt/ros/humble/share/image_transport/cmake)
+[1.663s] [31mCMake Error at CMakeLists.txt:55 (message):
+[1.663s]   Environment variable COPPELIASIM_ROOT_DIR is not set
+[1.663s] 
+[1.663s] [0m
+[1.663s] -- Configuring incomplete, errors occurred!
+[1.663s] See also "/home/camilo/ros2_ws/build/sim_ros2_interface/CMakeFiles/CMakeOutput.log".
+[1.669s] gmake: *** [Makefile:470: cmake_check_build_system] Error 1
+[1.671s] Invoked command in '/home/camilo/ros2_ws/build/sim_ros2_interface' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --build /home/camilo/ros2_ws/build/sim_ros2_interface -- -j8 -l8

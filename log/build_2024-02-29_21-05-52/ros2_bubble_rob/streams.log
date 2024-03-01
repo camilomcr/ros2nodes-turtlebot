@@ -1,0 +1,31 @@
+[0.147s] Invoking command in '/home/camilo/ros2_ws/build/ros2_bubble_rob': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --build /home/camilo/ros2_ws/build/ros2_bubble_rob -- -j8 -l8
+[0.184s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.310s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.366s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.374s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[0.404s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.405s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.411s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.420s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.433s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.481s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.482s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.577s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.722s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.782s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.783s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.784s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/camilo/ros2_ws/src/ros2_bubble_rob/include>
+[0.784s] -- Configured cppcheck exclude dirs and/or files: 
+[0.785s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.785s] -- Configured cpplint exclude dirs and/or files: 
+[0.786s] -- Added test 'lint_cmake' to check CMake code style
+[0.788s] -- Added test 'uncrustify' to check C / C++ code style
+[0.788s] -- Configured uncrustify additional arguments: 
+[0.788s] -- Added test 'xmllint' to check XML markup files
+[0.789s] -- Configuring done
+[0.797s] -- Generating done
+[0.798s] -- Build files have been written to: /home/camilo/ros2_ws/build/ros2_bubble_rob
+[0.819s] [35m[1mConsolidate compiler generated dependencies of target ros2BubbleRob[0m
+[0.841s] [ 50%] [32mBuilding CXX object CMakeFiles/ros2BubbleRob.dir/src/ros2BubbleRob.cpp.o[0m
+[12.015s] [100%] [32m[1mLinking CXX executable ros2BubbleRob[0m
+[12.178s] [100%] Built target ros2BubbleRob

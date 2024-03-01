@@ -1,0 +1,62 @@
+[0.110s] Invoking command in '/home/camilo/ros2_ws/build/sim_ros2_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --build /home/camilo/ros2_ws/build/sim_ros2_interface -- -j8 -l8
+[0.151s] [  2%] [34m[1mGenerating generated/actcli_sendGoal.cpp[0m
+[0.151s] [  7%] [34m[1mGenerating generated/actcli_cancelLastGoal.cpp[0m
+[0.151s] [  7%] [34m[1mGenerating generated/actcli_new.cpp[0m
+[0.151s] [ 10%] [34m[1mGenerating generated/actcli_del.cpp[0m
+[0.152s] [ 12%] [34m[1mGenerating generated/actsrv_action_abort.cpp[0m
+[0.156s] [ 17%] [34m[1mGenerating generated/actsrv_action_is_active.cpp[0m
+[0.157s] [ 17%] [34m[1mGenerating generated/actsrv_action_canceled.cpp[0m
+[0.160s] [ 20%] [34m[1mGenerating generated/actsrv_action_execute.cpp[0m
+[0.412s] [ 22%] [34m[1mGenerating generated/actsrv_action_is_canceling.cpp[0m
+[0.416s] [ 25%] [34m[1mGenerating generated/actsrv_action_is_executing.cpp[0m
+[0.425s] [ 27%] [34m[1mGenerating generated/actsrv_action_publish_feedback.cpp[0m
+[0.436s] [ 30%] [34m[1mGenerating generated/actsrv_action_succeed.cpp[0m
+[0.438s] [ 32%] [34m[1mGenerating generated/actsrv_del.cpp[0m
+[0.447s] [ 35%] [34m[1mGenerating generated/actsrv_new.cpp[0m
+[0.491s] [ 37%] [34m[1mGenerating generated/callbacks.cpp[0m
+[0.542s] [ 40%] [34m[1mGenerating generated/callbacks.h[0m
+[0.654s] [ 42%] [34m[1mGenerating generated/cli_call.cpp[0m
+[0.670s] [ 45%] [34m[1mGenerating generated/cli_del.cpp[0m
+[0.688s] [ 47%] [34m[1mGenerating generated/cli_new.cpp[0m
+[0.709s] [ 50%] [34m[1mGenerating generated/cli_wait.cpp[0m
+[0.722s] [ 52%] [34m[1mGenerating generated/if_const.cpp[0m
+[0.774s] [ 55%] [34m[1mGenerating generated/if_list.cpp[0m
+[0.861s] [ 57%] [34m[1mGenerating generated/if_new.cpp[0m
+[0.887s] [ 60%] [34m[1mGenerating generated/pub_del.cpp[0m
+[0.932s] [ 62%] [34m[1mGenerating generated/pub_new.cpp[0m
+[0.946s] [ 65%] [34m[1mGenerating generated/pub_publish.cpp[0m
+[0.956s] [ 67%] [34m[1mGenerating generated/srv_del.cpp[0m
+[0.991s] [ 70%] [34m[1mGenerating generated/srv_new.cpp[0m
+[1.012s] [ 72%] [34m[1mGenerating generated/sub_del.cpp[0m
+[1.092s] [ 75%] [34m[1mGenerating generated/sub_new.cpp[0m
+[1.315s] [ 75%] Built target generate_ros_code
+[1.333s] [35m[1mConsolidate compiler generated dependencies of target simExtROS2[0m
+[1.365s] [ 77%] [32mBuilding CXX object CMakeFiles/simExtROS2.dir/src/sim_ros2_interface.cpp.o[0m
+[1.366s] [ 80%] [32mBuilding CXX object CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o[0m
+[108.658s] [ 82%] [32m[1mLinking CXX shared library libsimExtROS2.so[0m
+[109.824s] [100%] Built target simExtROS2
+[109.833s] Invoked command in '/home/camilo/ros2_ws/build/sim_ros2_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --build /home/camilo/ros2_ws/build/sim_ros2_interface -- -j8 -l8
+[109.865s] Invoking command in '/home/camilo/ros2_ws/build/sim_ros2_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --install /home/camilo/ros2_ws/build/sim_ros2_interface
+[109.875s] -- Install configuration: "Release"
+[109.875s] -- Execute custom install script
+[109.876s] -- Up-to-date symlink: /home/camilo/Downloads/Coppelia/lua/simROS2-typecheck.lua
+[109.876s] -- Up-to-date symlink: /home/camilo/Downloads/Coppelia/lua/simROS2.lua
+[109.878s] -- Up-to-date symlink: /home/camilo/Downloads/Coppelia/helpFiles/en/simROS2.htm
+[109.878s] -- Up-to-date symlink: /home/camilo/Downloads/Coppelia/helpFiles/index/simROS2.json
+[109.879s] -- Up-to-date symlink: /home/camilo/Downloads/Coppelia/libsimExtROS2.so
+[109.879s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/ament_index/resource_index/package_run_dependencies/sim_ros2_interface
+[109.879s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/ament_index/resource_index/parent_prefix_path/sim_ros2_interface
+[109.881s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/environment/ament_prefix_path.sh
+[109.881s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/environment/ament_prefix_path.dsv
+[109.881s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/environment/path.sh
+[109.881s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/environment/path.dsv
+[109.881s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/local_setup.bash
+[109.882s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/local_setup.sh
+[109.882s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/local_setup.zsh
+[109.882s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/local_setup.dsv
+[109.882s] -- Symlinking: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/package.dsv
+[109.889s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/ament_index/resource_index/packages/sim_ros2_interface
+[109.889s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/cmake/sim_ros2_interfaceConfig.cmake
+[109.889s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/cmake/sim_ros2_interfaceConfig-version.cmake
+[109.890s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/package.xml
+[109.892s] Invoked command in '/home/camilo/ros2_ws/build/sim_ros2_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --install /home/camilo/ros2_ws/build/sim_ros2_interface

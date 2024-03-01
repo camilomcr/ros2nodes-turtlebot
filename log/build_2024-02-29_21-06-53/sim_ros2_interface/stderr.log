@@ -1,0 +1,8 @@
+warning: missing python package "xmlschema"; input file callbacks.xml will not be validated.
+warning: missing python package "xmlschema"; input file callbacks.xml will not be validated.
+warning: missing python package "xmlschema"; input file callbacks.xml will not be validated.
+warning: missing python package "xmlschema"; input file callbacks.xml will not be validated.
+error: program "xsltproc" is missing (hint: try "sudo apt install xsltproc")
+gmake[2]: *** [CMakeFiles/simExtROS2.dir/build.make:96: generated/stubs.cpp] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:163: CMakeFiles/simExtROS2.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

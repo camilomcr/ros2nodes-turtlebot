@@ -1,0 +1,12 @@
+[0.107s] Invoking command in '/home/camilo/ros2_ws/build/sim_ros2_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --build /home/camilo/ros2_ws/build/sim_ros2_interface -- -j8 -l8
+[0.147s] [ 75%] Built target generate_ros_code
+[0.155s] [ 77%] [34m[1mGenerating generated/stubs.cpp, generated/stubs.h, generated/plugin.h, generated/stubsPlusPlus.cpp, generated/index.json, generated/reference.html, generated/lua_calltips.cpp, generated/simROS2-typecheck.lua[0m
+[0.181s] /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/generate.py --verbose --xml-file /home/camilo/ros2_ws/src/sim_ros2_interface/meta/callbacks.xml --gen-all /home/camilo/ros2_ws/build/sim_ros2_interface/generated --lua-file /home/camilo/ros2_ws/src/sim_ros2_interface/simROS2.lua
+[0.458s] /usr/bin/python3 /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/generate_lua_xml.py /home/camilo/ros2_ws/src/sim_ros2_interface/meta/callbacks.xml /home/camilo/ros2_ws/src/sim_ros2_interface/simROS2.lua /home/camilo/ros2_ws/build/sim_ros2_interface/generated/lua.xml
+[0.774s] /usr/bin/python3 /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/merge_xml.py /home/camilo/ros2_ws/src/sim_ros2_interface/meta/callbacks.xml /home/camilo/ros2_ws/build/sim_ros2_interface/generated/lua.xml /home/camilo/ros2_ws/build/sim_ros2_interface/generated/reference.xml
+[0.801s] xsltproc -o /home/camilo/ros2_ws/build/sim_ros2_interface/generated/reference.html /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/xsl/reference.xsl /home/camilo/ros2_ws/build/sim_ros2_interface/generated/reference.xml
+[0.801s] error: program "xsltproc" is missing (hint: try "sudo apt install xsltproc")
+[0.832s] gmake[2]: *** [CMakeFiles/simExtROS2.dir/build.make:96: generated/stubs.cpp] Error 1
+[0.832s] gmake[1]: *** [CMakeFiles/Makefile2:163: CMakeFiles/simExtROS2.dir/all] Error 2
+[0.833s] gmake: *** [Makefile:146: all] Error 2
+[0.836s] Invoked command in '/home/camilo/ros2_ws/build/sim_ros2_interface' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --build /home/camilo/ros2_ws/build/sim_ros2_interface -- -j8 -l8

@@ -1,0 +1,227 @@
+[0.000000] (-) TimerEvent: {}
+[0.000148] (ros2_bubble_rob) JobQueued: {'identifier': 'ros2_bubble_rob', 'dependencies': OrderedDict()}
+[0.000251] (sim_ros2_interface) JobQueued: {'identifier': 'sim_ros2_interface', 'dependencies': OrderedDict()}
+[0.000267] (turtle_bot) JobQueued: {'identifier': 'turtle_bot', 'dependencies': OrderedDict()}
+[0.000288] (ros2_bubble_rob) JobStarted: {'identifier': 'ros2_bubble_rob'}
+[0.041949] (sim_ros2_interface) JobStarted: {'identifier': 'sim_ros2_interface'}
+[0.082222] (turtle_bot) JobStarted: {'identifier': 'turtle_bot'}
+[0.099328] (-) TimerEvent: {}
+[0.143688] (ros2_bubble_rob) JobProgress: {'identifier': 'ros2_bubble_rob', 'progress': 'cmake'}
+[0.144220] (ros2_bubble_rob) JobProgress: {'identifier': 'ros2_bubble_rob', 'progress': 'build'}
+[0.144772] (ros2_bubble_rob) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/camilo/ros2_ws/build/ros2_bubble_rob', '--', '-j8', '-l8'], 'cwd': '/home/camilo/ros2_ws/build/ros2_bubble_rob', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'camilo'), ('LC_TIME', 'es_CO.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/camilo'), ('OLDPWD', '/home/camilo/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_CO.UTF-8'), ('SYSTEMD_EXEC_PID', '28832'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/camilo/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'camilo'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'camilo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/camilolinux:@/tmp/.ICE-unix/888,unix/camilolinux:/tmp/.ICE-unix/888'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_CO.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9ccabf43_e10d_49c2_a43f_9507f9606cf9'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_CO.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.NH0DK2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.275'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/camilo/ros2_ws/install/turtle_bot:/home/camilo/ros2_ws/install/sim_ros2_interface:/home/camilo/ros2_ws/install/ros2_bubble_rob:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_CO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_CO.UTF-8'), ('LC_IDENTIFICATION', 'es_CO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/camilo/ros2_ws/build/ros2_bubble_rob'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_CO.UTF-8'), ('LC_PAPER', 'es_CO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/camilo/ros2_ws/install/sim_ros2_interface:/home/camilo/ros2_ws/install/ros2_bubble_rob:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble')]), 'shell': False}
+[0.147017] (sim_ros2_interface) JobProgress: {'identifier': 'sim_ros2_interface', 'progress': 'cmake'}
+[0.147423] (sim_ros2_interface) JobProgress: {'identifier': 'sim_ros2_interface', 'progress': 'build'}
+[0.147612] (sim_ros2_interface) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/camilo/ros2_ws/build/sim_ros2_interface', '--', '-j8', '-l8'], 'cwd': '/home/camilo/ros2_ws/build/sim_ros2_interface', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'camilo'), ('LC_TIME', 'es_CO.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/camilo'), ('OLDPWD', '/home/camilo/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_CO.UTF-8'), ('SYSTEMD_EXEC_PID', '28832'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/camilo/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'camilo'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'camilo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/camilolinux:@/tmp/.ICE-unix/888,unix/camilolinux:/tmp/.ICE-unix/888'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_CO.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9ccabf43_e10d_49c2_a43f_9507f9606cf9'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_CO.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.NH0DK2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.275'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/camilo/ros2_ws/install/turtle_bot:/home/camilo/ros2_ws/install/sim_ros2_interface:/home/camilo/ros2_ws/install/ros2_bubble_rob:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_CO.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_CO.UTF-8'), ('LC_IDENTIFICATION', 'es_CO.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/camilo/ros2_ws/build/sim_ros2_interface'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_CO.UTF-8'), ('LC_PAPER', 'es_CO.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/camilo/ros2_ws/install/sim_ros2_interface:/home/camilo/ros2_ws/install/ros2_bubble_rob:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble')]), 'shell': False}
+[0.184385] (ros2_bubble_rob) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.184604] (sim_ros2_interface) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.199445] (-) TimerEvent: {}
+[0.299722] (-) TimerEvent: {}
+[0.310134] (ros2_bubble_rob) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.310306] (sim_ros2_interface) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.365824] (sim_ros2_interface) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.366045] (ros2_bubble_rob) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.374656] (ros2_bubble_rob) StdoutLine: {'line': b'-- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.374823] (sim_ros2_interface) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.378601] (sim_ros2_interface) StdoutLine: {'line': b'-- Found diagnostic_msgs: 4.2.3 (/opt/ros/humble/share/diagnostic_msgs/cmake)\n'}
+[0.399911] (-) TimerEvent: {}
+[0.403422] (sim_ros2_interface) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.403833] (ros2_bubble_rob) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.405423] (sim_ros2_interface) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.405684] (ros2_bubble_rob) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.410646] (sim_ros2_interface) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.410787] (ros2_bubble_rob) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.419767] (sim_ros2_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.419921] (ros2_bubble_rob) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.432706] (sim_ros2_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.433021] (ros2_bubble_rob) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.481267] (ros2_bubble_rob) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.482361] (ros2_bubble_rob) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.500016] (-) TimerEvent: {}
+[0.529296] (sim_ros2_interface) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[0.565115] (sim_ros2_interface) StdoutLine: {'line': b'-- Found lifecycle_msgs: 1.2.1 (/opt/ros/humble/share/lifecycle_msgs/cmake)\n'}
+[0.577311] (ros2_bubble_rob) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.578540] (sim_ros2_interface) StdoutLine: {'line': b'-- Found map_msgs: 2.1.0 (/opt/ros/humble/share/map_msgs/cmake)\n'}
+[0.600121] (-) TimerEvent: {}
+[0.685200] (turtle_bot) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/turtle_bot', 'build', '--build-base', '/home/camilo/ros2_ws/build/turtle_bot/build', 'install', '--record', '/home/camilo/ros2_ws/build/turtle_bot/install.log', '--single-version-externally-managed'], 'cwd': '/home/camilo/ros2_ws/src/turtle_bot', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'camilo', 'LC_TIME': 'es_CO.UTF-8', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/camilo', 'OLDPWD': '/home/camilo/ros2_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'es_CO.UTF-8', 'SYSTEMD_EXEC_PID': '28832', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/camilo/ros2_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'camilo', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'camilo', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/camilolinux:@/tmp/.ICE-unix/888,unix/camilolinux:/tmp/.ICE-unix/888', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'es_CO.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/9ccabf43_e10d_49c2_a43f_9507f9606cf9', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'es_CO.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.NH0DK2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.275', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/camilo/ros2_ws/install/turtle_bot:/home/camilo/ros2_ws/install/sim_ros2_interface:/home/camilo/ros2_ws/install/ros2_bubble_rob:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'es_CO.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'es_CO.UTF-8', 'LC_IDENTIFICATION': 'es_CO.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/camilo/ros2_ws/build/turtle_bot', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/camilo/ros2_ws/build/turtle_bot/prefix_override:/home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages:/home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'es_CO.UTF-8', 'LC_PAPER': 'es_CO.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/camilo/ros2_ws/install/sim_ros2_interface:/home/camilo/ros2_ws/install/ros2_bubble_rob'}, 'shell': False}
+[0.700236] (-) TimerEvent: {}
+[0.722521] (ros2_bubble_rob) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.781748] (ros2_bubble_rob) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[0.783599] (ros2_bubble_rob) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[0.783821] (ros2_bubble_rob) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/camilo/ros2_ws/src/ros2_bubble_rob/include>\n'}
+[0.783922] (ros2_bubble_rob) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[0.785364] (ros2_bubble_rob) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[0.785478] (ros2_bubble_rob) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[0.786219] (ros2_bubble_rob) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.788032] (ros2_bubble_rob) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[0.788140] (ros2_bubble_rob) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[0.788472] (ros2_bubble_rob) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.789233] (ros2_bubble_rob) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.796709] (ros2_bubble_rob) StdoutLine: {'line': b'-- Generating done\n'}
+[0.797826] (ros2_bubble_rob) StdoutLine: {'line': b'-- Build files have been written to: /home/camilo/ros2_ws/build/ros2_bubble_rob\n'}
+[0.800311] (-) TimerEvent: {}
+[0.819116] (ros2_bubble_rob) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ros2BubbleRob\x1b[0m\n'}
+[0.835214] (sim_ros2_interface) StdoutLine: {'line': b'-- Found pendulum_msgs: 0.20.3 (/opt/ros/humble/share/pendulum_msgs/cmake)\n'}
+[0.840685] (ros2_bubble_rob) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/ros2BubbleRob.dir/src/ros2BubbleRob.cpp.o\x1b[0m\n'}
+[0.859848] (sim_ros2_interface) StdoutLine: {'line': b'-- Found rosgraph_msgs: 1.2.1 (/opt/ros/humble/share/rosgraph_msgs/cmake)\n'}
+[0.883488] (turtle_bot) StdoutLine: {'line': b'running egg_info\n'}
+[0.884106] (turtle_bot) StdoutLine: {'line': b'writing ../../build/turtle_bot/turtle_bot.egg-info/PKG-INFO\n'}
+[0.884313] (turtle_bot) StdoutLine: {'line': b'writing dependency_links to ../../build/turtle_bot/turtle_bot.egg-info/dependency_links.txt\n'}
+[0.884459] (turtle_bot) StdoutLine: {'line': b'writing entry points to ../../build/turtle_bot/turtle_bot.egg-info/entry_points.txt\n'}
+[0.884546] (turtle_bot) StdoutLine: {'line': b'writing requirements to ../../build/turtle_bot/turtle_bot.egg-info/requires.txt\n'}
+[0.884654] (turtle_bot) StdoutLine: {'line': b'writing top-level names to ../../build/turtle_bot/turtle_bot.egg-info/top_level.txt\n'}
+[0.886006] (turtle_bot) StdoutLine: {'line': b"reading manifest file '../../build/turtle_bot/turtle_bot.egg-info/SOURCES.txt'\n"}
+[0.887011] (sim_ros2_interface) StdoutLine: {'line': b'-- Found shape_msgs: 4.2.3 (/opt/ros/humble/share/shape_msgs/cmake)\n'}
+[0.887273] (turtle_bot) StdoutLine: {'line': b"writing manifest file '../../build/turtle_bot/turtle_bot.egg-info/SOURCES.txt'\n"}
+[0.887383] (turtle_bot) StdoutLine: {'line': b'running build\n'}
+[0.887468] (turtle_bot) StdoutLine: {'line': b'running build_py\n'}
+[0.887718] (turtle_bot) StdoutLine: {'line': b'running install\n'}
+[0.887959] (turtle_bot) StdoutLine: {'line': b'running install_lib\n'}
+[0.888951] (turtle_bot) StdoutLine: {'line': b'running install_data\n'}
+[0.889306] (turtle_bot) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.890637] (turtle_bot) StdoutLine: {'line': b"removing '/home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[0.890903] (turtle_bot) StdoutLine: {'line': b'Copying ../../build/turtle_bot/turtle_bot.egg-info to /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot-0.0.0-py3.10.egg-info\n'}
+[0.891600] (turtle_bot) StdoutLine: {'line': b'running install_scripts\n'}
+[0.900406] (-) TimerEvent: {}
+[0.908056] (turtle_bot) StdoutLine: {'line': b'Installing turtle_bot_interface script to /home/camilo/ros2_ws/install/turtle_bot/lib/turtle_bot\n'}
+[0.908281] (turtle_bot) StdoutLine: {'line': b'Installing turtle_bot_player script to /home/camilo/ros2_ws/install/turtle_bot/lib/turtle_bot\n'}
+[0.908386] (turtle_bot) StdoutLine: {'line': b'Installing turtle_bot_teleop script to /home/camilo/ros2_ws/install/turtle_bot/lib/turtle_bot\n'}
+[0.908649] (turtle_bot) StdoutLine: {'line': b"writing list of installed files to '/home/camilo/ros2_ws/build/turtle_bot/install.log'\n"}
+[0.930048] (turtle_bot) CommandEnded: {'returncode': 0}
+[0.931948] (sim_ros2_interface) StdoutLine: {'line': b'-- Found stereo_msgs: 4.2.3 (/opt/ros/humble/share/stereo_msgs/cmake)\n'}
+[0.981937] (turtle_bot) JobEnded: {'identifier': 'turtle_bot', 'rc': 0}
+[0.999389] (sim_ros2_interface) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.6 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[1.000479] (-) TimerEvent: {}
+[1.003053] (sim_ros2_interface) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[1.004145] (sim_ros2_interface) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.091302] (sim_ros2_interface) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.092309] (sim_ros2_interface) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.100643] (-) TimerEvent: {}
+[1.177551] (sim_ros2_interface) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.200836] (-) TimerEvent: {}
+[1.301204] (-) TimerEvent: {}
+[1.401582] (-) TimerEvent: {}
+[1.480174] (sim_ros2_interface) StdoutLine: {'line': b'-- Found trajectory_msgs: 4.2.3 (/opt/ros/humble/share/trajectory_msgs/cmake)\n'}
+[1.501703] (-) TimerEvent: {}
+[1.543452] (sim_ros2_interface) StdoutLine: {'line': b'-- Found visualization_msgs: 4.2.3 (/opt/ros/humble/share/visualization_msgs/cmake)\n'}
+[1.601827] (-) TimerEvent: {}
+[1.634532] (sim_ros2_interface) StdoutLine: {'line': b'-- Found std_srvs: 4.2.3 (/opt/ros/humble/share/std_srvs/cmake)\n'}
+[1.646807] (sim_ros2_interface) StdoutLine: {'line': b'-- Found example_interfaces: 0.9.3 (/opt/ros/humble/share/example_interfaces/cmake)\n'}
+[1.688059] (sim_ros2_interface) StdoutLine: {'line': b'-- Found image_transport: 3.1.8 (/opt/ros/humble/share/image_transport/cmake)\n'}
+[1.701943] (-) TimerEvent: {}
+[1.704444] (sim_ros2_interface) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:55 (message):\n'}
+[1.704665] (sim_ros2_interface) StderrLine: {'line': b'  Environment variable COPPELIASIM_ROOT_DIR is not set\n'}
+[1.704762] (sim_ros2_interface) StderrLine: {'line': b'\n'}
+[1.704837] (sim_ros2_interface) StderrLine: {'line': b'\x1b[0m\n'}
+[1.704910] (sim_ros2_interface) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.704994] (sim_ros2_interface) StdoutLine: {'line': b'See also "/home/camilo/ros2_ws/build/sim_ros2_interface/CMakeFiles/CMakeOutput.log".\n'}
+[1.710555] (sim_ros2_interface) StderrLine: {'line': b'gmake: *** [Makefile:470: cmake_check_build_system] Error 1\n'}
+[1.712283] (sim_ros2_interface) CommandEnded: {'returncode': 2}
+[1.786189] (sim_ros2_interface) JobEnded: {'identifier': 'sim_ros2_interface', 'rc': 2}
+[1.802129] (-) TimerEvent: {}
+[1.902487] (-) TimerEvent: {}
+[2.002834] (-) TimerEvent: {}
+[2.103249] (-) TimerEvent: {}
+[2.203559] (-) TimerEvent: {}
+[2.303932] (-) TimerEvent: {}
+[2.404274] (-) TimerEvent: {}
+[2.504620] (-) TimerEvent: {}
+[2.604975] (-) TimerEvent: {}
+[2.705330] (-) TimerEvent: {}
+[2.805691] (-) TimerEvent: {}
+[2.906042] (-) TimerEvent: {}
+[3.006385] (-) TimerEvent: {}
+[3.106745] (-) TimerEvent: {}
+[3.207080] (-) TimerEvent: {}
+[3.307365] (-) TimerEvent: {}
+[3.407649] (-) TimerEvent: {}
+[3.507937] (-) TimerEvent: {}
+[3.608301] (-) TimerEvent: {}
+[3.708655] (-) TimerEvent: {}
+[3.809026] (-) TimerEvent: {}
+[3.909382] (-) TimerEvent: {}
+[4.009743] (-) TimerEvent: {}
+[4.110109] (-) TimerEvent: {}
+[4.210494] (-) TimerEvent: {}
+[4.310890] (-) TimerEvent: {}
+[4.411165] (-) TimerEvent: {}
+[4.511444] (-) TimerEvent: {}
+[4.611731] (-) TimerEvent: {}
+[4.712088] (-) TimerEvent: {}
+[4.812555] (-) TimerEvent: {}
+[4.912902] (-) TimerEvent: {}
+[5.013320] (-) TimerEvent: {}
+[5.113734] (-) TimerEvent: {}
+[5.214114] (-) TimerEvent: {}
+[5.314517] (-) TimerEvent: {}
+[5.414906] (-) TimerEvent: {}
+[5.515225] (-) TimerEvent: {}
+[5.615687] (-) TimerEvent: {}
+[5.716057] (-) TimerEvent: {}
+[5.816475] (-) TimerEvent: {}
+[5.916815] (-) TimerEvent: {}
+[6.017173] (-) TimerEvent: {}
+[6.117544] (-) TimerEvent: {}
+[6.217878] (-) TimerEvent: {}
+[6.318237] (-) TimerEvent: {}
+[6.418579] (-) TimerEvent: {}
+[6.518967] (-) TimerEvent: {}
+[6.619246] (-) TimerEvent: {}
+[6.719519] (-) TimerEvent: {}
+[6.819801] (-) TimerEvent: {}
+[6.920082] (-) TimerEvent: {}
+[7.020440] (-) TimerEvent: {}
+[7.120795] (-) TimerEvent: {}
+[7.221137] (-) TimerEvent: {}
+[7.321477] (-) TimerEvent: {}
+[7.421824] (-) TimerEvent: {}
+[7.522183] (-) TimerEvent: {}
+[7.622552] (-) TimerEvent: {}
+[7.722927] (-) TimerEvent: {}
+[7.823211] (-) TimerEvent: {}
+[7.923500] (-) TimerEvent: {}
+[8.023792] (-) TimerEvent: {}
+[8.124139] (-) TimerEvent: {}
+[8.224478] (-) TimerEvent: {}
+[8.324837] (-) TimerEvent: {}
+[8.425206] (-) TimerEvent: {}
+[8.525558] (-) TimerEvent: {}
+[8.625898] (-) TimerEvent: {}
+[8.726261] (-) TimerEvent: {}
+[8.826668] (-) TimerEvent: {}
+[8.927015] (-) TimerEvent: {}
+[9.027272] (-) TimerEvent: {}
+[9.127563] (-) TimerEvent: {}
+[9.227901] (-) TimerEvent: {}
+[9.328230] (-) TimerEvent: {}
+[9.428557] (-) TimerEvent: {}
+[9.528906] (-) TimerEvent: {}
+[9.629252] (-) TimerEvent: {}
+[9.729624] (-) TimerEvent: {}
+[9.829978] (-) TimerEvent: {}
+[9.930340] (-) TimerEvent: {}
+[10.030760] (-) TimerEvent: {}
+[10.131077] (-) TimerEvent: {}
+[10.231364] (-) TimerEvent: {}
+[10.331605] (-) TimerEvent: {}
+[10.431959] (-) TimerEvent: {}
+[10.532312] (-) TimerEvent: {}
+[10.632656] (-) TimerEvent: {}
+[10.733001] (-) TimerEvent: {}
+[10.833348] (-) TimerEvent: {}
+[10.933697] (-) TimerEvent: {}
+[11.034078] (-) TimerEvent: {}
+[11.134433] (-) TimerEvent: {}
+[11.234814] (-) TimerEvent: {}
+[11.335137] (-) TimerEvent: {}
+[11.435437] (-) TimerEvent: {}
+[11.535825] (-) TimerEvent: {}
+[11.636186] (-) TimerEvent: {}
+[11.736543] (-) TimerEvent: {}
+[11.836934] (-) TimerEvent: {}
+[11.937321] (-) TimerEvent: {}
+[12.014679] (ros2_bubble_rob) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable ros2BubbleRob\x1b[0m\n'}
+[12.037503] (-) TimerEvent: {}
+[12.137884] (-) TimerEvent: {}
+[12.177991] (ros2_bubble_rob) StdoutLine: {'line': b'[100%] Built target ros2BubbleRob\n'}
+[12.186232] (ros2_bubble_rob) JobEnded: {'identifier': 'ros2_bubble_rob', 'rc': 'SIGINT'}
+[12.197069] (-) EventReactorShutdown: {}

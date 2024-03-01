@@ -1,0 +1,53 @@
+[0.107s] Invoking command in '/home/camilo/ros2_ws/build/sim_ros2_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --build /home/camilo/ros2_ws/build/sim_ros2_interface -- -j8 -l8
+[0.147s] [ 75%] Built target generate_ros_code
+[0.155s] [ 77%] [34m[1mGenerating generated/stubs.cpp, generated/stubs.h, generated/plugin.h, generated/stubsPlusPlus.cpp, generated/index.json, generated/reference.html, generated/lua_calltips.cpp, generated/simROS2-typecheck.lua[0m
+[0.181s] /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/generate.py --verbose --xml-file /home/camilo/ros2_ws/src/sim_ros2_interface/meta/callbacks.xml --gen-all /home/camilo/ros2_ws/build/sim_ros2_interface/generated --lua-file /home/camilo/ros2_ws/src/sim_ros2_interface/simROS2.lua
+[0.465s] /usr/bin/python3 /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/generate_lua_xml.py /home/camilo/ros2_ws/src/sim_ros2_interface/meta/callbacks.xml /home/camilo/ros2_ws/src/sim_ros2_interface/simROS2.lua /home/camilo/ros2_ws/build/sim_ros2_interface/generated/lua.xml
+[0.784s] /usr/bin/python3 /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/merge_xml.py /home/camilo/ros2_ws/src/sim_ros2_interface/meta/callbacks.xml /home/camilo/ros2_ws/build/sim_ros2_interface/generated/lua.xml /home/camilo/ros2_ws/build/sim_ros2_interface/generated/reference.xml
+[0.811s] xsltproc -o /home/camilo/ros2_ws/build/sim_ros2_interface/generated/reference.html /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/xsl/reference.xsl /home/camilo/ros2_ws/build/sim_ros2_interface/generated/reference.xml
+[0.829s] /usr/bin/python3 /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/generate_lua_calltips.py /home/camilo/ros2_ws/build/sim_ros2_interface/generated/lua.xml /home/camilo/ros2_ws/build/sim_ros2_interface/generated/lua_calltips.cpp
+[1.093s] /usr/bin/python3 /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/generate_lua_typechecker.py /home/camilo/ros2_ws/src/sim_ros2_interface/simROS2.lua /home/camilo/ros2_ws/build/sim_ros2_interface/generated/lua.xml /home/camilo/ros2_ws/build/sim_ros2_interface/generated/simROS2-typecheck.lua
+[1.349s] /usr/bin/python3 /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/generate_api_index.py /home/camilo/ros2_ws/build/sim_ros2_interface/generated/reference.xml /home/camilo/ros2_ws/build/sim_ros2_interface/generated/index.json
+[1.651s] /usr/bin/python3 /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/external/pycpp/pycpp.py -p xml_file=/home/camilo/ros2_ws/src/sim_ros2_interface/meta/callbacks.xml -p have_lua_calltips=True -P /home/camilo/Downloads/Coppelia/programming/include/simStubsGen -p lua_require=simROS2-typecheck -i /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/cpp/stubs.cpp -o /home/camilo/ros2_ws/build/sim_ros2_interface/generated/stubs.cpp
+[1.966s] /usr/bin/python3 /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/external/pycpp/pycpp.py -p xml_file=/home/camilo/ros2_ws/src/sim_ros2_interface/meta/callbacks.xml -p have_lua_calltips=True -P /home/camilo/Downloads/Coppelia/programming/include/simStubsGen -p lua_require=simROS2-typecheck -i /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/cpp/stubs.h -o /home/camilo/ros2_ws/build/sim_ros2_interface/generated/stubs.h
+[2.271s] /usr/bin/python3 /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/external/pycpp/pycpp.py -p xml_file=/home/camilo/ros2_ws/src/sim_ros2_interface/meta/callbacks.xml -p have_lua_calltips=True -P /home/camilo/Downloads/Coppelia/programming/include/simStubsGen -p lua_require=simROS2-typecheck -i /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/cpp/plugin.h -o /home/camilo/ros2_ws/build/sim_ros2_interface/generated/plugin.h
+[2.573s] /usr/bin/python3 /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/external/pycpp/pycpp.py -p xml_file=/home/camilo/ros2_ws/src/sim_ros2_interface/meta/callbacks.xml -p have_lua_calltips=True -P /home/camilo/Downloads/Coppelia/programming/include/simStubsGen -p lua_require=simROS2-typecheck -i /home/camilo/Downloads/Coppelia/programming/include/simStubsGen/cpp/stubsPlusPlus.cpp -o /home/camilo/ros2_ws/build/sim_ros2_interface/generated/stubsPlusPlus.cpp
+[2.924s] [35m[1mConsolidate compiler generated dependencies of target simExtROS2[0m
+[2.952s] [ 80%] [32mBuilding CXX object CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.cpp.o[0m
+[2.954s] [ 82%] [32mBuilding CXX object CMakeFiles/simExtROS2.dir/generated/stubs.cpp.o[0m
+[2.954s] [ 85%] [32mBuilding CXX object CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.cpp.o[0m
+[2.956s] [ 87%] [32mBuilding CXX object CMakeFiles/simExtROS2.dir/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp.o[0m
+[2.961s] [ 92%] [32mBuilding CXX object CMakeFiles/simExtROS2.dir/src/ros_msg_builtin_io.cpp.o[0m
+[2.961s] [ 92%] [32mBuilding CXX object CMakeFiles/simExtROS2.dir/src/sim_ros2_interface.cpp.o[0m
+[2.964s] [ 95%] [32mBuilding CXX object CMakeFiles/simExtROS2.dir/generated/callbacks.cpp.o[0m
+[3.810s] [01m[K/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp:[m[K In member function ‘[01m[Kvirtual void* sim::Plugin::loadSimLibrary()[m[K’:
+[3.810s] [01m[K/home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Plugin.cpp:612:15:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kchar* getcwd(char*, size_t)[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+[3.810s]   612 |         [01;35m[Kgetcwd(curDirAndFile, sizeof(curDirAndFile))[m[K;
+[3.810s]       |         [01;35m[K~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[99.694s] [ 97%] [32m[1mLinking CXX shared library libsimExtROS2.so[0m
+[100.746s] [100%] Built target simExtROS2
+[100.755s] Invoked command in '/home/camilo/ros2_ws/build/sim_ros2_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --build /home/camilo/ros2_ws/build/sim_ros2_interface -- -j8 -l8
+[100.794s] Invoking command in '/home/camilo/ros2_ws/build/sim_ros2_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --install /home/camilo/ros2_ws/build/sim_ros2_interface
+[100.804s] -- Install configuration: "Release"
+[100.805s] -- Execute custom install script
+[100.805s] -- Symlinking: /home/camilo/Downloads/Coppelia/lua/simROS2-typecheck.lua
+[100.814s] -- Symlinking: /home/camilo/Downloads/Coppelia/lua/simROS2.lua
+[100.825s] -- Symlinking: /home/camilo/Downloads/Coppelia/helpFiles/en/simROS2.htm
+[100.834s] -- Symlinking: /home/camilo/Downloads/Coppelia/helpFiles/index/simROS2.json
+[100.841s] -- Symlinking: /home/camilo/Downloads/Coppelia/libsimExtROS2.so
+[100.848s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/ament_index/resource_index/package_run_dependencies/sim_ros2_interface
+[100.848s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/ament_index/resource_index/parent_prefix_path/sim_ros2_interface
+[100.848s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/environment/ament_prefix_path.sh
+[100.849s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/environment/ament_prefix_path.dsv
+[100.849s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/environment/path.sh
+[100.849s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/environment/path.dsv
+[100.849s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/local_setup.bash
+[100.849s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/local_setup.sh
+[100.849s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/local_setup.zsh
+[100.850s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/local_setup.dsv
+[100.850s] -- Symlinking: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/package.dsv
+[100.857s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/ament_index/resource_index/packages/sim_ros2_interface
+[100.857s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/cmake/sim_ros2_interfaceConfig.cmake
+[100.858s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/cmake/sim_ros2_interfaceConfig-version.cmake
+[100.858s] -- Up-to-date symlink: /home/camilo/ros2_ws/install/sim_ros2_interface/share/sim_ros2_interface/package.xml
+[100.859s] Invoked command in '/home/camilo/ros2_ws/build/sim_ros2_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/camilo/ros2_ws/install/turtle_bot:/opt/ros/humble /usr/bin/cmake --install /home/camilo/ros2_ws/build/sim_ros2_interface

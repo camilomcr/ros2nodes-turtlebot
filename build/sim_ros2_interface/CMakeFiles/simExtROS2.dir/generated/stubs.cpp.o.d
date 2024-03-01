@@ -2,7 +2,8 @@ CMakeFiles/simExtROS2.dir/generated/stubs.cpp.o: \
  /home/camilo/ros2_ws/build/sim_ros2_interface/generated/stubs.cpp \
  /usr/include/stdc-predef.h \
  /home/camilo/ros2_ws/build/sim_ros2_interface/generated/stubs.h \
- /home/camilo/Downloads/Coppelia/programming/libPlugin/simPlusPlus/Lib.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simLib/simExp.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simPlusPlus/Lib.h \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -405,9 +406,10 @@ CMakeFiles/simExtROS2.dir/generated/stubs.cpp.o: \
  /usr/include/boost/format/parsing.hpp \
  /usr/include/boost/format/free_funcs.hpp \
  /usr/include/boost/format/detail/unset_macros.hpp \
- /home/camilo/Downloads/Coppelia/programming/include/simLib.h \
- /home/camilo/Downloads/Coppelia/programming/include/simConst.h \
- /home/camilo/Downloads/Coppelia/programming/include/simTypes.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simLib/simLib.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simLib/simConst.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simLib/simTypes.h \
+ /home/camilo/Downloads/Coppelia/programming/include/simLib/simLib-old.h \
  /usr/include/boost/algorithm/string.hpp \
  /usr/include/boost/algorithm/string/std_containers_traits.hpp \
  /usr/include/boost/algorithm/string/std/string_traits.hpp \

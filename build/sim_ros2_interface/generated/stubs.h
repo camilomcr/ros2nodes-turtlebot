@@ -1,6 +1,7 @@
 #ifndef STUBS_H__INCLUDED
 #define STUBS_H__INCLUDED
 
+#include <simLib/simExp.h>
 #include <simPlusPlus/Lib.h>
 #include <string>
 #include <vector>
@@ -238,10 +239,8 @@ struct createSubscription_out
     createSubscription_out();
 };
 
-void createSubscription(SScriptCallBack *p, createSubscription_in *in, createSubscription_out *out);
-std::string createSubscription(SScriptCallBack *p, std::string topicName, std::string topicType, std::string topicCallback, int queueSize = 1);
-void createSubscription(SScriptCallBack *p, createSubscription_out *out, std::string topicName, std::string topicType, std::string topicCallback, int queueSize = 1);
 void createSubscription_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_createSubscription(createSubscription_in *in, createSubscription_out *out);
 
 struct shutdownSubscription_in
 {
@@ -257,10 +256,8 @@ struct shutdownSubscription_out
     shutdownSubscription_out();
 };
 
-void shutdownSubscription(SScriptCallBack *p, shutdownSubscription_in *in, shutdownSubscription_out *out);
-void shutdownSubscription(SScriptCallBack *p, std::string subscriptionHandle);
-void shutdownSubscription(SScriptCallBack *p, shutdownSubscription_out *out, std::string subscriptionHandle);
 void shutdownSubscription_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_shutdownSubscription(shutdownSubscription_in *in, shutdownSubscription_out *out);
 
 struct subscriptionTreatUInt8ArrayAsString_in
 {
@@ -276,10 +273,8 @@ struct subscriptionTreatUInt8ArrayAsString_out
     subscriptionTreatUInt8ArrayAsString_out();
 };
 
-void subscriptionTreatUInt8ArrayAsString(SScriptCallBack *p, subscriptionTreatUInt8ArrayAsString_in *in, subscriptionTreatUInt8ArrayAsString_out *out);
-void subscriptionTreatUInt8ArrayAsString(SScriptCallBack *p, std::string subscriptionHandle);
-void subscriptionTreatUInt8ArrayAsString(SScriptCallBack *p, subscriptionTreatUInt8ArrayAsString_out *out, std::string subscriptionHandle);
 void subscriptionTreatUInt8ArrayAsString_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_subscriptionTreatUInt8ArrayAsString(subscriptionTreatUInt8ArrayAsString_in *in, subscriptionTreatUInt8ArrayAsString_out *out);
 
 struct createPublisher_in
 {
@@ -299,10 +294,8 @@ struct createPublisher_out
     createPublisher_out();
 };
 
-void createPublisher(SScriptCallBack *p, createPublisher_in *in, createPublisher_out *out);
-std::string createPublisher(SScriptCallBack *p, std::string topicName, std::string topicType, int queueSize = 1, bool latch = false);
-void createPublisher(SScriptCallBack *p, createPublisher_out *out, std::string topicName, std::string topicType, int queueSize = 1, bool latch = false);
 void createPublisher_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_createPublisher(createPublisher_in *in, createPublisher_out *out);
 
 struct shutdownPublisher_in
 {
@@ -318,10 +311,8 @@ struct shutdownPublisher_out
     shutdownPublisher_out();
 };
 
-void shutdownPublisher(SScriptCallBack *p, shutdownPublisher_in *in, shutdownPublisher_out *out);
-void shutdownPublisher(SScriptCallBack *p, std::string publisherHandle);
-void shutdownPublisher(SScriptCallBack *p, shutdownPublisher_out *out, std::string publisherHandle);
 void shutdownPublisher_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_shutdownPublisher(shutdownPublisher_in *in, shutdownPublisher_out *out);
 
 struct publisherTreatUInt8ArrayAsString_in
 {
@@ -337,10 +328,8 @@ struct publisherTreatUInt8ArrayAsString_out
     publisherTreatUInt8ArrayAsString_out();
 };
 
-void publisherTreatUInt8ArrayAsString(SScriptCallBack *p, publisherTreatUInt8ArrayAsString_in *in, publisherTreatUInt8ArrayAsString_out *out);
-void publisherTreatUInt8ArrayAsString(SScriptCallBack *p, std::string publisherHandle);
-void publisherTreatUInt8ArrayAsString(SScriptCallBack *p, publisherTreatUInt8ArrayAsString_out *out, std::string publisherHandle);
 void publisherTreatUInt8ArrayAsString_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_publisherTreatUInt8ArrayAsString(publisherTreatUInt8ArrayAsString_in *in, publisherTreatUInt8ArrayAsString_out *out);
 
 struct publish_in
 {
@@ -356,10 +345,8 @@ struct publish_out
     publish_out();
 };
 
-void publish(SScriptCallBack *p, publish_in *in, publish_out *out);
-void publish(SScriptCallBack *p, std::string publisherHandle);
-void publish(SScriptCallBack *p, publish_out *out, std::string publisherHandle);
 void publish_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_publish(publish_in *in, publish_out *out);
 
 struct createClient_in
 {
@@ -377,10 +364,8 @@ struct createClient_out
     createClient_out();
 };
 
-void createClient(SScriptCallBack *p, createClient_in *in, createClient_out *out);
-std::string createClient(SScriptCallBack *p, std::string serviceName, std::string serviceType);
-void createClient(SScriptCallBack *p, createClient_out *out, std::string serviceName, std::string serviceType);
 void createClient_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_createClient(createClient_in *in, createClient_out *out);
 
 struct shutdownClient_in
 {
@@ -396,10 +381,8 @@ struct shutdownClient_out
     shutdownClient_out();
 };
 
-void shutdownClient(SScriptCallBack *p, shutdownClient_in *in, shutdownClient_out *out);
-void shutdownClient(SScriptCallBack *p, std::string clientHandle);
-void shutdownClient(SScriptCallBack *p, shutdownClient_out *out, std::string clientHandle);
 void shutdownClient_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_shutdownClient(shutdownClient_in *in, shutdownClient_out *out);
 
 struct clientTreatUInt8ArrayAsString_in
 {
@@ -415,10 +398,8 @@ struct clientTreatUInt8ArrayAsString_out
     clientTreatUInt8ArrayAsString_out();
 };
 
-void clientTreatUInt8ArrayAsString(SScriptCallBack *p, clientTreatUInt8ArrayAsString_in *in, clientTreatUInt8ArrayAsString_out *out);
-void clientTreatUInt8ArrayAsString(SScriptCallBack *p, std::string clientHandle);
-void clientTreatUInt8ArrayAsString(SScriptCallBack *p, clientTreatUInt8ArrayAsString_out *out, std::string clientHandle);
 void clientTreatUInt8ArrayAsString_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_clientTreatUInt8ArrayAsString(clientTreatUInt8ArrayAsString_in *in, clientTreatUInt8ArrayAsString_out *out);
 
 struct waitForService_in
 {
@@ -436,10 +417,8 @@ struct waitForService_out
     waitForService_out();
 };
 
-void waitForService(SScriptCallBack *p, waitForService_in *in, waitForService_out *out);
-bool waitForService(SScriptCallBack *p, std::string clientHandle, float timeout);
-void waitForService(SScriptCallBack *p, waitForService_out *out, std::string clientHandle, float timeout);
 void waitForService_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_waitForService(waitForService_in *in, waitForService_out *out);
 
 struct call_in
 {
@@ -455,10 +434,8 @@ struct call_out
     call_out();
 };
 
-void call(SScriptCallBack *p, call_in *in, call_out *out);
-void call(SScriptCallBack *p, std::string clientHandle);
-void call(SScriptCallBack *p, call_out *out, std::string clientHandle);
 void call_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_call(call_in *in, call_out *out);
 
 struct createService_in
 {
@@ -477,10 +454,8 @@ struct createService_out
     createService_out();
 };
 
-void createService(SScriptCallBack *p, createService_in *in, createService_out *out);
-std::string createService(SScriptCallBack *p, std::string serviceName, std::string serviceType, std::string serviceCallback);
-void createService(SScriptCallBack *p, createService_out *out, std::string serviceName, std::string serviceType, std::string serviceCallback);
 void createService_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_createService(createService_in *in, createService_out *out);
 
 struct shutdownService_in
 {
@@ -496,10 +471,8 @@ struct shutdownService_out
     shutdownService_out();
 };
 
-void shutdownService(SScriptCallBack *p, shutdownService_in *in, shutdownService_out *out);
-void shutdownService(SScriptCallBack *p, std::string serviceHandle);
-void shutdownService(SScriptCallBack *p, shutdownService_out *out, std::string serviceHandle);
 void shutdownService_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_shutdownService(shutdownService_in *in, shutdownService_out *out);
 
 struct serviceTreatUInt8ArrayAsString_in
 {
@@ -515,10 +488,8 @@ struct serviceTreatUInt8ArrayAsString_out
     serviceTreatUInt8ArrayAsString_out();
 };
 
-void serviceTreatUInt8ArrayAsString(SScriptCallBack *p, serviceTreatUInt8ArrayAsString_in *in, serviceTreatUInt8ArrayAsString_out *out);
-void serviceTreatUInt8ArrayAsString(SScriptCallBack *p, std::string serviceHandle);
-void serviceTreatUInt8ArrayAsString(SScriptCallBack *p, serviceTreatUInt8ArrayAsString_out *out, std::string serviceHandle);
 void serviceTreatUInt8ArrayAsString_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_serviceTreatUInt8ArrayAsString(serviceTreatUInt8ArrayAsString_in *in, serviceTreatUInt8ArrayAsString_out *out);
 
 struct createActionClient_in
 {
@@ -539,10 +510,8 @@ struct createActionClient_out
     createActionClient_out();
 };
 
-void createActionClient(SScriptCallBack *p, createActionClient_in *in, createActionClient_out *out);
-std::string createActionClient(SScriptCallBack *p, std::string actionName, std::string actionType, std::string goalResponseCallback, std::string feedbackCallback, std::string resultCallback);
-void createActionClient(SScriptCallBack *p, createActionClient_out *out, std::string actionName, std::string actionType, std::string goalResponseCallback, std::string feedbackCallback, std::string resultCallback);
 void createActionClient_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_createActionClient(createActionClient_in *in, createActionClient_out *out);
 
 struct shutdownActionClient_in
 {
@@ -558,10 +527,8 @@ struct shutdownActionClient_out
     shutdownActionClient_out();
 };
 
-void shutdownActionClient(SScriptCallBack *p, shutdownActionClient_in *in, shutdownActionClient_out *out);
-void shutdownActionClient(SScriptCallBack *p, std::string actionClientHandle);
-void shutdownActionClient(SScriptCallBack *p, shutdownActionClient_out *out, std::string actionClientHandle);
 void shutdownActionClient_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_shutdownActionClient(shutdownActionClient_in *in, shutdownActionClient_out *out);
 
 struct actionClientTreatUInt8ArrayAsString_in
 {
@@ -577,10 +544,8 @@ struct actionClientTreatUInt8ArrayAsString_out
     actionClientTreatUInt8ArrayAsString_out();
 };
 
-void actionClientTreatUInt8ArrayAsString(SScriptCallBack *p, actionClientTreatUInt8ArrayAsString_in *in, actionClientTreatUInt8ArrayAsString_out *out);
-void actionClientTreatUInt8ArrayAsString(SScriptCallBack *p, std::string actionClientHandle);
-void actionClientTreatUInt8ArrayAsString(SScriptCallBack *p, actionClientTreatUInt8ArrayAsString_out *out, std::string actionClientHandle);
 void actionClientTreatUInt8ArrayAsString_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_actionClientTreatUInt8ArrayAsString(actionClientTreatUInt8ArrayAsString_in *in, actionClientTreatUInt8ArrayAsString_out *out);
 
 struct sendGoal_in
 {
@@ -597,10 +562,8 @@ struct sendGoal_out
     sendGoal_out();
 };
 
-void sendGoal(SScriptCallBack *p, sendGoal_in *in, sendGoal_out *out);
-bool sendGoal(SScriptCallBack *p, std::string actionClientHandle);
-void sendGoal(SScriptCallBack *p, sendGoal_out *out, std::string actionClientHandle);
 void sendGoal_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_sendGoal(sendGoal_in *in, sendGoal_out *out);
 
 struct cancelLastGoal_in
 {
@@ -617,10 +580,8 @@ struct cancelLastGoal_out
     cancelLastGoal_out();
 };
 
-void cancelLastGoal(SScriptCallBack *p, cancelLastGoal_in *in, cancelLastGoal_out *out);
-bool cancelLastGoal(SScriptCallBack *p, std::string actionClientHandle);
-void cancelLastGoal(SScriptCallBack *p, cancelLastGoal_out *out, std::string actionClientHandle);
 void cancelLastGoal_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_cancelLastGoal(cancelLastGoal_in *in, cancelLastGoal_out *out);
 
 struct createActionServer_in
 {
@@ -641,10 +602,8 @@ struct createActionServer_out
     createActionServer_out();
 };
 
-void createActionServer(SScriptCallBack *p, createActionServer_in *in, createActionServer_out *out);
-std::string createActionServer(SScriptCallBack *p, std::string actionName, std::string actionType, std::string handleGoalCallback, std::string handleCancelCallback, std::string handleAcceptedCallback);
-void createActionServer(SScriptCallBack *p, createActionServer_out *out, std::string actionName, std::string actionType, std::string handleGoalCallback, std::string handleCancelCallback, std::string handleAcceptedCallback);
 void createActionServer_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_createActionServer(createActionServer_in *in, createActionServer_out *out);
 
 struct shutdownActionServer_in
 {
@@ -660,10 +619,8 @@ struct shutdownActionServer_out
     shutdownActionServer_out();
 };
 
-void shutdownActionServer(SScriptCallBack *p, shutdownActionServer_in *in, shutdownActionServer_out *out);
-void shutdownActionServer(SScriptCallBack *p, std::string actionServerHandle);
-void shutdownActionServer(SScriptCallBack *p, shutdownActionServer_out *out, std::string actionServerHandle);
 void shutdownActionServer_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_shutdownActionServer(shutdownActionServer_in *in, shutdownActionServer_out *out);
 
 struct actionServerTreatUInt8ArrayAsString_in
 {
@@ -679,10 +636,8 @@ struct actionServerTreatUInt8ArrayAsString_out
     actionServerTreatUInt8ArrayAsString_out();
 };
 
-void actionServerTreatUInt8ArrayAsString(SScriptCallBack *p, actionServerTreatUInt8ArrayAsString_in *in, actionServerTreatUInt8ArrayAsString_out *out);
-void actionServerTreatUInt8ArrayAsString(SScriptCallBack *p, std::string actionServerHandle);
-void actionServerTreatUInt8ArrayAsString(SScriptCallBack *p, actionServerTreatUInt8ArrayAsString_out *out, std::string actionServerHandle);
 void actionServerTreatUInt8ArrayAsString_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_actionServerTreatUInt8ArrayAsString(actionServerTreatUInt8ArrayAsString_in *in, actionServerTreatUInt8ArrayAsString_out *out);
 
 struct actionServerPublishFeedback_in
 {
@@ -699,10 +654,8 @@ struct actionServerPublishFeedback_out
     actionServerPublishFeedback_out();
 };
 
-void actionServerPublishFeedback(SScriptCallBack *p, actionServerPublishFeedback_in *in, actionServerPublishFeedback_out *out);
-void actionServerPublishFeedback(SScriptCallBack *p, std::string actionServerHandle, std::string goalUUID);
-void actionServerPublishFeedback(SScriptCallBack *p, actionServerPublishFeedback_out *out, std::string actionServerHandle, std::string goalUUID);
 void actionServerPublishFeedback_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_actionServerPublishFeedback(actionServerPublishFeedback_in *in, actionServerPublishFeedback_out *out);
 
 struct actionServerActionAbort_in
 {
@@ -719,10 +672,8 @@ struct actionServerActionAbort_out
     actionServerActionAbort_out();
 };
 
-void actionServerActionAbort(SScriptCallBack *p, actionServerActionAbort_in *in, actionServerActionAbort_out *out);
-void actionServerActionAbort(SScriptCallBack *p, std::string actionServerHandle, std::string goalUUID);
-void actionServerActionAbort(SScriptCallBack *p, actionServerActionAbort_out *out, std::string actionServerHandle, std::string goalUUID);
 void actionServerActionAbort_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_actionServerActionAbort(actionServerActionAbort_in *in, actionServerActionAbort_out *out);
 
 struct actionServerActionSucceed_in
 {
@@ -739,10 +690,8 @@ struct actionServerActionSucceed_out
     actionServerActionSucceed_out();
 };
 
-void actionServerActionSucceed(SScriptCallBack *p, actionServerActionSucceed_in *in, actionServerActionSucceed_out *out);
-void actionServerActionSucceed(SScriptCallBack *p, std::string actionServerHandle, std::string goalUUID);
-void actionServerActionSucceed(SScriptCallBack *p, actionServerActionSucceed_out *out, std::string actionServerHandle, std::string goalUUID);
 void actionServerActionSucceed_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_actionServerActionSucceed(actionServerActionSucceed_in *in, actionServerActionSucceed_out *out);
 
 struct actionServerActionCanceled_in
 {
@@ -759,10 +708,8 @@ struct actionServerActionCanceled_out
     actionServerActionCanceled_out();
 };
 
-void actionServerActionCanceled(SScriptCallBack *p, actionServerActionCanceled_in *in, actionServerActionCanceled_out *out);
-void actionServerActionCanceled(SScriptCallBack *p, std::string actionServerHandle, std::string goalUUID);
-void actionServerActionCanceled(SScriptCallBack *p, actionServerActionCanceled_out *out, std::string actionServerHandle, std::string goalUUID);
 void actionServerActionCanceled_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_actionServerActionCanceled(actionServerActionCanceled_in *in, actionServerActionCanceled_out *out);
 
 struct actionServerActionExecute_in
 {
@@ -779,10 +726,8 @@ struct actionServerActionExecute_out
     actionServerActionExecute_out();
 };
 
-void actionServerActionExecute(SScriptCallBack *p, actionServerActionExecute_in *in, actionServerActionExecute_out *out);
-void actionServerActionExecute(SScriptCallBack *p, std::string actionServerHandle, std::string goalUUID);
-void actionServerActionExecute(SScriptCallBack *p, actionServerActionExecute_out *out, std::string actionServerHandle, std::string goalUUID);
 void actionServerActionExecute_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_actionServerActionExecute(actionServerActionExecute_in *in, actionServerActionExecute_out *out);
 
 struct actionServerActionIsCanceling_in
 {
@@ -800,10 +745,8 @@ struct actionServerActionIsCanceling_out
     actionServerActionIsCanceling_out();
 };
 
-void actionServerActionIsCanceling(SScriptCallBack *p, actionServerActionIsCanceling_in *in, actionServerActionIsCanceling_out *out);
-bool actionServerActionIsCanceling(SScriptCallBack *p, std::string actionServerHandle, std::string goalUUID);
-void actionServerActionIsCanceling(SScriptCallBack *p, actionServerActionIsCanceling_out *out, std::string actionServerHandle, std::string goalUUID);
 void actionServerActionIsCanceling_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_actionServerActionIsCanceling(actionServerActionIsCanceling_in *in, actionServerActionIsCanceling_out *out);
 
 struct actionServerActionIsActive_in
 {
@@ -821,10 +764,8 @@ struct actionServerActionIsActive_out
     actionServerActionIsActive_out();
 };
 
-void actionServerActionIsActive(SScriptCallBack *p, actionServerActionIsActive_in *in, actionServerActionIsActive_out *out);
-bool actionServerActionIsActive(SScriptCallBack *p, std::string actionServerHandle, std::string goalUUID);
-void actionServerActionIsActive(SScriptCallBack *p, actionServerActionIsActive_out *out, std::string actionServerHandle, std::string goalUUID);
 void actionServerActionIsActive_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_actionServerActionIsActive(actionServerActionIsActive_in *in, actionServerActionIsActive_out *out);
 
 struct actionServerActionIsExecuting_in
 {
@@ -842,10 +783,8 @@ struct actionServerActionIsExecuting_out
     actionServerActionIsExecuting_out();
 };
 
-void actionServerActionIsExecuting(SScriptCallBack *p, actionServerActionIsExecuting_in *in, actionServerActionIsExecuting_out *out);
-bool actionServerActionIsExecuting(SScriptCallBack *p, std::string actionServerHandle, std::string goalUUID);
-void actionServerActionIsExecuting(SScriptCallBack *p, actionServerActionIsExecuting_out *out, std::string actionServerHandle, std::string goalUUID);
 void actionServerActionIsExecuting_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_actionServerActionIsExecuting(actionServerActionIsExecuting_in *in, actionServerActionIsExecuting_out *out);
 
 struct sendTransform_in
 {
@@ -860,10 +799,8 @@ struct sendTransform_out
     sendTransform_out();
 };
 
-void sendTransform(SScriptCallBack *p, sendTransform_in *in, sendTransform_out *out);
-void sendTransform(SScriptCallBack *p);
-void sendTransform(SScriptCallBack *p, sendTransform_out *out);
 void sendTransform_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_sendTransform(sendTransform_in *in, sendTransform_out *out);
 
 struct sendTransforms_in
 {
@@ -878,10 +815,8 @@ struct sendTransforms_out
     sendTransforms_out();
 };
 
-void sendTransforms(SScriptCallBack *p, sendTransforms_in *in, sendTransforms_out *out);
-void sendTransforms(SScriptCallBack *p);
-void sendTransforms(SScriptCallBack *p, sendTransforms_out *out);
 void sendTransforms_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_sendTransforms(sendTransforms_in *in, sendTransforms_out *out);
 
 struct imageTransportCreateSubscription_in
 {
@@ -900,10 +835,8 @@ struct imageTransportCreateSubscription_out
     imageTransportCreateSubscription_out();
 };
 
-void imageTransportCreateSubscription(SScriptCallBack *p, imageTransportCreateSubscription_in *in, imageTransportCreateSubscription_out *out);
-std::string imageTransportCreateSubscription(SScriptCallBack *p, std::string topicName, std::string topicCallback, int queueSize = 1);
-void imageTransportCreateSubscription(SScriptCallBack *p, imageTransportCreateSubscription_out *out, std::string topicName, std::string topicCallback, int queueSize = 1);
 void imageTransportCreateSubscription_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_imageTransportCreateSubscription(imageTransportCreateSubscription_in *in, imageTransportCreateSubscription_out *out);
 
 struct imageTransportShutdownSubscription_in
 {
@@ -919,10 +852,8 @@ struct imageTransportShutdownSubscription_out
     imageTransportShutdownSubscription_out();
 };
 
-void imageTransportShutdownSubscription(SScriptCallBack *p, imageTransportShutdownSubscription_in *in, imageTransportShutdownSubscription_out *out);
-void imageTransportShutdownSubscription(SScriptCallBack *p, std::string subscriptionHandle);
-void imageTransportShutdownSubscription(SScriptCallBack *p, imageTransportShutdownSubscription_out *out, std::string subscriptionHandle);
 void imageTransportShutdownSubscription_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_imageTransportShutdownSubscription(imageTransportShutdownSubscription_in *in, imageTransportShutdownSubscription_out *out);
 
 struct imageTransportCreatePublisher_in
 {
@@ -940,10 +871,8 @@ struct imageTransportCreatePublisher_out
     imageTransportCreatePublisher_out();
 };
 
-void imageTransportCreatePublisher(SScriptCallBack *p, imageTransportCreatePublisher_in *in, imageTransportCreatePublisher_out *out);
-std::string imageTransportCreatePublisher(SScriptCallBack *p, std::string topicName, int queueSize = 1);
-void imageTransportCreatePublisher(SScriptCallBack *p, imageTransportCreatePublisher_out *out, std::string topicName, int queueSize = 1);
 void imageTransportCreatePublisher_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_imageTransportCreatePublisher(imageTransportCreatePublisher_in *in, imageTransportCreatePublisher_out *out);
 
 struct imageTransportShutdownPublisher_in
 {
@@ -959,10 +888,8 @@ struct imageTransportShutdownPublisher_out
     imageTransportShutdownPublisher_out();
 };
 
-void imageTransportShutdownPublisher(SScriptCallBack *p, imageTransportShutdownPublisher_in *in, imageTransportShutdownPublisher_out *out);
-void imageTransportShutdownPublisher(SScriptCallBack *p, std::string publisherHandle);
-void imageTransportShutdownPublisher(SScriptCallBack *p, imageTransportShutdownPublisher_out *out, std::string publisherHandle);
 void imageTransportShutdownPublisher_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_imageTransportShutdownPublisher(imageTransportShutdownPublisher_in *in, imageTransportShutdownPublisher_out *out);
 
 struct imageTransportPublish_in
 {
@@ -982,10 +909,8 @@ struct imageTransportPublish_out
     imageTransportPublish_out();
 };
 
-void imageTransportPublish(SScriptCallBack *p, imageTransportPublish_in *in, imageTransportPublish_out *out);
-void imageTransportPublish(SScriptCallBack *p, std::string publisherHandle, std::string data, int width, int height, std::string frame_id);
-void imageTransportPublish(SScriptCallBack *p, imageTransportPublish_out *out, std::string publisherHandle, std::string data, int width, int height, std::string frame_id);
 void imageTransportPublish_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_imageTransportPublish(imageTransportPublish_in *in, imageTransportPublish_out *out);
 
 struct getTime_in
 {
@@ -1002,10 +927,8 @@ struct getTime_out
     getTime_out();
 };
 
-void getTime(SScriptCallBack *p, getTime_in *in, getTime_out *out);
-sim_ros2_time getTime(SScriptCallBack *p, int clock_type = sim_ros2_clock_ros);
-void getTime(SScriptCallBack *p, getTime_out *out, int clock_type = sim_ros2_clock_ros);
 void getTime_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_getTime(getTime_in *in, getTime_out *out);
 
 struct getParamString_in
 {
@@ -1024,9 +947,8 @@ struct getParamString_out
     getParamString_out();
 };
 
-void getParamString(SScriptCallBack *p, getParamString_in *in, getParamString_out *out);
-void getParamString(SScriptCallBack *p, getParamString_out *out, std::string name, std::string defaultValue = "");
 void getParamString_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_getParamString(getParamString_in *in, getParamString_out *out);
 
 struct getParamInt_in
 {
@@ -1045,9 +967,8 @@ struct getParamInt_out
     getParamInt_out();
 };
 
-void getParamInt(SScriptCallBack *p, getParamInt_in *in, getParamInt_out *out);
-void getParamInt(SScriptCallBack *p, getParamInt_out *out, std::string name, int defaultValue = 0);
 void getParamInt_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_getParamInt(getParamInt_in *in, getParamInt_out *out);
 
 struct getParamDouble_in
 {
@@ -1066,9 +987,8 @@ struct getParamDouble_out
     getParamDouble_out();
 };
 
-void getParamDouble(SScriptCallBack *p, getParamDouble_in *in, getParamDouble_out *out);
-void getParamDouble(SScriptCallBack *p, getParamDouble_out *out, std::string name, double defaultValue = 0.0);
 void getParamDouble_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_getParamDouble(getParamDouble_in *in, getParamDouble_out *out);
 
 struct getParamBool_in
 {
@@ -1087,9 +1007,8 @@ struct getParamBool_out
     getParamBool_out();
 };
 
-void getParamBool(SScriptCallBack *p, getParamBool_in *in, getParamBool_out *out);
-void getParamBool(SScriptCallBack *p, getParamBool_out *out, std::string name, bool defaultValue = false);
 void getParamBool_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_getParamBool(getParamBool_in *in, getParamBool_out *out);
 
 struct setParamString_in
 {
@@ -1106,10 +1025,8 @@ struct setParamString_out
     setParamString_out();
 };
 
-void setParamString(SScriptCallBack *p, setParamString_in *in, setParamString_out *out);
-void setParamString(SScriptCallBack *p, std::string name, std::string value);
-void setParamString(SScriptCallBack *p, setParamString_out *out, std::string name, std::string value);
 void setParamString_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_setParamString(setParamString_in *in, setParamString_out *out);
 
 struct setParamInt_in
 {
@@ -1126,10 +1043,8 @@ struct setParamInt_out
     setParamInt_out();
 };
 
-void setParamInt(SScriptCallBack *p, setParamInt_in *in, setParamInt_out *out);
-void setParamInt(SScriptCallBack *p, std::string name, int value);
-void setParamInt(SScriptCallBack *p, setParamInt_out *out, std::string name, int value);
 void setParamInt_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_setParamInt(setParamInt_in *in, setParamInt_out *out);
 
 struct setParamDouble_in
 {
@@ -1146,10 +1061,8 @@ struct setParamDouble_out
     setParamDouble_out();
 };
 
-void setParamDouble(SScriptCallBack *p, setParamDouble_in *in, setParamDouble_out *out);
-void setParamDouble(SScriptCallBack *p, std::string name, double value);
-void setParamDouble(SScriptCallBack *p, setParamDouble_out *out, std::string name, double value);
 void setParamDouble_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_setParamDouble(setParamDouble_in *in, setParamDouble_out *out);
 
 struct setParamBool_in
 {
@@ -1166,10 +1079,8 @@ struct setParamBool_out
     setParamBool_out();
 };
 
-void setParamBool(SScriptCallBack *p, setParamBool_in *in, setParamBool_out *out);
-void setParamBool(SScriptCallBack *p, std::string name, bool value);
-void setParamBool(SScriptCallBack *p, setParamBool_out *out, std::string name, bool value);
 void setParamBool_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_setParamBool(setParamBool_in *in, setParamBool_out *out);
 
 struct hasParam_in
 {
@@ -1186,10 +1097,8 @@ struct hasParam_out
     hasParam_out();
 };
 
-void hasParam(SScriptCallBack *p, hasParam_in *in, hasParam_out *out);
-bool hasParam(SScriptCallBack *p, std::string name);
-void hasParam(SScriptCallBack *p, hasParam_out *out, std::string name);
 void hasParam_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_hasParam(hasParam_in *in, hasParam_out *out);
 
 struct deleteParam_in
 {
@@ -1205,10 +1114,8 @@ struct deleteParam_out
     deleteParam_out();
 };
 
-void deleteParam(SScriptCallBack *p, deleteParam_in *in, deleteParam_out *out);
-void deleteParam(SScriptCallBack *p, std::string name);
-void deleteParam(SScriptCallBack *p, deleteParam_out *out, std::string name);
 void deleteParam_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_deleteParam(deleteParam_in *in, deleteParam_out *out);
 
 struct createInterface_in
 {
@@ -1224,10 +1131,8 @@ struct createInterface_out
     createInterface_out();
 };
 
-void createInterface(SScriptCallBack *p, createInterface_in *in, createInterface_out *out);
-void createInterface(SScriptCallBack *p, std::string type);
-void createInterface(SScriptCallBack *p, createInterface_out *out, std::string type);
 void createInterface_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_createInterface(createInterface_in *in, createInterface_out *out);
 
 struct getInterfaceConstants_in
 {
@@ -1243,10 +1148,8 @@ struct getInterfaceConstants_out
     getInterfaceConstants_out();
 };
 
-void getInterfaceConstants(SScriptCallBack *p, getInterfaceConstants_in *in, getInterfaceConstants_out *out);
-void getInterfaceConstants(SScriptCallBack *p, std::string type);
-void getInterfaceConstants(SScriptCallBack *p, getInterfaceConstants_out *out, std::string type);
 void getInterfaceConstants_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_getInterfaceConstants(getInterfaceConstants_in *in, getInterfaceConstants_out *out);
 
 struct supportedInterfaces_in
 {
@@ -1262,10 +1165,8 @@ struct supportedInterfaces_out
     supportedInterfaces_out();
 };
 
-void supportedInterfaces(SScriptCallBack *p, supportedInterfaces_in *in, supportedInterfaces_out *out);
-std::vector< std::string > supportedInterfaces(SScriptCallBack *p);
-void supportedInterfaces(SScriptCallBack *p, supportedInterfaces_out *out);
 void supportedInterfaces_callback(SScriptCallBack *p);
+SIM_DLLEXPORT void simExtROS2_supportedInterfaces(supportedInterfaces_in *in, supportedInterfaces_out *out);
 
 struct subscriptionCallback_in
 {
@@ -1279,8 +1180,8 @@ struct subscriptionCallback_out
     subscriptionCallback_out();
 };
 
-void subscriptionCallback(simInt scriptId, const char *func);
-bool subscriptionCallback(simInt scriptId, const char *func, subscriptionCallback_in *in_args, subscriptionCallback_out *out_args);
+void subscriptionCallback(int scriptId, const char *func);
+bool subscriptionCallback(int scriptId, const char *func, subscriptionCallback_in *in_args, subscriptionCallback_out *out_args);
 
 struct imageTransportCallback_in
 {
@@ -1297,8 +1198,8 @@ struct imageTransportCallback_out
     imageTransportCallback_out();
 };
 
-void imageTransportCallback(simInt scriptId, const char *func, std::string data, int width, int height);
-bool imageTransportCallback(simInt scriptId, const char *func, imageTransportCallback_in *in_args, imageTransportCallback_out *out_args);
+void imageTransportCallback(int scriptId, const char *func, std::string data, int width, int height);
+bool imageTransportCallback(int scriptId, const char *func, imageTransportCallback_in *in_args, imageTransportCallback_out *out_args);
 
 struct actionGoalResponseCallback_in
 {
@@ -1314,8 +1215,8 @@ struct actionGoalResponseCallback_out
     actionGoalResponseCallback_out();
 };
 
-void actionGoalResponseCallback(simInt scriptId, const char *func, std::string goalID, bool accepted);
-bool actionGoalResponseCallback(simInt scriptId, const char *func, actionGoalResponseCallback_in *in_args, actionGoalResponseCallback_out *out_args);
+void actionGoalResponseCallback(int scriptId, const char *func, std::string goalID, bool accepted);
+bool actionGoalResponseCallback(int scriptId, const char *func, actionGoalResponseCallback_in *in_args, actionGoalResponseCallback_out *out_args);
 
 // following functions must be implemented in the plugin
 
