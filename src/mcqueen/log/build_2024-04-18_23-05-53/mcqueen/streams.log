@@ -1,0 +1,32 @@
+[0.576s] Invoking command in '/home/camilo/ros2_ws/src/mcqueen': PYTHONPATH=/home/camilo/ros2_ws/src/mcqueen/build/mcqueen/prefix_override:/home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/mcqueen build --build-base /home/camilo/ros2_ws/src/mcqueen/build/mcqueen/build install --record /home/camilo/ros2_ws/src/mcqueen/build/mcqueen/install.log --single-version-externally-managed
+[0.758s] running egg_info
+[0.758s] writing build/mcqueen/mcqueen.egg-info/PKG-INFO
+[0.758s] writing dependency_links to build/mcqueen/mcqueen.egg-info/dependency_links.txt
+[0.759s] writing entry points to build/mcqueen/mcqueen.egg-info/entry_points.txt
+[0.759s] writing requirements to build/mcqueen/mcqueen.egg-info/requires.txt
+[0.759s] writing top-level names to build/mcqueen/mcqueen.egg-info/top_level.txt
+[0.760s] reading manifest file 'build/mcqueen/mcqueen.egg-info/SOURCES.txt'
+[0.761s] writing manifest file 'build/mcqueen/mcqueen.egg-info/SOURCES.txt'
+[0.761s] running build
+[0.761s] running build_py
+[0.761s] copying mcqueen/mcqueen_interface.py -> /home/camilo/ros2_ws/src/mcqueen/build/mcqueen/build/lib/mcqueen
+[0.761s] copying mcqueen/mcqueen_player.py -> /home/camilo/ros2_ws/src/mcqueen/build/mcqueen/build/lib/mcqueen
+[0.761s] copying mcqueen/mcqueen_teleop.py -> /home/camilo/ros2_ws/src/mcqueen/build/mcqueen/build/lib/mcqueen
+[0.762s] running install
+[0.762s] running install_lib
+[0.762s] copying /home/camilo/ros2_ws/src/mcqueen/build/mcqueen/build/lib/mcqueen/mcqueen_interface.py -> /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages/mcqueen
+[0.762s] copying /home/camilo/ros2_ws/src/mcqueen/build/mcqueen/build/lib/mcqueen/mcqueen_player.py -> /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages/mcqueen
+[0.762s] copying /home/camilo/ros2_ws/src/mcqueen/build/mcqueen/build/lib/mcqueen/mcqueen_teleop.py -> /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages/mcqueen
+[0.763s] byte-compiling /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages/mcqueen/mcqueen_interface.py to mcqueen_interface.cpython-310.pyc
+[0.764s] byte-compiling /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages/mcqueen/mcqueen_player.py to mcqueen_player.cpython-310.pyc
+[0.765s] byte-compiling /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages/mcqueen/mcqueen_teleop.py to mcqueen_teleop.cpython-310.pyc
+[0.765s] running install_data
+[0.766s] running install_egg_info
+[0.767s] removing '/home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages/mcqueen-0.0.0-py3.10.egg-info' (and everything under it)
+[0.767s] Copying build/mcqueen/mcqueen.egg-info to /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages/mcqueen-0.0.0-py3.10.egg-info
+[0.768s] running install_scripts
+[0.782s] Installing mcqueen_interface script to /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/mcqueen
+[0.782s] Installing mcqueen_player script to /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/mcqueen
+[0.782s] Installing mcqueen_teleop script to /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/mcqueen
+[0.782s] writing list of installed files to '/home/camilo/ros2_ws/src/mcqueen/build/mcqueen/install.log'
+[0.801s] Invoked command in '/home/camilo/ros2_ws/src/mcqueen' returned '0': PYTHONPATH=/home/camilo/ros2_ws/src/mcqueen/build/mcqueen/prefix_override:/home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/mcqueen build --build-base /home/camilo/ros2_ws/src/mcqueen/build/mcqueen/build install --record /home/camilo/ros2_ws/src/mcqueen/build/mcqueen/install.log --single-version-externally-managed

@@ -1,11 +1,11 @@
-from setuptools import find_packages, setup
+from setuptools import setup
 
 package_name = 'mcqueen'
 
 setup(
     name=package_name,
     version='0.0.0',
-    packages=find_packages(exclude=['test']),
+    packages=[package_name],
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
@@ -20,6 +20,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            "mcqueen_teleop = mcqueen.mcqueen_teleop:main",
+            "mcqueen_interface = mcqueen.mcqueen_interface:main",
+	        "mcqueen_player= mcqueen.mcqueen_player:main"
         ],
     },
 )

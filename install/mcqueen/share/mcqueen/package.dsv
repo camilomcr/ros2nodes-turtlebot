@@ -1,0 +1,6 @@
+source;share/mcqueen/hook/pythonpath.ps1
+source;share/mcqueen/hook/pythonpath.dsv
+source;share/mcqueen/hook/pythonpath.sh
+source;share/mcqueen/hook/ament_prefix_path.ps1
+source;share/mcqueen/hook/ament_prefix_path.dsv
+source;share/mcqueen/hook/ament_prefix_path.sh
