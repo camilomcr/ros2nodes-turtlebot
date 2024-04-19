@@ -22,7 +22,8 @@ setup(
         'console_scripts': [
             "mcqueen_teleop = mcqueen.mcqueen_teleop:main",
             "mcqueen_interface = mcqueen.mcqueen_interface:main",
-	        "mcqueen_player= mcqueen.mcqueen_player:main"
+	        "mcqueen_player= mcqueen.mcqueen_player:main",
+            "mcqueen_controller= mcqueen.mcqueen_controller:main"
         ],
     },
 )
