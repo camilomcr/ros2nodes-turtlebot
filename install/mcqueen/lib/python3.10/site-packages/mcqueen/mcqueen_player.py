@@ -11,9 +11,9 @@ class mcqueen_player(Node):
     def __init__(self):
         super().__init__("mcqueen_player")
         self.map_path = ''
-        self.cmdVel_publisher = self.create_publisher(Twist, "/turtlebot_cmdVel", 10)
+        self.cmdVel_publisher = self.create_publisher(Twist, "/mcqueen_cmdVel", 10)
         self.server = self.create_service(LoadMap, "/player_service", self.follow_path )
-        self.get_logger().info(f"Turtle bot player started")
+        self.get_logger().info(f"mcqueen player started")
 
     def follow_path(self, request: LoadMap.Request, response: LoadMap.Response):
         self.map_path = "src/mcqueen/resource/"+request.map_url+".txt"

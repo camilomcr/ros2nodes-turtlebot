@@ -2,10 +2,12 @@
 /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages/mcqueen/__init__.py
 /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages/mcqueen/mcqueen_player.py
 /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages/mcqueen/mcqueen_teleop.py
+/home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages/mcqueen/mcqueen_controller.py
 /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages/mcqueen/__pycache__/mcqueen_interface.cpython-310.pyc
 /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages/mcqueen/__pycache__/__init__.cpython-310.pyc
 /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages/mcqueen/__pycache__/mcqueen_player.cpython-310.pyc
 /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages/mcqueen/__pycache__/mcqueen_teleop.cpython-310.pyc
+/home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages/mcqueen/__pycache__/mcqueen_controller.cpython-310.pyc
 /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/share/ament_index/resource_index/packages/mcqueen
 /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/share/mcqueen/package.xml
 /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages/mcqueen-0.0.0-py3.10.egg-info/top_level.txt
@@ -15,6 +17,7 @@
 /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages/mcqueen-0.0.0-py3.10.egg-info/entry_points.txt
 /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages/mcqueen-0.0.0-py3.10.egg-info/PKG-INFO
 /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/python3.10/site-packages/mcqueen-0.0.0-py3.10.egg-info/SOURCES.txt
+/home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/mcqueen/mcqueen_controller
 /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/mcqueen/mcqueen_interface
 /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/mcqueen/mcqueen_player
 /home/camilo/ros2_ws/src/mcqueen/install/mcqueen/lib/mcqueen/mcqueen_teleop

@@ -41,8 +41,8 @@ class mcqueen_interface(Node):
         self.subplot.set_ylim(-250, 250)
         self.canvas = FigureCanvasTkAgg(self.fig, master=self.plot_frame)
         self.canvas.get_tk_widget().pack()
-        self.mcqueen_pos_suscriber = self.create_subscription(Twist, "/turtlebot_position", self.position_callback, 10)
-        self.get_logger().info("turtle bot position drawer started")
+        self.mcqueen_pos_suscriber = self.create_subscription(Twist, "/mcqueen_position", self.position_callback, 10)
+        self.get_logger().info("mcqueen position drawer started")
 
     def position_callback(self, msg: Twist):
         if self.pos==False:
@@ -67,8 +67,8 @@ class mcqueen_interface(Node):
         self.file_path="src/mcqueen/resource/"+self.file_name+".txt"
         with open(self.file_path, 'a') as file:
             file.write(f'Lx,Ly,Lz,Ax,Ay,Az\n')
-        self.mcqueen_vel_suscriber = self.create_subscription(Twist, "/turtlebot_cmdVel", self.save_callback, 10)
-        self.get_logger().info("turtle bot saver started")
+        self.mcqueen_vel_suscriber = self.create_subscription(Twist, "/mcqueen_cmdVel", self.save_callback, 10)
+        self.get_logger().info("mcqueen saver started")
     
     def save_callback(self, msg: Twist):
         self.Lx = msg.linear.x
@@ -87,7 +87,7 @@ class mcqueen_interface(Node):
         while not self.client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('Service unavailable, waiting...')
         self.follow_path(file_name)
-        self.get_logger().info("turtle bot path follower started")
+        self.get_logger().info("mcqueen path follower started")
         
 
     def follow_path(self, file_name: str):
@@ -102,7 +102,7 @@ class gui_class():
     def __init__(self, args):
         threading.Thread(target=self.start_node, args=(args,)).start()
         self.gui = tk.Tk()
-        self.gui.title('Turtle bot interface')
+        self.gui.title('mcqueen interface')
 
         self.saving=False
         self.button_position = tk.Button(self.gui, text='Start position tracker', width=25, command=self.gui_position)

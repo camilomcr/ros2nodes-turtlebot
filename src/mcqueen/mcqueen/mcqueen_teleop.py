@@ -9,8 +9,8 @@ pressed = False
 lastTime = time.time()
 dif = 0.2
 parser = argparse.ArgumentParser()
-parser.add_argument('--linear', '-l', type=float, default=5.0,help='linear velocity')
-parser.add_argument('--angular', '-a', type=float, default=5.0, help='angular velocity')
+parser.add_argument('--linear', '-l', type=float, default=150.0,help='linear velocity')
+parser.add_argument('--angular', '-a', type=float, default=150.0, help='angular velocity')
 args = parser.parse_args()
 
 def get_key(stdscr):

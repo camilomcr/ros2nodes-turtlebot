@@ -16,6 +16,7 @@
   <depend>nav_msgs</depend>
   <depend>threading</depend>
   <depend>tkinter</depend>
+  <depend>serial</depend>
   <depend>os</depend>
 
   <test_depend>ament_copyright</test_depend>

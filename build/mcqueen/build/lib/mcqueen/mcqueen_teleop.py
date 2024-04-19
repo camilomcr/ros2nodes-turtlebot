@@ -9,8 +9,8 @@ pressed = False
 lastTime = time.time()
 dif = 0.2
 parser = argparse.ArgumentParser()
-parser.add_argument('--linear', '-l', type=float, default=5.0,help='linear velocity')
-parser.add_argument('--angular', '-a', type=float, default=5.0, help='angular velocity')
+parser.add_argument('--linear', '-l', type=float, default=150.0,help='linear velocity')
+parser.add_argument('--angular', '-a', type=float, default=150.0, help='angular velocity')
 args = parser.parse_args()
 
 def get_key(stdscr):
@@ -32,8 +32,8 @@ class mcqueen_teleop(Node):
 
     def __init__(self):
         super().__init__("mcqueen_teleop")
-        self.cmdVel_publisher = self.create_publisher(Twist, "/turtlebot_cmdVel", 10)
-        self.get_logger().info("turtle bot teleop started")
+        self.cmdVel_publisher = self.create_publisher(Twist, "/mcqueen_cmdVel", 10)
+        self.get_logger().info("mcqueen teleop started")
         self.get_logger().info("Use A for left, D for right, W for up and S for down")
         self.timer1 = self.create_timer(0.3, self.set_cmdVel)
         self.timer2 = self.create_timer(0.01, self.wrapper)

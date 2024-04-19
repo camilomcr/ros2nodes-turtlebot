@@ -1,0 +1,23 @@
+[0.844s] Invoking command in '/home/camilo/ros2_ws/src/turtle_bot': PYTHONPATH=/home/camilo/ros2_ws/build/turtle_bot/prefix_override:/home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtle_bot build --build-base /home/camilo/ros2_ws/build/turtle_bot/build install --record /home/camilo/ros2_ws/build/turtle_bot/install.log --single-version-externally-managed
+[1.032s] running egg_info
+[1.032s] writing ../../build/turtle_bot/turtle_bot.egg-info/PKG-INFO
+[1.032s] writing dependency_links to ../../build/turtle_bot/turtle_bot.egg-info/dependency_links.txt
+[1.033s] writing entry points to ../../build/turtle_bot/turtle_bot.egg-info/entry_points.txt
+[1.033s] writing requirements to ../../build/turtle_bot/turtle_bot.egg-info/requires.txt
+[1.033s] writing top-level names to ../../build/turtle_bot/turtle_bot.egg-info/top_level.txt
+[1.034s] reading manifest file '../../build/turtle_bot/turtle_bot.egg-info/SOURCES.txt'
+[1.035s] writing manifest file '../../build/turtle_bot/turtle_bot.egg-info/SOURCES.txt'
+[1.036s] running build
+[1.036s] running build_py
+[1.036s] running install
+[1.036s] running install_lib
+[1.037s] running install_data
+[1.038s] running install_egg_info
+[1.039s] removing '/home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot-0.0.0-py3.10.egg-info' (and everything under it)
+[1.039s] Copying ../../build/turtle_bot/turtle_bot.egg-info to /home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages/turtle_bot-0.0.0-py3.10.egg-info
+[1.040s] running install_scripts
+[1.057s] Installing turtle_bot_interface script to /home/camilo/ros2_ws/install/turtle_bot/lib/turtle_bot
+[1.057s] Installing turtle_bot_player script to /home/camilo/ros2_ws/install/turtle_bot/lib/turtle_bot
+[1.057s] Installing turtle_bot_teleop script to /home/camilo/ros2_ws/install/turtle_bot/lib/turtle_bot
+[1.057s] writing list of installed files to '/home/camilo/ros2_ws/build/turtle_bot/install.log'
+[1.101s] Invoked command in '/home/camilo/ros2_ws/src/turtle_bot' returned '0': PYTHONPATH=/home/camilo/ros2_ws/build/turtle_bot/prefix_override:/home/camilo/ros2_ws/install/turtle_bot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtle_bot build --build-base /home/camilo/ros2_ws/build/turtle_bot/build install --record /home/camilo/ros2_ws/build/turtle_bot/install.log --single-version-externally-managed

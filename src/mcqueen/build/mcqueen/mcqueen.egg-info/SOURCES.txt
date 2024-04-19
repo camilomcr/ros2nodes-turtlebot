@@ -9,6 +9,7 @@ build/mcqueen/mcqueen.egg-info/requires.txt
 build/mcqueen/mcqueen.egg-info/top_level.txt
 build/mcqueen/mcqueen.egg-info/zip-safe
 mcqueen/__init__.py
+mcqueen/mcqueen_controller.py
 mcqueen/mcqueen_interface.py
 mcqueen/mcqueen_player.py
 mcqueen/mcqueen_teleop.py
