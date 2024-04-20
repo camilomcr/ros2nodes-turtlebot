@@ -37,8 +37,8 @@ class mcqueen_interface(Node):
         self.plot_frame = tk.Frame(gui)
         self.plot_frame.grid(row=0, column=2, rowspan=6)
         self.subplot= self.fig.add_subplot()
-        self.subplot.set_xlim(-250, 250)
-        self.subplot.set_ylim(-250, 250)
+        self.subplot.set_xlim(-25, 25)
+        self.subplot.set_ylim(-25, 25)
         self.canvas = FigureCanvasTkAgg(self.fig, master=self.plot_frame)
         self.canvas.get_tk_widget().pack()
         self.mcqueen_pos_suscriber = self.create_subscription(Twist, "/mcqueen_position", self.position_callback, 10)
@@ -46,13 +46,13 @@ class mcqueen_interface(Node):
 
     def position_callback(self, msg: Twist):
         if self.pos==False:
-            self.posX = int(100*msg.linear.x)
-            self.posY = int(100*msg.linear.y)
+            self.posX = int(msg.linear.x)
+            self.posY = int(msg.linear.y)
             self.pos=True
             return
-        self.subplot.plot([self.posX, int(100*msg.linear.x)], [self.posY, int(100*msg.linear.y)],c='r')
-        self.posX = int(100*msg.linear.x)
-        self.posY = int(100*msg.linear.y)
+        self.subplot.plot([self.posX, int(msg.linear.x)], [self.posY, int(msg.linear.y)],c='r')
+        self.posX = int(msg.linear.x)
+        self.posY = int(msg.linear.y)
         self.canvas.draw()
         
 
