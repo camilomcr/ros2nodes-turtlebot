@@ -10,15 +10,19 @@ class mcqueen_controller(Node):
     def __init__(self):
         super().__init__("mcqueen_controller")
         try:
-            self.ser = serial.Serial('/dev/ttyACM0',9600)
+            self.ser = serial.Serial('/dev/ttyACM0',57600)
             self.ser.reset_input_buffer()
         except:
             self.get_logger().info("Serial not found")
-        self.rpm=160
-        self.rWheel=0.03
-        self.t=0.3/60
-        self.r=0
-        self.theta=90
+        self.rWheel=0.0325
+        self.lWheel=0.127
+        self.t=0.001
+        self.Npulsos=156.25
+        self.lastThetaR=0
+        self.lastThetaL=0
+        self.lastX=0
+        self.lastY=0
+        self.lastPhi=0
         self.mcqueen_pos_publisher = self.create_publisher(Twist, "/mcqueen_position", 10)
         self.mcqueen_motor_subscription = self.create_subscription(Twist, "/mcqueen_cmdVel", self.motor_callback, 10)
         self.get_logger().info(f"mcqueen controller started")
@@ -27,23 +31,35 @@ class mcqueen_controller(Node):
         self.ser.write(f"{msg.linear.x}, {msg.linear.y}, {msg.linear.z}, {msg.angular.x}, {msg.angular.y}, {msg.angular.z}\n".encode('utf-8'))
         line = self.ser.readline().decode('utf-8').rstrip()
         self.get_logger().info(f"Received {line}")
-        
-        lineParts = line.split(" ")
-        if line!="Stopped":
-            if lineParts[0]=="Forward" or lineParts[0]=="backwards":
-                self.r=self.r+(int(lineParts[1])/255)*self.rpm*self.t*2*math.pi*self.rWheel
-            if lineParts[0]=="Clockwise" or lineParts[0]=="Counterclockwise":
-                self.theta=self.theta+math.degrees((int(lineParts[1])/255)*self.rpm*self.t*2*math.pi)
-        posX=self.r*math.cos(math.radians(self.theta))
-        posY=self.r*math.sin(math.radians(self.theta))
         msg=Twist()
-        msg.linear.x=posX
-        msg.linear.y=posY
+        
+        lineParts = line.split(",")
+        if lineParts[0]!="Stopped":
+            MOTR_TICKS=float(lineParts[2])
+            MOTL_TICKS=float(lineParts[3])
+        else:
+            MOTR_TICKS=float(lineParts[1])
+            MOTL_TICKS=float(lineParts[2])
+
+        thetaR=(MOTR_TICKS*math.pi*2)/self.Npulsos
+        thetaL=(MOTL_TICKS*math.pi*2)/self.Npulsos
+        dthetaR=(thetaR-self.lastThetaR)/self.t
+        dthetaL=(thetaL-self.lastThetaL)/self.t
+        phi=self.lastPhi+self.rWheel*self.t*((dthetaR-dthetaL)/self.lWheel)
+        x=self.lastX+math.cos(phi)*self.t*((dthetaR+dthetaL)/2)
+        y=self.lastY+math.sin(phi)*self.t*((dthetaR+dthetaL)/2)
+
+        self.lastThetaR=thetaR
+        self.lastThetaL=thetaL
+        self.lastPhi=phi
+        self.lastX=x
+        self.lastY=y
+
+        msg.linear.x = x
+        msg.linear.y = y
         self.mcqueen_pos_publisher.publish(msg)
 
         
-
-
 def main(args=None):
     rclpy.init(args=args)
     node=mcqueen_controller()

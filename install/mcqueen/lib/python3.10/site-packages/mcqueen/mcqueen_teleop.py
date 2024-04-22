@@ -19,6 +19,8 @@ def get_key(stdscr):
     global lastTime
     stdscr.nodelay(True)
     stdscr.timeout(0)
+    stdscr.refresh()
+    stdscr.getch()
     try:
         key=stdscr.getkey()
         lastTime = time.time()
@@ -35,8 +37,8 @@ class mcqueen_teleop(Node):
         self.cmdVel_publisher = self.create_publisher(Twist, "/mcqueen_cmdVel", 10)
         self.get_logger().info("mcqueen teleop started")
         self.get_logger().info("Use A for left, D for right, W for up and S for down")
-        self.timer1 = self.create_timer(0.3, self.set_cmdVel)
-        self.timer2 = self.create_timer(0.01, self.wrapper)
+        self.timer1 = self.create_timer(0.0001, self.set_cmdVel)
+        self.timer2 = self.create_timer(0.0001, self.wrapper)
 
     def wrapper(self):
         curses.wrapper(get_key)

@@ -42,7 +42,7 @@ class mcqueen_player(Node):
                     msg.angular.y = float(line[4])
                     msg.angular.z = float(line[5])
                     self.cmdVel_publisher.publish(msg)
-                    time.sleep(0.3)
+                    time.sleep(0.001)
    
 
 def main(args=None):

@@ -1,0 +1,25 @@
+running egg_info
+writing ../../build/mcqueen/mcqueen.egg-info/PKG-INFO
+writing dependency_links to ../../build/mcqueen/mcqueen.egg-info/dependency_links.txt
+writing entry points to ../../build/mcqueen/mcqueen.egg-info/entry_points.txt
+writing requirements to ../../build/mcqueen/mcqueen.egg-info/requires.txt
+writing top-level names to ../../build/mcqueen/mcqueen.egg-info/top_level.txt
+reading manifest file '../../build/mcqueen/mcqueen.egg-info/SOURCES.txt'
+writing manifest file '../../build/mcqueen/mcqueen.egg-info/SOURCES.txt'
+running build
+running build_py
+copying mcqueen/mcqueen_teleop.py -> /home/camilo/ros2_ws/build/mcqueen/build/lib/mcqueen
+running install
+running install_lib
+copying /home/camilo/ros2_ws/build/mcqueen/build/lib/mcqueen/mcqueen_teleop.py -> /home/camilo/ros2_ws/install/mcqueen/lib/python3.10/site-packages/mcqueen
+byte-compiling /home/camilo/ros2_ws/install/mcqueen/lib/python3.10/site-packages/mcqueen/mcqueen_teleop.py to mcqueen_teleop.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/camilo/ros2_ws/install/mcqueen/lib/python3.10/site-packages/mcqueen-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/mcqueen/mcqueen.egg-info to /home/camilo/ros2_ws/install/mcqueen/lib/python3.10/site-packages/mcqueen-0.0.0-py3.10.egg-info
+running install_scripts
+Installing mcqueen_controller script to /home/camilo/ros2_ws/install/mcqueen/lib/mcqueen
+Installing mcqueen_interface script to /home/camilo/ros2_ws/install/mcqueen/lib/mcqueen
+Installing mcqueen_player script to /home/camilo/ros2_ws/install/mcqueen/lib/mcqueen
+Installing mcqueen_teleop script to /home/camilo/ros2_ws/install/mcqueen/lib/mcqueen
+writing list of installed files to '/home/camilo/ros2_ws/build/mcqueen/install.log'

@@ -8,6 +8,7 @@
   <license>TODO: License declaration</license>
 
   <depend>rclpy</depend>
+  <depend>math</depend>
   <depend>geometry_msgs</depend>
   <depend>curses</depend>
   <depend>time</depend>
